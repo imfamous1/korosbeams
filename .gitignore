@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Logs and local server artifacts
+*.log
+.koros-server.log
+.koros-server.pid
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: Python (если будут venv в проекте)
+.venv/
+venv/
+__pycache__/
+*.py[cod]

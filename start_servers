@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT"
+
+PID_FILE="$ROOT/.koros-server.pid"
+LOG_FILE="$ROOT/.koros-server.log"
+PORT="${PORT:-8080}"
+
+if [[ -f "$PID_FILE" ]]; then
+  old_pid="$(cat "$PID_FILE")"
+  if kill -0 "$old_pid" 2>/dev/null; then
+    echo "Сервер уже запущен (PID $old_pid, порт из PID-файла). Сначала: ./stop_servers"
+    exit 1
+  fi
+  rm -f "$PID_FILE"
+fi
+
+if command -v lsof >/dev/null 2>&1; then
+  pids_on_port="$(lsof -ti TCP:"$PORT" -sTCP:LISTEN 2>/dev/null || true)"
+  if [[ -n "$pids_on_port" ]]; then
+    echo "Порт $PORT занят процессом: $pids_on_port. Укажите другой порт: PORT=3000 ./start_servers"
+    exit 1
+  fi
+fi
+
+python3 -m http.server "$PORT" >>"$LOG_FILE" 2>&1 &
+echo $! >"$PID_FILE"
+echo "Koros: http://127.0.0.1:$PORT/ (PID $(cat "$PID_FILE"), лог: $LOG_FILE)"
+echo "Остановка: ./stop_servers"

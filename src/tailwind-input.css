@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Preflight не задаёт cursor для <a>; без этого на части зон курсор «прыгает» между default и pointer */
+@layer base {
+  a:any-link {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="css/koros.css" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .tonal-shift {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<a class="bg-[#ffd100] text-black px-4 py-1 font-['Space_Grotesk'] font-black tracking-tighter text-xl" href="#">Koros</a>
+<div class="hidden md:flex gap-6">
+<a class="text-[#725c00] border-b-2 border-[#ffd100] pb-1 font-['Space_Grotesk'] font-bold tracking-tight" href="#">Products</a>
+<a class="text-zinc-600 font-medium hover:text-[#725c00] transition-colors duration-300" href="#">Solutions</a>
+<a class="text-zinc-600 font-medium hover:text-[#725c00] transition-colors duration-300" href="#">About Us</a>
+<a class="text-zinc-600 font-medium hover:text-[#725c00] transition-colors duration-300" href="#">Manufacturing</a>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-md font-bold active:scale-95 transition-transform">
+                Contact/Inquiry
+            </button>
+</div>
+</nav>
+<main class="pt-24 pb-24">
+<!-- Hero Section -->
+<header class="px-8 py-16 max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row gap-12 items-end">
+<div class="flex-1">
+<span class="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-4 block">Engineered precision</span>
+<h1 class="font-headline text-6xl font-bold tracking-tight text-on-background max-w-2xl leading-[0.95]">
+                        Formwork <span class="text-primary italic">Systems</span> &amp; Structural Components
+                    </h1>
+</div>
+<div class="flex-1 text-on-surface-variant font-medium max-w-lg mb-2">
+                    Discover our market-leading range of H20 beams, steel props, and specialized structural supports designed for maximum load-bearing efficiency and durability.
+                </div>
+</div>
+</header>
+<!-- Product Filter Shell -->
+<section class="px-8 mb-12 max-w-[1440px] mx-auto">
+<div class="bg-surface-container-low p-6 flex flex-wrap gap-6 items-center justify-between border-l-4 border-primary">
+<div class="flex flex-wrap gap-8">
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold tracking-widest uppercase text-outline">Length Class</label>
+<select class="bg-surface-container-lowest border-none text-sm font-bold pr-10 focus:ring-2 focus:ring-primary rounded-none h-10 min-w-[160px]">
+<option>All Lengths</option>
+<option>1.90m - 2.90m</option>
+<option>3.00m - 4.50m</option>
+<option>4.90m - 5.90m</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold tracking-widest uppercase text-outline">Material Base</label>
+<select class="bg-surface-container-lowest border-none text-sm font-bold pr-10 focus:ring-2 focus:ring-primary rounded-none h-10 min-w-[160px]">
+<option>All Materials</option>
+<option>Spruce/Fir Wood</option>
+<option>Galvanized Steel</option>
+<option>Aluminum Alloy</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold tracking-widest uppercase text-outline">Load Capacity</label>
+<select class="bg-surface-container-lowest border-none text-sm font-bold pr-10 focus:ring-2 focus:ring-primary rounded-none h-10 min-w-[160px]">
+<option>Standard (5kN/m)</option>
+<option>Heavy Duty (10kN/m+)</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-medium text-outline">Showing 12 Products</span>
+<button class="flex items-center gap-2 bg-on-background text-white px-4 py-2 text-sm font-bold active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">tune</span>
+                        Advanced Filters
+                    </button>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-8 max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group flex flex-col bg-surface-container-lowest overflow-hidden">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img alt="H20 Wooden Beam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of stacked yellow industrial H20 timber beams for concrete formwork showing wood grain and protective plastic ends" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5nYkLOa6TrRoSqkJ9aFgSa80sH7wqbavYPubSmOveLzw0qnRlnRoBmAAEtmuTf5Yg9b5f_CoiASJ6vsPc9hv44Qc1nW2geKI04rDM7-dZuFV75j0hVccgN7vt2KXqkx57swJsPIUCfcydIuCFtXobte2jc8BaThHw02cPfdfq5aOzDW3gtGHZuUnsJWu8b_30_wE-N925jAGc16LUxUSdl2Qx4bvPB2oUHroj6Do8M6KYnQvZD6-3qiLximHhDyD3UJ7zUY3QjPIY"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 text-[10px] font-black tracking-widest uppercase">Best Seller</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold tracking-tight">K-1 H20 Timber Beam</h3>
+<span class="text-xs font-bold font-headline text-secondary tracking-tighter">WOODEN SERIES</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                        Precision-engineered spruce beams with synthetic resin coating. Reinforced ends for maximum impact resistance on site.
+                    </p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-highest pt-4">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Max Load</span>
+<span class="font-bold text-sm">5.0 kN/m</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Weight</span>
+<span class="font-bold text-sm">4.8 kg/m</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col bg-surface-container-lowest overflow-hidden">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img alt="Steel Formwork Prop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Industrial construction site with heavy-duty galvanized steel props and structural support beams against a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2kHxyJgqhGuAbupK6ofngp423jRMl-gzhXMurop-IUhCEzuU9Zg_MlSz1mUTMHziko-FB0h6VpsET80Ygvi5Hu2O-RUT40Ti4quRb_zY_Zyedq5wqmQc4jWFP229o33GcaQwRJgyDdxjZ-6_PfaLmQotu7IUlwbjVa8ARRgv_FUYb_xEl6HxxZGXKKlUCBNStE4XcN7ZXGicSNDLeZ15PxwrxEytruobD0nqJrKZXdiO3Px3sqb2oxctMKguY7CdZr2zzzummNse2"/>
+<div class="absolute top-4 left-4 bg-on-background text-white px-3 py-1 text-[10px] font-black tracking-widest uppercase">Heavy Duty</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold tracking-tight">E-Series Steel Prop</h3>
+<span class="text-xs font-bold font-headline text-secondary tracking-tighter">SUPPORT SERIES</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                        Galvanized structural steel with telescopic adjustment. Anti-hand-crush safety mechanism and fine-thread adjustment.
+                    </p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-highest pt-4">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Range</span>
+<span class="font-bold text-sm">2.0m - 3.5m</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Capacity</span>
+<span class="font-bold text-sm">20 kN min</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col bg-surface-container-lowest overflow-hidden">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img alt="Aluminum Beam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sleek silver aluminum structural beams with precision geometric cutouts for lightweight industrial construction support" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXOHGyd2yFx_KPeTY7LCruJ3aNim91Xj44HP_xYqfKk5noL7gW8w4IBhKpg9bSVbFyCZQyNp7e7FgzYJ22pSXvRU5fwxiGcx__xprEj7Mu0V00e7Mp6L3Xy2gjmtT6OAI86AEO2AgQtO5NsgKItLTxWWy42Jjte52MeUek5ECFuy6Kch9hwn3Ll3GwLtvQfDoCoLFdnqlLnnGz3uYZNs0Rszixl1wWn7SnN53rLaQk5sOtmeGj1w8-xs43mLg_vO6HMjELplNC6zRW"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold tracking-tight">ALU-Light 140</h3>
+<span class="text-xs font-bold font-headline text-secondary tracking-tighter">ALUMINUM SERIES</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                        High-strength lightweight aluminum alloy beam. Integrated bolting slot for easy attachment of accessories and safety rails.
+                    </p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-highest pt-4">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Length</span>
+<span class="font-bold text-sm">Custom up to 6m</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Weight</span>
+<span class="font-bold text-sm">3.2 kg/m</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col bg-surface-container-lowest overflow-hidden">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img alt="Formwork Panel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Stacks of phenolic plywood formwork panels with smooth dark coating used for concrete surface finishing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3LL7f0mI4KxqFI7u7Z9HXYbcvMVzLye4RgBTwj79I-eEeK4mGSI2ElpSr38Ld4QmoM2AHzK7YLHDub3QlF14k5jgoEh3CIoxbSPK4O_hOKmtWDgTaadUTBFvADNCEdEx1g_E4E6xhIfs6RoIYj6WktJqMSYvqPpu2NcSrfchBZV343b1VIgucnWhcxOodtkJLYI9slDqtH3PbXox5CfXwnWmx0AiNnohbFzC1P1y6cd4YRI5wSzu8HKBvgWcW232F99QGHO3sQIj1"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Premium Ply-21</h3>
+<span class="text-xs font-bold font-headline text-secondary tracking-tighter">PANEL SERIES</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                        Phenolic resin coated 21mm birch plywood. Provides architectural-grade fair-faced concrete finishes across multiple reuses.
+                    </p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-highest pt-4">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Thickness</span>
+<span class="font-bold text-sm">21.0 mm</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Reuses</span>
+<span class="font-bold text-sm">Up to 40x</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group flex flex-col bg-surface-container-lowest overflow-hidden">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img alt="Slab Shoring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Complex network of industrial shoring towers and scaffolding systems inside a massive concrete structural development" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClelFaZx1TzAU_FfphpQvI37xgwKiyETEVeyjsbDr5UBFXuZKEk_8V0FfYV_nrKX3ggeZVm1Pn6OQeGZtLhPFvDEPq9CXxomPpcgMZ7esfMDr_tG5Qwd-_mSLkp89Itslb8m6XAUwmTnWWdrlftWiNEmjQcnvJhgvVwSxcDG330TwirXfwgNROTc8kPysxaLCVzLPYYJVF44gHltH69QzVyFF7e7ztDlg9Vh6y_AtPUbg4iyWJldC78N9C2UI8LU0Kn-r8W9c76_aN"/>
+<div class="absolute top-4 left-4 bg-[#2c5ea3] text-white px-3 py-1 text-[10px] font-black tracking-widest uppercase">System Component</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Tower Frame 150</h3>
+<span class="text-xs font-bold font-headline text-secondary tracking-tighter">SHORING SERIES</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                        Vertical modular shoring frames for high-rise slab casting. Integrated interlocking system for rapid and safe assembly.
+                    </p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-highest pt-4">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">H-Width</span>
+<span class="font-bold text-sm">1.50 m</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Finish</span>
+<span class="font-bold text-sm">Hot-Dip Galv</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col bg-surface-container-lowest overflow-hidden">
+<div class="relative h-72 overflow-hidden bg-surface-container">
+<img alt="Specialized Clamps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heavy duty steel clamps and coupling components used for connecting industrial formwork beams in structural engineering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJhoixeK95VcHo5xaY1T2u-kz4txuY7jTe0mbE_w9mn8G9hnfmawwoKHW7xbiWCTCgCiDjtoP6dYblJ8yuurJK3YWilfV1SmA2dCFxMSbyZTPM4eiYQRTOCwKyZyfWAU7VN28wHV99uMUWOTQ5h2WTWG3b3N5qoRn1nWYDSX4Y_6ZFhEVbhORGEMmprVsEP6Qx3bNmvVgVFnu9XxGA6dHFs6lLRW6aWTv1ApIlgPBx8r_DXdAnVILymEVj_xr3h7JZGrb2kAX8jBUT"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Beam Clamp H-Pro</h3>
+<span class="text-xs font-bold font-headline text-secondary tracking-tighter">ACCESSORY SERIES</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                        Forge-hardened steel clamps designed specifically for the K-1 H20 system. Ensures rigid connection between primary and secondary beams.
+                    </p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-highest pt-4">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Material</span>
+<span class="font-bold text-sm">Forged Steel</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline mb-1 font-bold">Safety</span>
+<span class="font-bold text-sm">TUV Certified</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pagination -->
+<div class="flex justify-center mt-20 gap-2">
+<button class="w-10 h-10 flex items-center justify-center bg-on-background text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-high text-on-surface font-bold hover:bg-primary-container transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-high text-on-surface font-bold hover:bg-primary-container transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-high text-on-surface font-bold hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-900 text-[#ffd100] font-['Inter'] text-sm tracking-wide pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-[#ffd100] font-black text-2xl tracking-tighter mb-4 block">Koros</span>
+<p class="text-zinc-400 max-w-xs mb-6">Market leading industrial formwork and structural engineering solutions for global infrastructure.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">mail</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">description</span>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Products</a></li>
+<li><a class="text-zinc-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Solutions</a></li>
+<li><a class="text-zinc-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Manufacturing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Technical Data</a></li>
+<li><a class="text-zinc-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Technical Standards</h4>
+<p class="text-zinc-400 text-xs leading-loose">
+                    All Koros products are manufactured to exceed EN 13377 standards for timber beams and EN 1065 for telescopic steel props.
+                </p>
+<div class="mt-6 flex gap-4 grayscale opacity-50">
+<span class="material-symbols-outlined text-4xl">verified</span>
+<span class="material-symbols-outlined text-4xl">engineering</span>
+</div>
+</div>
+</div>
+<div class="mt-16 px-8 max-w-[1440px] mx-auto border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-zinc-500 text-xs">© 2024 Koros Industrial. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-zinc-500 hover:text-[#ffd100] text-xs" href="#">Terms of Service</a>
+<a class="text-zinc-500 hover:text-[#ffd100] text-xs" href="#">Accessibility</a>
+<a class="text-zinc-500 hover:text-[#ffd100] text-xs" href="#">Legal Notice</a>
+</div>
+</div>
+</footer>
+</body></html>
