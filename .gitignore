@@ -1,3 +1,6 @@
+# Stitch / локальные исходники пересборки (не публикуем)
+_raw-*.html
+
 # Dependencies
 node_modules/
 
