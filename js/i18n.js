@@ -13,7 +13,6 @@
     ru: {
       "meta.title.index": "КОРОС | БДК H20 для опалубки",
       "meta.title.catalog": "Продукция | ООО «КОРОС»",
-      "meta.title.product.hub": "БДК H20 — линейки Norm и Pro | ООО «КОРОС»",
       "meta.title.product.norm": "БДК H20 Norm | ООО «КОРОС»",
       "meta.title.product.pro": "БДК H20 Pro | ООО «КОРОС»",
       "meta.title.manufacturing": "О компании и производстве | ООО «КОРОС»",
@@ -22,7 +21,6 @@
       "meta.title.certificates": "Сертификаты и испытания | ООО «КОРОС»",
       "meta.desc.index": "Производитель балок БДК H20 для монолитной опалубки. ГОСТ Р 71938-2025, EN 13377:2002. Ленинградская область, поставки в РФ и за рубеж.",
       "meta.desc.catalog": "БДК H20 Norm и БДК H20 Pro — две линейки деревянных балок для опалубки от ООО «КОРОС».",
-      "meta.desc.product.hub": "Две линейки БДК H20: страницы Norm и Pro, каталог и сравнение исполнений.",
       "meta.desc.product.norm": "БДК H20 Norm: фанера ФСФ 24 мм, торцы с защитным составом. Техданные и стандарты ГОСТ и EN.",
       "meta.desc.product.pro": "БДК H20 Pro: фанера ФСФ 24 или 27 мм, полимерные заглушки на торцах. Техданные КОРОС.",
       "meta.desc.manufacturing": "Опыт в деревопереработке, полный производственный цикл, контроль качества и испытания в аккредитованных лабораториях.",
@@ -169,7 +167,6 @@
       "cat.card.link": "Подробнее",
       "cat.card.compare": "Сравнить линейки",
 
-      "breadcrumb.h20.hub": "Балки БДК H20",
       "breadcrumb.norm": "БДК H20 Norm",
       "breadcrumb.pro": "БДК H20 Pro",
 
@@ -382,7 +379,6 @@
     en: {
       "meta.title.index": "Koros | H20 timber formwork beams",
       "meta.title.catalog": "Product range | Koros LLC",
-      "meta.title.product.hub": "H20 Norm & Pro lines | Koros LLC",
       "meta.title.product.norm": "H20 Norm beam | Koros LLC",
       "meta.title.product.pro": "H20 Pro beam | Koros LLC",
       "meta.title.manufacturing": "About & manufacturing | Koros LLC",
@@ -391,7 +387,6 @@
       "meta.title.certificates": "Certificates & testing | Koros LLC",
       "meta.desc.index": "Manufacturer of H20 timber beams for formwork. GOST R 71938-2025, EN 13377:2002. Leningrad region; Russia and export.",
       "meta.desc.catalog": "H20 Norm and H20 Pro timber beam lines for formwork from Koros LLC.",
-      "meta.desc.product.hub": "Two H20 beam lines: Norm and Pro product pages, catalogue and comparison.",
       "meta.desc.product.norm": "H20 Norm: 24 mm FSF plywood, compound end sealing. Specs and GOST/EN alignment.",
       "meta.desc.product.pro": "H20 Pro: 24 or 27 mm FSF, polymer end caps. Koros technical data.",
       "meta.desc.manufacturing": "Wood-processing experience, full in-house cycle, quality control and accredited lab testing.",
@@ -541,7 +536,6 @@
       "cat.card.link": "Learn more",
       "cat.card.compare": "Compare lines",
 
-      "breadcrumb.h20.hub": "H20 timber beams",
       "breadcrumb.norm": "H20 Norm",
       "breadcrumb.pro": "H20 Pro",
 

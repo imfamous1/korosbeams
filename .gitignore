@@ -1,6 +1,10 @@
 # Stitch / локальные исходники пересборки (не публикуем)
 _raw-*.html
 
+# Локальный просмотр (python http.server), не публиковать
+start_servers
+stop_servers
+
 # Dependencies
 node_modules/
 

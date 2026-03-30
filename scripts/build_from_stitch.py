@@ -14,7 +14,7 @@ def build_nav(active: str) -> str:
     s = LINK
     a = LINK
     m = LINK
-    if active in ("catalog", "product"):
+    if active == "catalog":
         p = ACTIVE
     elif active == "manufacturing":
         m = ACTIVE
@@ -40,7 +40,7 @@ def build_nav(active: str) -> str:
 <div class="flex items-center gap-4 md:gap-8 min-w-0">
 <a class="bg-[#ffd100] text-black px-4 py-1 font-black tracking-tighter text-xl font-headline shrink-0" href="index.html">Koros</a>
 <div class="hidden md:flex items-center gap-6">
-<a class="{p}" href="catalog.html"{(' aria-current="page"' if active in ('catalog', 'product') else '')}>Products</a>
+<a class="{p}" href="catalog.html"{(' aria-current="page"' if active == 'catalog' else '')}>Products</a>
 <a class="{s}" href="index.html#features">Solutions</a>
 <a class="{a}" href="manufacturing.html">About Us</a>
 <a class="{m}" href="manufacturing.html#production"{(' aria-current="page"' if active == 'manufacturing' else '')}>Manufacturing</a>
@@ -78,13 +78,13 @@ def strip_old_nav(html: str) -> str:
 
 def fix_footer(html: str) -> str:
     pairs = [
-        ('href="#">H20 Beams</a>', 'href="product-h20.html">H20 Beams</a>'),
-        ('href="#">H20 Timber Beams</a>', 'href="product-h20.html">H20 Timber Beams</a>'),
-        ('href="#">H20 Timber Beams</a>', 'href="product-h20.html">H20 Timber Beams</a>'),
+        ('href="#">H20 Beams</a>', 'href="catalog.html">H20 Beams</a>'),
+        ('href="#">H20 Timber Beams</a>', 'href="catalog.html">H20 Timber Beams</a>'),
+        ('href="#">H20 Timber Beams</a>', 'href="catalog.html">H20 Timber Beams</a>'),
         ('href="#">Plywood Systems</a>', 'href="catalog.html">Plywood Systems</a>'),
         ('href="#">Accessories</a>', 'href="catalog.html">Accessories</a>'),
         ('href="#">Scaffolding</a>', 'href="catalog.html">Scaffolding</a>'),
-        ('href="#">Technical Data</a>', 'href="product-h20.html">Technical Data</a>'),
+        ('href="#">Technical Data</a>', 'href="catalog.html">Technical Data</a>'),
         ('href="#">Installation Guide</a>', 'href="manufacturing.html">Installation Guide</a>'),
         ('href="#">Safety Protocols</a>', 'href="manufacturing.html#quality">Safety Protocols</a>'),
         ('href="#">Contact</a>', 'href="contact.html">Contact</a>'),
@@ -156,16 +156,7 @@ def patch_index(html: str) -> str:
     )
     html = html.replace(
         '<button class="mt-12 text-primary font-bold flex items-center gap-2 group">\n                            Full technical specifications \n                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>\n</button>',
-        '<a href="product-h20.html" class="mt-12 text-primary font-bold flex items-center gap-2 group">\n                            Full technical specifications \n                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>\n</a>',
-    )
-    return html
-
-
-def patch_product(html: str) -> str:
-    html = html.replace(
-        '<a class="inline-flex items-center gap-2 font-bold border-b border-on-primary pb-1 hover:gap-4 transition-all" href="#">',
-        '<a class="inline-flex items-center gap-2 font-bold border-b border-on-primary pb-1 hover:gap-4 transition-all" href="contact.html">',
-        1,
+        '<a href="catalog.html" class="mt-12 text-primary font-bold flex items-center gap-2 group">\n                            Full technical specifications \n                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>\n</a>',
     )
     return html
 
@@ -191,7 +182,7 @@ def patch_manufacturing(html: str) -> str:
 def patch_catalog(html: str) -> str:
     html = html.replace(
         '<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">\n                            View Details\n                        </button>\n</div>\n</div>\n</div>\n<!-- Product Card 2 -->',
-        '<a href="product-h20.html" class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300 flex items-center justify-center">\n                            View Details\n                        </a>\n</div>\n</div>\n</div>\n<!-- Product Card 2 -->',
+        '<a href="catalog.html" class="w-full py-4 bg-surface-container-high text-on-surface font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300 flex items-center justify-center">\n                            View Details\n                        </a>\n</div>\n</div>\n</div>\n<!-- Product Card 2 -->',
         1,
     )
     return html
@@ -207,7 +198,6 @@ def run():
     pages = [
         ("_raw-home.html", "index.html", "home", patch_index),
         ("_raw-catalog.html", "catalog.html", "catalog", lambda h: patch_catalog(ensure_catalog_title(h))),
-        ("_raw-product.html", "product-h20.html", "product", patch_product),
         ("_raw-manufacturing.html", "manufacturing.html", "manufacturing", patch_manufacturing),
         ("_raw-contact.html", "contact.html", "contact", None),
     ]
