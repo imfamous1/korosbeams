@@ -11,6 +11,21 @@
 <style>
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .tonal-shift { transition: background-color 0.3s ease; }
+        .contact-loc-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        @media (min-width: 768px) {
+            .contact-loc-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto auto;
+                column-gap: 2rem;
+                row-gap: 1.25rem;
+            }
+            .contact-loc-grid > .contact-loc-card {
+                display: grid;
+                grid-template-rows: subgrid;
+                grid-row: span 3;
+                row-gap: 0;
+            }
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
@@ -18,14 +33,14 @@
 <main class="koros-site-main pb-16">
 <div class="max-w-[1440px] mx-auto px-6 sm:px-8">
 <header class="py-12">
-<p class="text-xs uppercase tracking-widest text-secondary font-bold mb-3" data-i18n="contact.hero.kicker">Связь</p>
-<h1 class="font-headline font-bold text-4xl md:text-6xl tracking-tighter leading-tight max-w-3xl mb-6" data-i18n="contact.hero.title">Контакты</h1>
-<p class="text-on-surface-variant max-w-xl" data-i18n="contact.hero.lead">…</p>
+<p class="text-xs font-bold tracking-widest text-secondary uppercase mb-3" data-i18n="contact.hero.kicker">Связь</p>
+<h1 class="font-headline font-bold text-4xl md:text-6xl tracking-tight max-w-[50rem] leading-tight mb-6" data-i18n="contact.hero.title">Контакты</h1>
+<p class="text-on-surface-variant max-w-2xl" data-i18n="contact.hero.lead">…</p>
 </header>
-<section>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-<div class="lg:col-span-7 bg-surface-container-low p-8 md:p-10 rounded-xl">
-<h2 class="font-headline font-bold text-2xl mb-8" data-i18n="contact.form.title">Форма</h2>
+<div class="w-full flex flex-col pb-4">
+<section aria-labelledby="contact-form-heading">
+<div class="bg-surface-container-low p-8 md:p-10 rounded-xl border border-outline-variant/20">
+<h2 id="contact-form-heading" class="font-headline font-bold text-2xl md:text-3xl tracking-tight mb-8" data-i18n="contact.form.title">Запрос по продукту</h2>
 <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6" method="get">
 <div class="space-y-2">
 <label class="block text-xs font-bold uppercase tracking-wider text-outline" data-i18n="contact.form.name">ФИО</label>
@@ -44,8 +59,8 @@
 <input class="w-full bg-surface-container-high border-none p-4 focus:ring-0 border-b-2 border-transparent focus:border-primary" type="tel" data-i18n-placeholder="contact.form.phoneHint"/>
 </div>
 <div class="md:col-span-2 space-y-4">
-<h3 class="font-headline font-bold text-lg border-l-4 border-primary pl-3" data-i18n="contact.form.materials">Продукт</h3>
-<div class="grid md:grid-cols-2 gap-6">
+<h3 class="font-headline font-bold text-base md:text-lg text-on-surface tracking-tight border-l-4 border-primary pl-3" data-i18n="contact.form.materials">Параметры</h3>
+<div class="grid md:grid-cols-2 gap-6 pt-1">
 <div class="space-y-2">
 <label class="block text-xs font-bold uppercase text-outline" data-i18n="contact.form.beam">Линейка</label>
 <select class="w-full bg-surface-container-high border-none p-4 focus:ring-0 border-b-2 border-transparent focus:border-primary">
@@ -61,57 +76,84 @@
 </div>
 </div>
 </div>
-<div class="md:col-span-2 space-y-2">
+<div class="md:col-span-2 space-y-2 pt-2">
 <label class="block text-xs font-bold uppercase text-outline" data-i18n="contact.form.details">Комментарий</label>
 <textarea class="w-full bg-surface-container-high border-none p-4 min-h-[120px]" rows="4" data-i18n-placeholder="contact.form.details"></textarea>
 </div>
 <div class="md:col-span-2">
-<button class="w-full bg-primary-container text-on-primary-container font-headline font-black py-4 text-lg flex items-center justify-center gap-2 rounded-lg hover:opacity-95" type="submit">
-<span data-i18n="contact.form.submit">Отправить</span>
-<span class="material-symbols-outlined">arrow_forward</span>
+<button class="w-full bg-primary-container text-on-primary-container font-headline font-black py-4 px-8 text-lg flex items-center justify-center gap-2 rounded-lg hover:opacity-95" type="submit">
+<span data-i18n="contact.form.submit">Отправить запрос</span>
+<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
 </button>
 </div>
 </form>
 </div>
-<div class="lg:col-span-5 flex flex-col gap-8">
-<div class="grid sm:grid-cols-2 lg:grid-cols-1 gap-6">
-<div class="p-6 bg-surface-container-highest rounded-lg flex flex-col gap-3">
-<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
-<h4 class="font-headline font-bold text-lg" data-i18n="contact.addr.title">Адрес</h4>
-<address class="not-italic text-on-surface-variant text-sm leading-relaxed">
-Россия, Ленинградская область,<br/>
-п. Тихорецы, ул. Набережная, д. 1Н
+</section>
+<section id="contact-locations" class="mt-16 scroll-mt-24" aria-labelledby="contact-locations-heading">
+<h2 id="contact-locations-heading" class="font-headline font-bold text-2xl md:text-3xl tracking-tight mb-8" data-i18n="contact.locations.title">Адреса</h2>
+<div class="contact-loc-grid">
+<article class="contact-loc-card flex flex-col gap-5 p-6 md:p-8 bg-surface-container-low rounded-xl border border-outline-variant/20 min-h-0">
+<div class="flex gap-3 min-w-0">
+<span class="material-symbols-outlined text-primary text-3xl shrink-0 leading-none" aria-hidden="true">apartment</span>
+<div class="min-w-0">
+<h3 class="font-headline font-bold text-lg leading-snug" data-i18n="contact.addr.officeSpb.title">Офис СПБ</h3>
+<address class="not-italic text-on-surface-variant text-sm leading-relaxed mt-2 mb-4">
+<span data-i18n="contact.addr.officeSpb.line">Санкт-Петербург, ул. Якорная, 7АД</span>
 </address>
 </div>
-<div class="p-6 bg-surface-container-highest rounded-lg flex flex-col gap-3">
-<span class="material-symbols-outlined text-primary text-3xl">call</span>
-<h4 class="font-headline font-bold text-lg" data-i18n="contact.direct.title">Контакты</h4>
-<p class="text-base"><span class="text-sm font-bold uppercase text-outline block mb-1" data-i18n="contact.direct.phone">Телефон</span><a class="font-medium" href="tel:+78003332233" data-i18n="header.phone.display">8 800 333-22-33</a></p>
-<p class="text-base mt-3">
-<span class="text-sm font-bold uppercase text-outline block mb-1" data-i18n="contact.direct.email">Email</span>
-<span class="flex flex-wrap items-center gap-2">
-<a class="font-medium break-all hover:text-primary" href="mailto:beams@korosbeams.ru">beams@korosbeams.ru</a>
-<span class="inline-flex items-center gap-1 shrink-0" role="group" data-i18n-aria-label="a11y.messengerLinks">
-<a class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-outline-variant hover:bg-surface-container-high hover:border-primary transition-colors overflow-hidden p-0.5 bg-surface-container-low/80" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
-<img src="images/icons/max-logo-2025.png" alt="" width="64" height="32" class="max-h-[22px] w-auto max-w-[36px] object-contain" loading="lazy" decoding="async"/>
-</a>
-<a class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-outline-variant hover:bg-surface-container-high hover:border-primary transition-colors overflow-hidden p-0.5 bg-surface-container-low/80" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
-<img src="images/icons/telegram-logo.png" alt="" width="96" height="96" class="w-[22px] h-[22px] object-contain" loading="lazy" decoding="async"/>
-</a>
-</span>
-</span>
-</p>
+</div>
+<div class="relative w-full min-h-0 overflow-hidden rounded-xl border border-outline-variant shadow-sm aspect-video min-h-[200px] bg-surface-container-high">
+<iframe class="absolute inset-0 w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-i18n-title="contact.map.ariaOffice" title="Карта: офис в Санкт-Петербурге" src="https://yandex.ru/map-widget/v1/?ll=30.42117%2C59.94051&amp;z=16&amp;pt=30.42117%2C59.94051%2Cpm2rdm"></iframe>
+</div>
+<p class="text-sm min-w-0 mt-4"><a class="font-bold uppercase tracking-wider text-primary hover:underline inline-flex items-center gap-1" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB.%20%D0%AF%D0%BA%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%2C%207%D0%90%D0%94" target="_blank" rel="noopener noreferrer"><span data-i18n="contact.map.open">Открыть в Яндекс.Картах</span><span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span></a></p>
+</article>
+<article class="contact-loc-card flex flex-col gap-5 p-6 md:p-8 bg-surface-container-low rounded-xl border border-outline-variant/20 min-h-0">
+<div class="flex gap-3 min-w-0">
+<span class="material-symbols-outlined text-primary text-3xl shrink-0 leading-none" aria-hidden="true">precision_manufacturing</span>
+<div class="min-w-0">
+<h3 class="font-headline font-bold text-lg leading-snug" data-i18n="contact.addr.plant.title">Производство Тихорецы</h3>
+<address class="not-italic text-on-surface-variant text-sm leading-relaxed mt-2 mb-4">
+<span data-i18n="contact.addr.plant.line1">Россия, Ленинградская область,</span><br/>
+<span data-i18n="contact.addr.plant.line2">п. Тихорецы, ул. Набережная, д. 1Н</span>
+</address>
 </div>
 </div>
-<a class="block w-full rounded-xl overflow-hidden border border-zinc-200 aspect-video relative group" href="https://yandex.ru/maps/?text=%D0%A2%D0%B8%D1%85%D0%BE%D1%80%D0%B5%D1%86%D1%8B%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%201%D0%BD" target="_blank" rel="noopener noreferrer">
-<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Карта" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7Sdz3xY66AzR82kvjKRmDBId29BJyDi1ZVbZdzN7wLA1R-ykYIx1_PiSnFggpEJARuur47Y7OfcRgSy8Yu4RNiU6BI4g2L1N1vp_E9Vk4xT0ExuQKWPV6r9ldXcnlOzQr8UBqBlzXX6Ak2EUTtTRzk1caPwKSZArjTx0cWgAxejxM_18KYOVM67PZlHKnDPSLd45NPVFpjMaahnbGZ90hoa0eMY0BjAoMQ6Fx7ZNV4bRR2yYmk9_fEkrfA2yahxCWKH8K5i9MXcj2"/>
-<span class="absolute inset-0 flex items-center justify-center bg-primary/20 text-white font-bold text-sm pointer-events-none">Яндекс.Карты</span>
-</a>
+<div class="relative w-full min-h-0 overflow-hidden rounded-xl border border-outline-variant shadow-sm aspect-video min-h-[200px] bg-surface-container-high">
+<iframe class="absolute inset-0 w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-i18n-title="contact.map.ariaPlant" title="Карта: производство в п. Тихорецы" src="https://yandex.ru/map-widget/v1/?from=api-maps&amp;mode=search&amp;text=%D0%A2%D0%B8%D1%85%D0%BE%D1%80%D0%B5%D1%86%D1%8B%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%201%D0%BD"></iframe>
 </div>
+<p class="text-sm min-w-0 mt-4"><a class="font-bold uppercase tracking-wider text-primary hover:underline inline-flex items-center gap-1" href="https://yandex.ru/maps/?text=%D0%A2%D0%B8%D1%85%D0%BE%D1%80%D0%B5%D1%86%D1%8B%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%201%D0%BD" target="_blank" rel="noopener noreferrer"><span data-i18n="contact.map.open">Открыть в Яндекс.Картах</span><span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span></a></p>
+</article>
 </div>
 </section>
-<section class="mt-20">
-<h2 class="font-headline font-bold text-2xl mb-10 text-center" data-i18n="contact.bento.title">Документы</h2>
+<section class="bg-surface-container-highest rounded-xl border border-outline-variant/30 p-6 md:p-8 mt-10 lg:mt-14" aria-labelledby="contact-direct-heading">
+<h2 id="contact-direct-heading" class="font-headline font-bold text-xl md:text-2xl tracking-tight mb-5 md:mb-6" data-i18n="contact.direct.title">Связь напрямую</h2>
+<dl class="grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-6 lg:gap-10">
+<div>
+<dt class="text-[10px] font-bold uppercase tracking-wider text-outline mb-1" data-i18n="contact.direct.phone">Телефон</dt>
+<dd class="m-0 text-sm md:text-base font-medium"><a class="text-on-surface hover:text-primary transition-colors underline-offset-2 hover:underline" href="tel:+78003332233" data-i18n="header.phone.display">8 800 333-22-33</a></dd>
+</div>
+<div>
+<dt class="text-[10px] font-bold uppercase tracking-wider text-outline mb-1" data-i18n="contact.direct.email">Email</dt>
+<dd class="m-0 text-sm md:text-base font-medium break-all sm:break-words"><a class="text-on-surface hover:text-primary transition-colors underline-offset-2 hover:underline" href="mailto:beams@korosbeams.ru">beams@korosbeams.ru</a></dd>
+</div>
+<div>
+<dt class="text-[10px] font-bold uppercase tracking-wider text-outline mb-1.5" data-i18n="contact.direct.messengers">Мессенджеры</dt>
+<dd class="m-0">
+<span class="inline-flex items-center gap-1.5" role="group" data-i18n-aria-label="a11y.messengerLinks">
+<a class="inline-flex shrink-0 items-center justify-center rounded-sm opacity-90 hover:opacity-100 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
+<img src="images/icons/max-logo-2025.png" alt="" width="30" height="30" class="h-[30px] w-[30px] object-contain object-center pointer-events-none" loading="lazy" decoding="async"/>
+</a>
+<a class="inline-flex shrink-0 items-center justify-center rounded-sm opacity-90 hover:opacity-100 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
+<img src="images/icons/telegram-logo.png" alt="" width="30" height="30" class="h-[30px] w-[30px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+</a>
+</span>
+</dd>
+</div>
+</dl>
+</section>
+</div>
+<section class="mt-16 lg:mt-20 pt-12 lg:pt-14 border-t border-surface-container-high w-full">
+<h2 class="font-headline font-bold text-2xl md:text-3xl mb-10 text-center tracking-tight" data-i18n="contact.bento.title">Документы</h2>
 <div class="grid md:grid-cols-3 gap-6">
 <a class="group p-8 bg-secondary text-white rounded-xl hover:-translate-y-1 transition-transform" href="certificates.html">
 <span class="material-symbols-outlined text-4xl opacity-70 mb-4 block">menu_book</span>
