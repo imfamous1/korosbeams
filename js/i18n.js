@@ -19,6 +19,7 @@
       "meta.title.contact": "Контакты | ООО «КОРОС»",
       "meta.title.compare": "Сравнение линеек | ООО «КОРОС»",
       "meta.title.certificates": "Сертификаты и испытания | ООО «КОРОС»",
+      "meta.title.objects": "Наши объекты | ООО «КОРОС»",
       "meta.desc.index": "Производитель балок БДК H20 для монолитной опалубки. ГОСТ Р 71938-2025, EN 13377:2002. Ленинградская область, поставки в РФ и за рубеж.",
       "meta.desc.catalog": "БДК H20 Norm и БДК H20 Pro — две линейки деревянных балок для опалубки от ООО «КОРОС».",
       "meta.desc.product.norm": "БДК H20 Norm: фанера ФСФ 24 мм, торцы с защитным составом. Техданные и стандарты ГОСТ и EN.",
@@ -27,19 +28,28 @@
       "meta.desc.contact": "Свяжитесь с ООО «КОРОС»: адрес в п. Тихорецы, телефон, email и форма запроса.",
       "meta.desc.compare": "Таблица сравнения БДК H20 Norm и БДК H20 Pro по материалам, защите торцов и оснащению.",
       "meta.desc.certificates": "Стандарты ГОСТ и EN, протоколы испытаний и презентация продукции для скачивания.",
+      "meta.desc.objects": "Примеры объектов с балками БДК КОРОС; раздел обновляется.",
 
       "a11y.mainNav": "Основная навигация",
       "a11y.breadcrumbs": "Хлебные крошки",
       "a11y.langSwitch": "Язык интерфейса",
+      "a11y.messengerLinks": "Мессенджеры: чат по номеру",
+      "a11y.openMax": "Написать в MAX",
+      "a11y.openTelegram": "Написать в Telegram",
       "lang.ru.short": "RU",
       "lang.en.short": "EN",
 
       "nav.home": "Главная",
       "nav.about": "О компании",
       "nav.products": "Продукция",
-      "nav.certificates": "Сертификаты",
+      "nav.certificates": "Сертификация",
+      "nav.objects": "Наши объекты",
       "nav.contact": "Контакты",
       "nav.cta": "Связаться",
+
+      "header.phone.display": "8 800 333-22-33",
+      "header.messenger.max": "MAX",
+      "header.messenger.telegram": "Telegram",
 
       "contact.phone.label": "Телефон",
       "contact.email.label": "Почта",
@@ -53,6 +63,7 @@
       "footer.link.catalog": "Каталог линеек",
       "footer.link.compare": "Сравнение",
       "footer.link.certificates": "Сертификаты",
+      "footer.link.objects": "Наши объекты",
       "footer.link.manufacturing": "О компании",
       "footer.link.contact": "Связаться",
       "footer.privacy": "Политика конфиденциальности",
@@ -324,6 +335,8 @@
       "contact.direct.title": "Контакты",
       "contact.direct.phone": "Телефон",
       "contact.direct.email": "Email",
+      "contact.direct.messengers": "Мессенджеры",
+      "contact.form.phoneHint": "8 800 333-22-33",
 
       "contact.bento.title": "Документы и поддержка",
       "contact.bento.doc.t": "Техническая документация",
@@ -375,6 +388,12 @@
       "cert.card3.link": "Скачать PDF",
       "cert.std.title": "Применяемые стандарты",
       "cert.std.p": "ГОСТ Р 71938-2025; EN 13377:2002; ГОСТ 8486-86 (древесина); ГОСТ 3916.1-2018 и EN 636-3 (фанера); EN 301 / EN 204-205 (классификация клеевых систем).",
+
+      "objects.hero.kicker": "Объекты",
+      "objects.title": "Наши объекты",
+      "objects.lead": "Раздел в подготовке: здесь появятся примеры объектов с нашими балками БДК.",
+      "objects.placeholder": "Мы готовим материалы для этой страницы. По вопросам поставок и референсов свяжитесь с нами.",
+      "objects.cta": "Связаться",
     },
     en: {
       "meta.title.index": "Koros | H20 timber formwork beams",
@@ -385,6 +404,7 @@
       "meta.title.contact": "Contact | Koros LLC",
       "meta.title.compare": "Line comparison | Koros LLC",
       "meta.title.certificates": "Certificates & testing | Koros LLC",
+      "meta.title.objects": "Our projects | Koros LLC",
       "meta.desc.index": "Manufacturer of H20 timber beams for formwork. GOST R 71938-2025, EN 13377:2002. Leningrad region; Russia and export.",
       "meta.desc.catalog": "H20 Norm and H20 Pro timber beam lines for formwork from Koros LLC.",
       "meta.desc.product.norm": "H20 Norm: 24 mm FSF plywood, compound end sealing. Specs and GOST/EN alignment.",
@@ -393,19 +413,28 @@
       "meta.desc.contact": "Contact Koros LLC: Tikhoretsy address, phone, email and inquiry form.",
       "meta.desc.compare": "Side-by-side comparison of H20 Norm and H20 Pro by materials and end protection.",
       "meta.desc.certificates": "GOST & EN alignment, test reports and downloadable product presentation.",
+      "meta.desc.objects": "Reference projects with Koros H20 beams; section coming soon.",
 
       "a11y.mainNav": "Main navigation",
       "a11y.breadcrumbs": "Breadcrumbs",
       "a11y.langSwitch": "Interface language",
+      "a11y.messengerLinks": "Messaging apps",
+      "a11y.openMax": "Message on MAX",
+      "a11y.openTelegram": "Message on Telegram",
       "lang.ru.short": "RU",
       "lang.en.short": "EN",
 
       "nav.home": "Home",
       "nav.about": "About",
       "nav.products": "Products",
-      "nav.certificates": "Certificates",
+      "nav.certificates": "Certification",
+      "nav.objects": "Our projects",
       "nav.contact": "Contact",
       "nav.cta": "Get in touch",
+
+      "header.phone.display": "8 800 333-22-33",
+      "header.messenger.max": "MAX",
+      "header.messenger.telegram": "Telegram",
 
       "contact.phone.label": "Phone",
       "contact.email.label": "Email",
@@ -419,6 +448,7 @@
       "footer.link.catalog": "Product lines",
       "footer.link.compare": "Comparison",
       "footer.link.certificates": "Certificates",
+      "footer.link.objects": "Our projects",
       "footer.link.manufacturing": "About us",
       "footer.link.contact": "Contact",
       "footer.privacy": "Privacy policy",
@@ -693,6 +723,8 @@
       "contact.direct.title": "Direct",
       "contact.direct.phone": "Phone",
       "contact.direct.email": "Email",
+      "contact.direct.messengers": "Messengers",
+      "contact.form.phoneHint": "8 800 333-22-33",
 
       "contact.bento.title": "Docs & support",
       "contact.bento.doc.t": "Technical pack",
@@ -744,6 +776,12 @@
       "cert.card3.link": "Download PDF",
       "cert.std.title": "Referenced standards",
       "cert.std.p": "GOST R 71938-2025; EN 13377:2002; GOST 8486-86 (timber); GOST 3916.1-2018 & EN 636-3 (plywood); EN 301 / EN 204-205 (adhesive systems).",
+
+      "objects.hero.kicker": "Projects",
+      "objects.title": "Our projects",
+      "objects.lead": "This section is in preparation: case studies with our H20 beams will appear here.",
+      "objects.placeholder": "We are preparing content for this page. For deliveries and references, please contact us.",
+      "objects.cta": "Get in touch",
     },
   };
 
@@ -814,6 +852,10 @@
         btn.classList.toggle(c, !on);
       });
     });
+
+    if (window.KorosLayout && typeof window.KorosLayout.syncHeaderHeight === "function") {
+      window.KorosLayout.syncHeaderHeight();
+    }
   }
 
   function initI18nUi() {

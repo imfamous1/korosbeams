@@ -7,4 +7,37 @@
   a:any-link {
     cursor: pointer;
   }
+  /* Чуть крупнее базовый текст: лучше читаемость на Retina 13" и при масштабе ОС */
+  html {
+    font-size: 106.25%;
+    scroll-padding-top: var(--koros-header-height, 5rem);
+  }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 112.5%;
+    }
+  }
+}
+
+/* Отступ под фиксированную шапку = фактическая высота полосы [data-koros-header-bar] (см. js/layout.js) */
+@layer components {
+  .koros-site-main {
+    padding-top: var(--koros-header-height, 5rem);
+  }
+
+  /* Бургер / крестик: глиф Material Symbols смещён в метриках шрифта; grid + line-height 0 центрируют в кнопке */
+  [data-nav-toggle] {
+    display: inline-grid;
+    place-items: center;
+    line-height: 0;
+  }
+  [data-nav-toggle] .material-symbols-outlined.koros-nav-toggle-icon {
+    display: grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1.75rem;
+    line-height: 0;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 28;
+  }
 }

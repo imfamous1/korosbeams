@@ -5,12 +5,20 @@
   "use strict";
 
   var DESKTOP_ON =
-    "text-[#725c00] dark:text-[#ffd100] font-semibold border-b-2 border-[#ffd100] pb-0.5";
+    "text-[16px] leading-tight text-[#725c00] dark:text-[#ffd100] font-semibold border-b-2 border-[#ffd100] pb-0.5";
   var DESKTOP_OFF =
-    "text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors";
-  var MOBILE_ON = "py-2.5 text-lg font-headline font-semibold text-[#725c00] dark:text-[#ffd100]";
+    "text-[16px] leading-tight text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors";
+  var MOBILE_ON =
+    "py-2.5 text-[16px] leading-snug font-headline font-semibold text-[#725c00] dark:text-[#ffd100]";
   var MOBILE_OFF =
-    "py-2.5 text-lg font-headline font-semibold text-on-surface hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors";
+    "py-2.5 text-[16px] leading-snug font-headline font-semibold text-on-surface hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors";
+
+  function syncKorosHeaderHeight() {
+    var bar = document.querySelector("[data-koros-header-bar]");
+    if (!bar) return;
+    var px = Math.ceil(bar.getBoundingClientRect().height);
+    document.documentElement.style.setProperty("--koros-header-height", px + "px");
+  }
 
   function applyNavActive(active) {
     document.querySelectorAll("a[data-koros-nav]").forEach(function (el) {
@@ -44,7 +52,27 @@
     if (fe) fe.innerHTML = f;
     var nav = document.documentElement.getAttribute("data-koros-nav") || "home";
     applyNavActive(nav);
+
+    syncKorosHeaderHeight();
+    var bar = document.querySelector("[data-koros-header-bar]");
+    if (bar && typeof ResizeObserver !== "undefined") {
+      var ro = new ResizeObserver(function () {
+        syncKorosHeaderHeight();
+      });
+      ro.observe(bar);
+    }
+    window.addEventListener("resize", syncKorosHeaderHeight);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(syncKorosHeaderHeight).catch(function () {});
+    }
+    requestAnimationFrame(function () {
+      requestAnimationFrame(syncKorosHeaderHeight);
+    });
   }
+
+  window.KorosLayout = {
+    syncHeaderHeight: syncKorosHeaderHeight,
+  };
 
   document.addEventListener("DOMContentLoaded", mountChrome);
 })();
