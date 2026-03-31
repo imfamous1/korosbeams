@@ -80,6 +80,12 @@
       "index.hero.cta.quote": "Запросить расчёт",
       "index.hero.scroll": "Листайте",
 
+      "index.features.kicker": "Цепочка ценности",
+      "index.features.title": "От сырья до отгрузки — в одном скане",
+      "index.features.lead": "Четыре опоры: производство под ключ, прочность по нормам, материалы и клей, экспортная логистика.",
+      "index.features.aside.label": "Документы",
+      "index.features.aside.text": "Паспорта, протоколы испытаний, данные по клеям и упаковке — по запросу к отгрузке.",
+
       "index.feat1.title": "Полный цикл",
       "index.feat1.text": "Распиловка, сушка, оптимизация, сращивание, шип, склейвание БДК, покраска и маркировка — под нашим контролем.",
       "index.feat2.title": "Прочность по нормам",
@@ -464,6 +470,12 @@
       "index.hero.cta.catalog": "Products",
       "index.hero.cta.quote": "Request a quote",
       "index.hero.scroll": "Scroll",
+
+      "index.features.kicker": "Value chain",
+      "index.features.title": "From raw material to dispatch — one scan",
+      "index.features.lead": "Four pillars: in-house production, code-aligned strength, materials and adhesive, export logistics.",
+      "index.features.aside.label": "Documentation",
+      "index.features.aside.text": "Data sheets, test reports, adhesive and packing details — available on request before shipment.",
 
       "index.feat1.title": "Full cycle",
       "index.feat1.text": "Sawing, drying, optimization, finger‑jointing, scarf jointing, beam gluing, coating and marking — all under our control.",

@@ -38,31 +38,52 @@
 </div>
 </div>
 </section>
-<section id="features" class="py-24 bg-surface-container-low">
+<section id="features" class="py-24 bg-surface-container-low border-y border-outline-variant/10">
 <div class="max-w-[1440px] mx-auto px-6 sm:px-8">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
-<div class="md:col-span-4 bg-primary-container p-10 sm:p-12 flex flex-col justify-between">
-<span class="material-symbols-outlined text-5xl text-on-primary-container">precision_manufacturing</span>
-<div>
-<h3 class="text-2xl sm:text-3xl font-headline font-bold text-on-primary-container mb-4" data-i18n="index.feat1.title">Полный цикл</h3>
-<p class="text-on-primary-container/80" data-i18n="index.feat1.text">…</p>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<div class="lg:col-span-4 lg:sticky lg:top-28">
+<p class="text-primary font-headline font-bold uppercase text-xs tracking-[0.2em] mb-3" data-i18n="index.features.kicker">Цепочка ценности</p>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold tracking-tight mb-6 leading-[1.1]" data-i18n="index.features.title">От сырья до отгрузки — в одном скане</h2>
+<p class="text-zinc-600 leading-relaxed mb-8 max-w-md" data-i18n="index.features.lead">Четыре опоры: производство под ключ, прочность по нормам, материалы и клей, экспортная логистика.</p>
+<div class="hidden lg:flex flex-col gap-3 pl-4 border-l-2 border-primary/50">
+<span class="text-xs font-bold uppercase tracking-widest text-zinc-500" data-i18n="index.features.aside.label">Документы</span>
+<span class="text-sm text-zinc-600 leading-relaxed" data-i18n="index.features.aside.text">Паспорта, протоколы испытаний, данные по клеям и упаковке — по запросу к отгрузке.</span>
 </div>
 </div>
-<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="bg-surface-container-lowest p-10 sm:p-12 border-b-4 border-secondary">
-<span class="material-symbols-outlined text-4xl text-secondary mb-6">verified</span>
-<h3 class="text-xl font-headline font-bold mb-4" data-i18n="index.feat2.title">Прочность по нормам</h3>
-<p class="text-zinc-600" data-i18n="index.feat2.text">…</p>
+<div class="lg:col-span-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<article class="group flex flex-col bg-primary-container p-8 sm:p-10 sm:col-span-2 border border-primary-container">
+<div class="flex items-start justify-between gap-4 mb-5">
+<span class="font-headline font-black text-5xl sm:text-6xl leading-none text-on-primary-container/25 tabular-nums group-hover:text-on-primary-container/35 transition-colors shrink-0" aria-hidden="true">01</span>
+<span class="material-symbols-outlined text-4xl sm:text-5xl text-on-primary-container leading-none shrink-0" aria-hidden="true">precision_manufacturing</span>
 </div>
-<div class="bg-surface-container-lowest p-10 sm:p-12 border-b-4 border-primary">
-<span class="material-symbols-outlined text-4xl text-primary mb-6">forest</span>
-<h3 class="text-xl font-headline font-bold mb-4" data-i18n="index.feat3.title">Материалы и клей</h3>
-<p class="text-zinc-600" data-i18n="index.feat3.text">…</p>
+<h3 class="text-xl sm:text-2xl font-headline font-bold text-on-primary-container mb-3" data-i18n="index.feat1.title">Полный цикл</h3>
+<p class="text-on-primary-container/80 text-sm sm:text-base leading-relaxed" data-i18n="index.feat1.text">…</p>
+</article>
+<article class="group flex flex-col bg-surface-container-lowest p-8 sm:p-10 border-b-4 border-secondary shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-4 mb-5">
+<span class="font-headline font-black text-4xl sm:text-5xl leading-none text-secondary/20 tabular-nums shrink-0" aria-hidden="true">02</span>
+<span class="material-symbols-outlined text-4xl text-secondary leading-none shrink-0" aria-hidden="true">verified</span>
 </div>
-<div class="md:col-span-2 bg-surface-container-lowest p-10 border-l-4 border-secondary">
-<span class="material-symbols-outlined text-4xl text-secondary mb-4">public</span>
-<h3 class="text-xl font-headline font-bold mb-4" data-i18n="index.feat4.title">Экспорт и логистика</h3>
-<p class="text-zinc-600" data-i18n="index.feat4.text">…</p>
+<h3 class="text-lg font-headline font-bold mb-3" data-i18n="index.feat2.title">Прочность по нормам</h3>
+<p class="text-zinc-600 text-sm leading-relaxed" data-i18n="index.feat2.text">…</p>
+</article>
+<article class="group flex flex-col bg-surface-container-lowest p-8 sm:p-10 border-b-4 border-primary shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-4 mb-5">
+<span class="font-headline font-black text-4xl sm:text-5xl leading-none text-primary/20 tabular-nums shrink-0" aria-hidden="true">03</span>
+<span class="material-symbols-outlined text-4xl text-primary leading-none shrink-0" aria-hidden="true">forest</span>
+</div>
+<h3 class="text-lg font-headline font-bold mb-3" data-i18n="index.feat3.title">Материалы и клей</h3>
+<p class="text-zinc-600 text-sm leading-relaxed" data-i18n="index.feat3.text">…</p>
+</article>
+<article class="group flex flex-col bg-surface-container-lowest p-8 sm:p-10 sm:col-span-2 border-l-4 border-secondary">
+<div class="flex items-start justify-between gap-4 mb-5">
+<span class="font-headline font-black text-5xl sm:text-6xl leading-none text-secondary/15 tabular-nums shrink-0" aria-hidden="true">04</span>
+<span class="material-symbols-outlined text-4xl sm:text-5xl text-secondary leading-none shrink-0" aria-hidden="true">public</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-3" data-i18n="index.feat4.title">Экспорт и логистика</h3>
+<p class="text-zinc-600 text-sm sm:text-base leading-relaxed" data-i18n="index.feat4.text">…</p>
+</article>
 </div>
 </div>
 </div>
