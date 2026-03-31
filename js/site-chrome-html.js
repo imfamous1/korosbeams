@@ -89,7 +89,7 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 <li><a class="text-zinc-400 hover:text-white block" href="product-h20-norm.html" data-i18n="footer.link.h20.norm">БДК H20 Norm</a></li>
 <li><a class="text-zinc-400 hover:text-white block" href="product-h20-pro.html" data-i18n="footer.link.h20.pro">БДК H20 Pro</a></li>
 <li><a class="text-zinc-400 hover:text-white block" href="catalog.html" data-i18n="footer.link.catalog">Каталог</a></li>
-<li><a class="text-zinc-400 hover:text-white block" href="catalog.html#compare" data-i18n="footer.link.compare">Сравнение</a></li>
+<li><a class="text-zinc-400 hover:text-white block" href="catalog.html#applications" data-i18n="footer.link.applications">Применение</a></li>
 </ul>
 </div>
 <div>
