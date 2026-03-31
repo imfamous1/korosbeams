@@ -40,4 +40,22 @@
     line-height: 0;
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 28;
   }
+
+  /*
+   * Слой поверх hero-изображения: не brightening фото, а градиент цвета фона (как было: from-background → via-background/44 → transparent).
+   * Крутите opacity и стоп-позиции на секции или на .koros-hero-scrim через --koros-hero-scrim-*.
+   */
+  .koros-hero-scrim {
+    --koros-hero-scrim-rgb: 252 249 248;
+    --koros-hero-scrim-from-opacity: 1;
+    --koros-hero-scrim-via-opacity: 0.44;
+    --koros-hero-scrim-via-pos: 50%;
+    --koros-hero-scrim-to-pos: 100%;
+    background: linear-gradient(
+      to right,
+      rgb(var(--koros-hero-scrim-rgb) / var(--koros-hero-scrim-from-opacity)) 0%,
+      rgb(var(--koros-hero-scrim-rgb) / var(--koros-hero-scrim-via-opacity)) var(--koros-hero-scrim-via-pos),
+      transparent var(--koros-hero-scrim-to-pos)
+    );
+  }
 }
