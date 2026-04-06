@@ -6,7 +6,7 @@
 
   var STORAGE_KEY = "koros-lang";
   var LANG_SWITCH_ACTIVE = ["bg-primary-container", "text-on-primary-container"];
-  var LANG_SWITCH_INACTIVE = ["bg-transparent", "text-zinc-600", "hover:bg-surface-container-high"];
+  var LANG_SWITCH_INACTIVE = ["bg-transparent", "text-zinc-600", "dark:text-zinc-400", "hover:bg-surface-container-high"];
   var DEFAULT_LANG = "ru";
 
   var STRINGS = {
@@ -36,6 +36,7 @@
       "a11y.messengerLinks": "Мессенджеры: чат по номеру",
       "a11y.openMax": "Написать в MAX",
       "a11y.openTelegram": "Написать в Telegram",
+      "a11y.writeEmail": "Написать на почту",
       "lang.ru.short": "RU",
       "lang.en.short": "EN",
 
@@ -432,6 +433,7 @@
       "a11y.messengerLinks": "Messaging apps",
       "a11y.openMax": "Message on MAX",
       "a11y.openTelegram": "Message on Telegram",
+      "a11y.writeEmail": "Send email",
       "lang.ru.short": "RU",
       "lang.en.short": "EN",
 

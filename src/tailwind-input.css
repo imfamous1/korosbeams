@@ -45,6 +45,21 @@
    * Слой поверх hero-изображения: не brightening фото, а градиент цвета фона (как было: from-background → via-background/44 → transparent).
    * Крутите opacity и стоп-позиции на секции или на .koros-hero-scrim через --koros-hero-scrim-*.
    */
+  /* Шапка: единая стилистика контактов / языка / CTA (бейджи-«чипы») */
+  .koros-header-chip {
+    @apply box-border inline-flex items-center justify-center gap-1.5 rounded-none border border-outline-variant/55 bg-surface-container-high/90 text-on-surface text-xs font-medium font-headline whitespace-nowrap transition-colors shrink-0;
+    @apply dark:border-zinc-600/45 dark:bg-zinc-800/75;
+    @apply hover:bg-surface-container-highest dark:hover:bg-zinc-700/85;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface dark:focus-visible:ring-offset-zinc-900;
+  }
+  .koros-header-chip--icon {
+    @apply p-1.5 min-h-[2rem] min-w-[2rem];
+  }
+  .koros-header-chip--cta {
+    @apply border-outline-variant/60 bg-primary-container text-on-primary-container font-bold;
+    @apply hover:opacity-95 dark:hover:opacity-95;
+  }
+
   .koros-hero-scrim {
     --koros-hero-scrim-rgb: 252 249 248;
     --koros-hero-scrim-from-opacity: 1;
