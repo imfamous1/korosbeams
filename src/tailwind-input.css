@@ -79,6 +79,13 @@
     user-select: none;
   }
 
+  /* Главная: hero-фото целиком в блоке + лёгкий сдвиг кадра вправо */
+  .koros-index-hero-img {
+    -o-object-fit: cover;
+    object-fit: contain;
+    object-position: 76% center;
+  }
+
   .koros-hero-scrim {
     --koros-hero-scrim-rgb: 252 249 248;
     --koros-hero-scrim-from-opacity: 1;
