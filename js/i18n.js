@@ -91,13 +91,14 @@
       "index.features.aside.text": "Паспорта, протоколы испытаний, данные по клеям и упаковке — по запросу к отгрузке.",
 
       "index.feat1.title": "Полный цикл",
-      "index.feat1.text": "Распиловка, сушка, оптимизация, сращивание, шип, склейвание БДК, покраска и маркировка — под нашим контролем.",
+      "index.feat1.text":
+        'Распиловка<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>сушка<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>оптимизация заготовки<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>сращивание заготовки<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>строжка заготовки (стенка, полка)<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>склейка БДК<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>покраска БДК<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>маркировка БДК<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>полимерные заглушки БДК<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>хранение БДК. Все этапы — под нашим контролем.',
       "index.feat2.title": "Прочность по нормам",
       "index.feat2.text": "Испытания в аккредитованных центрах. Показатели изгиба, разрушающей нагрузки и поперечной силы — не ниже требований EN 13377:2002.",
       "index.feat3.title": "Материалы и клей",
-      "index.feat3.text": "Хвоя не ниже II сорта по ГОСТ 8486-86. Фанера ФСФ по ГОСТ 3916.1-2018 и EN 636-3. Соединение PUR-клеем по EN 301 / EN 204-205.",
+      "index.feat3.text": "Хвоя не ниже II сорта по ГОСТ 8486-86. Фанера ФСФ по ГОСТ 3916.1-2018 и EN 636-3. Соединение PUR-клеем по EN 301 / EN 204-205. Покрытие с защитой от УФ-лучей; у линейки Pro — полимерные заглушки на торцах балки.",
       "index.feat4.title": "Экспорт и логистика",
-      "index.feat4.text": "Опыт поставок и сотрудничества с партнёрами в Грузии, Турции, Египте, ОАЭ, Израиле, Китае и других странах.",
+      "index.feat4.text": "Логистика в РФ и любую точку мира.",
 
       "index.product.kicker": "Балка",
       "index.product.titleLine1": "Наша продукция:",
@@ -488,13 +489,14 @@
       "index.features.aside.text": "Data sheets, test reports, adhesive and packing details — available on request before shipment.",
 
       "index.feat1.title": "Full cycle",
-      "index.feat1.text": "Sawing, drying, optimization, finger‑jointing, scarf jointing, beam gluing, coating and marking — all under our control.",
+      "index.feat1.text":
+        'Sawing<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>drying<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>blank optimization<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>blank finger-jointing<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>blank planing (web, flange)<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>H20 beam gluing<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>beam coating<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>beam marking<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>polymer end caps<span class="koros-feat-cycle-arr" aria-hidden="true">→</span>beam storage. Every stage — under our control.',
       "index.feat2.title": "Code-aligned strength",
       "index.feat2.text": "Testing in accredited labs. Bending, ultimate load and shear values meet or exceed EN 13377:2002 minima stated in our data sheets.",
       "index.feat3.title": "Materials & adhesive",
-      "index.feat3.text": "Softwood not below II grade per GOST 8486-86. FSF plywood per GOST 3916.1-2018 and EN 636-3. PUR bonding per EN 301 / EN 204-205.",
+      "index.feat3.text": "Softwood not below II grade per GOST 8486-86. FSF plywood per GOST 3916.1-2018 and EN 636-3. PUR bonding per EN 301 / EN 204-205. Coating with UV protection; on the Pro line — polymer end caps on the beam ends.",
       "index.feat4.title": "Export & logistics",
-      "index.feat4.text": "Experience supplying partners in Georgia, Turkey, Egypt, UAE, Israel, China and other countries.",
+      "index.feat4.text": "Logistics across Russia and to any destination worldwide.",
 
       "index.product.kicker": "Beams",
       "index.product.titleLine1": "Our products:",
@@ -841,8 +843,14 @@
     }
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      if (el.hasAttribute("data-i18n-html")) return;
       var key = el.getAttribute("data-i18n");
       if (key && dict[key] != null) el.textContent = dict[key];
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-html");
+      if (key && dict[key] != null) el.innerHTML = dict[key];
     });
 
     document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {

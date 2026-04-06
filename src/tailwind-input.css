@@ -60,6 +60,25 @@
     @apply hover:opacity-95 dark:hover:opacity-95;
   }
 
+  /* Цепочка этапов в карточке «Полный цикл»: перенос строк + компактные стрелки */
+  .koros-feat-cycle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.2em;
+    row-gap: 0.35em;
+  }
+  .koros-feat-cycle-arr {
+    display: inline-block;
+    flex: 0 0 auto;
+    font-size: 0.68em;
+    font-weight: 600;
+    line-height: 1;
+    opacity: 0.5;
+    translate: 0 0.04em;
+    user-select: none;
+  }
+
   .koros-hero-scrim {
     --koros-hero-scrim-rgb: 252 249 248;
     --koros-hero-scrim-from-opacity: 1;
