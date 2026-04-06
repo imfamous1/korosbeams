@@ -67,6 +67,9 @@ module.exports = {
         xl: "0.5rem",
         full: "0.75rem",
       },
+      maxWidth: {
+        xl: "30rem",
+      },
     },
   },
   plugins: [
