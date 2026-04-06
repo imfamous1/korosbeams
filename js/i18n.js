@@ -100,8 +100,7 @@
 
       "index.product.kicker": "Балка",
       "index.product.titleLine1": "Наша продукция:",
-      "index.product.titleLine2": "БДК H20",
-      "index.product.s1.title": "Norm и Pro",
+      "index.product.s1.title": "Norm и Pro БДК Н20 и БДК Н20 Про",
       "index.product.s1.text": "Обе линейки — высота 200 мм, полка 40×80 мм, влажность древесины 12 ± 2 %, масса около 4,8 кг на погонный метр.",
       "index.product.s2.title": "Защита и покрытие",
       "index.product.s2.text": "Водостойкое покрытие с защитой от УФ, информативная маркировка. У Pro — полимерные заглушки на торцах; у Norm — обработка торца защитным составом.",
@@ -499,8 +498,7 @@
 
       "index.product.kicker": "Beams",
       "index.product.titleLine1": "Our products:",
-      "index.product.titleLine2": "BDK H20",
-      "index.product.s1.title": "Norm & Pro",
+      "index.product.s1.title": "Norm & Pro BDK H20 and BDK H20 Pro",
       "index.product.s1.text": "Both lines share 200 mm height, 40×80 mm flange, approx. 12 ± 2 % moisture and ~4.8 kg/m mass.",
       "index.product.s2.title": "Protection & coating",
       "index.product.s2.text": "Water-resistant coating with UV protection and informative marking. Pro line: polymer end caps; Norm line: protective end treatment.",
