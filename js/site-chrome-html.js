@@ -22,7 +22,7 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
 <img src="images/icons/telegram-logo.png" alt="" width="96" height="96" class="h-[18px] w-[18px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
-<a class="koros-header-chip koros-header-chip--icon h-9 w-9" href="mailto:beams@korosbeams.ru" data-i18n-aria-label="a11y.writeEmail">
+<a class="koros-header-chip koros-header-chip--icon h-9 w-9" href="mailto:info@korosbeams.ru" data-i18n-aria-label="a11y.writeEmail">
 <span class="material-symbols-outlined text-[18px] leading-none pointer-events-none" aria-hidden="true">mail</span>
 </a>
 <div class="inline-flex box-border h-9 shrink-0 items-stretch overflow-hidden rounded-none border border-outline-variant/55 bg-surface-container-high/90 divide-x divide-outline-variant/45 dark:border-zinc-600/45 dark:bg-zinc-800/75 dark:divide-zinc-600/45" role="group" data-i18n-aria-label="a11y.langSwitch" aria-label="ru en">
@@ -60,7 +60,7 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
 <img src="images/icons/telegram-logo.png" alt="" width="96" height="96" class="h-5 w-5 object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
-<a class="koros-header-chip koros-header-chip--icon h-9 w-9" href="mailto:beams@korosbeams.ru" data-i18n-aria-label="a11y.writeEmail">
+<a class="koros-header-chip koros-header-chip--icon h-9 w-9" href="mailto:info@korosbeams.ru" data-i18n-aria-label="a11y.writeEmail">
 <span class="material-symbols-outlined text-[18px] leading-none pointer-events-none" aria-hidden="true">mail</span>
 </a>
 </div>
@@ -101,7 +101,16 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 </div>
 <div>
 <h4 class="text-white font-bold mb-4 font-headline" data-i18n="footer.office">Контакты</h4>
-<p class="text-zinc-400"><span data-i18n="footer.addr.line1">…</span><br/><span data-i18n="footer.addr.line2">…</span></p>
+<div class="text-zinc-400 text-sm leading-relaxed">
+<div>
+<p class="text-white font-semibold text-xs uppercase tracking-wide mb-0.5" data-i18n="contact.addr.officeSpb.title">Офис СПБ</p>
+<p class="m-0"><span data-i18n="contact.addr.officeSpb.line">Санкт-Петербург, ул. Якорная, 7АД</span></p>
+</div>
+<div class="mt-6">
+<p class="text-white font-semibold text-xs uppercase tracking-wide mb-0.5" data-i18n="contact.addr.plant.title">Производство, п. Тихорицы</p>
+<p class="m-0"><span data-i18n="contact.addr.plant.line1">Россия, Ленинградская область,</span><br/><span data-i18n="contact.addr.plant.line2">п. Тихорицы, ул. Набережная, д. 1Н</span></p>
+</div>
+</div>
 <p class="mt-3"><a class="text-[#ffd100] font-medium" href="tel:+78003332233" data-i18n="header.phone.display">8 800 333-22-33</a></p>
 <p class="mt-2 flex flex-wrap items-center gap-2">
 <span class="inline-flex items-center gap-1.5 shrink-0" role="group" data-i18n-aria-label="a11y.messengerLinks">
@@ -112,7 +121,7 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 <img src="images/icons/telegram-logo.png" alt="" width="96" height="96" class="w-[22px] h-[22px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
 </span>
-<a class="text-zinc-400 hover:text-white break-all" href="mailto:beams@korosbeams.ru">beams@korosbeams.ru</a>
+<a class="text-zinc-400 hover:text-white break-all" href="mailto:info@korosbeams.ru">info@korosbeams.ru</a>
 </p>
 </div>
 </div>
