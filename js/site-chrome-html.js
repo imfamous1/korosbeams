@@ -10,7 +10,6 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <a href="manufacturing.html" data-koros-nav="manufacturing" data-i18n="nav.about">О компании</a>
 <a href="catalog.html" data-koros-nav="catalog" data-i18n="nav.products">Продукция</a>
 <a href="certificates.html" data-koros-nav="certificates" data-i18n="nav.certificates">Сертификация</a>
-<a href="objects.html" data-koros-nav="objects" data-i18n="nav.objects">Наши объекты</a>
 <a href="contact.html" data-koros-nav="contact" data-i18n="nav.contact">Контакты</a>
 </div>
 </div>
@@ -50,7 +49,6 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <a href="manufacturing.html" data-koros-nav="manufacturing" data-i18n="nav.about">О компании</a>
 <a href="catalog.html" data-koros-nav="catalog" data-i18n="nav.products">Продукция</a>
 <a href="certificates.html" data-koros-nav="certificates" data-i18n="nav.certificates">Сертификация</a>
-<a href="objects.html" data-koros-nav="objects" data-i18n="nav.objects">Наши объекты</a>
 <a href="contact.html" data-koros-nav="contact" data-i18n="nav.contact">Контакты</a>
 </div>
 <div class="mt-8 flex w-full max-w-md flex-col items-stretch gap-3 px-1">
@@ -95,7 +93,6 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 <ul class="space-y-2">
 <li><a class="text-zinc-400 hover:text-white block" href="manufacturing.html" data-i18n="footer.link.manufacturing">О компании</a></li>
 <li><a class="text-zinc-400 hover:text-white block" href="certificates.html" data-i18n="footer.link.certificates">Сертификаты</a></li>
-<li><a class="text-zinc-400 hover:text-white block" href="objects.html" data-i18n="footer.link.objects">Наши объекты</a></li>
 <li><a class="text-zinc-400 hover:text-white block" href="contact.html" data-i18n="footer.link.contact">Связаться</a></li>
 </ul>
 </div>
