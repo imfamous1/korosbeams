@@ -48,7 +48,7 @@
       "nav.contact": "Контакты",
       "nav.cta": "Связаться",
 
-      "header.phone.display": "8 800 333-22-33",
+      "header.phone.display": "8 800 444 46 94",
       "header.messenger.max": "MAX",
       "header.messenger.telegram": "Telegram",
 
@@ -446,7 +446,7 @@
       "nav.contact": "Contact",
       "nav.cta": "Get in touch",
 
-      "header.phone.display": "8 800 333-22-33",
+      "header.phone.display": "8 800 444 46 94",
       "header.messenger.max": "MAX",
       "header.messenger.telegram": "Telegram",
 

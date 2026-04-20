@@ -16,7 +16,7 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 </div>
 <div class="hidden md:flex items-center gap-2 shrink-0 min-w-0 flex-nowrap overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
 <div class="grid shrink-0 [grid-template-columns:auto_repeat(3,2.25rem)] items-center gap-x-0.5">
-<a class="koros-header-chip h-9 px-2 text-sm font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78003332233" data-i18n="header.phone.display">8 800 333-22-33</a>
+<a class="koros-header-chip h-9 px-2 text-sm font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
 <img src="images/icons/max-logo-2025.png" alt="" width="64" height="32" class="max-h-[25px] w-auto max-w-[48px] object-contain object-center pointer-events-none" loading="lazy" decoding="async"/>
 </a>
@@ -55,7 +55,7 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 </div>
 <div class="mt-8 flex w-full max-w-md flex-col items-stretch gap-3 px-1">
 <div class="grid w-full max-w-md mx-auto [grid-template-columns:auto_repeat(3,2.25rem)] items-center justify-center gap-x-0.5">
-<a class="koros-header-chip h-9 px-2 text-sm font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78003332233" data-i18n="header.phone.display">8 800 333-22-33</a>
+<a class="koros-header-chip h-9 px-2 text-sm font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
 <img src="images/icons/max-logo-2025.png" alt="" width="64" height="32" class="max-h-[25px] w-auto max-w-[48px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
@@ -111,7 +111,7 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 <p class="m-0"><span data-i18n="contact.addr.plant.line1">Россия, Ленинградская область,</span><br/><span data-i18n="contact.addr.plant.line2">п. Тихорицы, ул. Набережная, д. 1Н</span></p>
 </div>
 </div>
-<p class="mt-3"><a class="text-[#ffd100] font-medium" href="tel:+78003332233" data-i18n="header.phone.display">8 800 333-22-33</a></p>
+<p class="mt-3"><a class="text-[#ffd100] font-medium" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a></p>
 <p class="mt-2 flex flex-wrap items-center gap-2">
 <span class="inline-flex items-center gap-1.5 shrink-0" role="group" data-i18n-aria-label="a11y.messengerLinks">
 <a class="inline-flex shrink-0 rounded-sm opacity-90 hover:opacity-100 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
