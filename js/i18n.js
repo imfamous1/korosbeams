@@ -121,8 +121,8 @@
 
       "index.specs.kicker": "К проектированию",
       "index.specs.title": "Ключевые данные",
-      "index.specs.sub": "Номинальные характеристики балки БДК H20 — для смет, подбора и сверки с нормами.",
-      "index.specs.aside": "Фактические значения по партии — в паспорте изделия и приложениях к отгрузке.",
+      "index.specs.sub": "Секция помогает быстро оценить применимость балки БДК H20 на стадии концепции и ППР: вы заранее видите нормативную базу, диапазон длин и базовые расчетные ориентиры для подбора системы опалубки. Это сокращает время согласований между проектировщиком, снабжением и строительной площадкой.",
+      "index.specs.aside": "Показатели приведены как справочные номинальные для предварительного выбора решения. Для финального расчета и приемки всегда используйте паспорт конкретной партии и комплект отгрузочных документов.",
       "index.specs.std": "Стандарты",
       "index.specs.std.val": "ГОСТ Р 71938-2025, EN 13377:2002",
       "index.specs.dims": "Доска / Фанера",
@@ -527,8 +527,8 @@
 
       "index.specs.kicker": "Engineering",
       "index.specs.title": "Key data",
-      "index.specs.sub": "Nominal BDK H20 beam specs — for estimates, selection and code checks.",
-      "index.specs.aside": "Lot-specific figures appear on the product data sheet and shipping paperwork.",
+      "index.specs.sub": "This section helps teams quickly evaluate BDK H20 suitability during concept design and method statements: you can align standards, length range and baseline structural references before final procurement. It reduces back-and-forth between engineering, purchasing and site operations.",
+      "index.specs.aside": "Values are shown as nominal references for preliminary selection. For final design checks and acceptance, always rely on the product passport for the specific lot and shipping documentation.",
       "index.specs.std": "Standards",
       "index.specs.std.val": "GOST R 71938-2025, EN 13377:2002",
       "index.specs.dims": "Board / plywood",
