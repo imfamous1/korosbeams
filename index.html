@@ -11,6 +11,17 @@
 <style>
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .tonal-shift { transition: background-color 0.3s ease; }
+        .koros-index-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .koros-hero-scrim {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.48) 42%, rgba(255, 255, 255, 0.32) 72%, rgba(255, 255, 255, 0.18) 100%);
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
@@ -18,8 +29,8 @@
 <main class="koros-site-main">
 <section class="relative min-h-[720px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0 bg-background">
-<img class="koros-index-hero-img w-full h-full" alt="Лесопилка и склад жёлтых балок БДК" src="images/hero-lumber-yard.png"/>
-<!-- <div class="absolute inset-0 koros-hero-scrim pointer-events-none" aria-hidden="true"></div> -->
+<img class="koros-index-hero-img absolute inset-0 block" alt="Лесопилка и склад жёлтых балок БДК" src="images/hero-lumber-yard-chatgpt.png"/>
+<div class="koros-hero-scrim pointer-events-none" aria-hidden="true"></div>
 </div>
 <div class="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-8 w-full py-20">
 <div class="max-w-3xl">
