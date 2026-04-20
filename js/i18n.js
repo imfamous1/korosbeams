@@ -151,7 +151,8 @@
       "mfg.about.li2": "Современное технологичное и экологически ответственное производство.",
       "mfg.about.li3": "Эффективная логистика, развитая инфраструктура и сопровождение ВЭД.",
       "mfg.about.stats.prod": "До 100 000 м балок в месяц",
-      "mfg.about.stats.area": "10 000 м² производственных площадей",
+      "mfg.about.stats.area": "5 000 м² производственных площадей",
+      "mfg.about.stats.qc": "контроль качества на всех этапах",
 
       "mfg.cycle.title": "Цикл производства",
       "mfg.cycle.lead": "Полный цикл переработки древесины под опалубочные балки.",
@@ -168,7 +169,7 @@
       "mfg.quality.sub": "Соответствие ГОСТ Р 71938-2025 и EN 13377:2002; древесина хвойных пород не ниже II сорта по ГОСТ 8486-86.",
       "mfg.quality.th.std": "Стандарт",
       "mfg.quality.th.req": "Показатель",
-      "mfg.quality.th.koros": "КОРОС",
+      "mfg.quality.th.koros": "ООО Корос",
       "mfg.quality.th.status": "Статус",
       "mfg.quality.r1.c1": "EN 13377:2002",
       "mfg.quality.r1.c2": "Изгибающий момент",
@@ -558,7 +559,8 @@
       "mfg.about.li3": "Efficient logistics, solid infrastructure and foreign-trade support.",
 
       "mfg.about.stats.prod": "Up to 100,000 m of beams per month",
-      "mfg.about.stats.area": "10,000 m² of production space",
+      "mfg.about.stats.area": "5,000 m² of production space",
+      "mfg.about.stats.qc": "quality control at every stage",
 
       "mfg.cycle.title": "Production flow",
       "mfg.cycle.lead": "Full timber processing chain dedicated to formwork beams.",
@@ -575,7 +577,7 @@
       "mfg.quality.sub": "GOST R 71938-2025 and EN 13377:2002; softwood not below grade II per GOST 8486-86.",
       "mfg.quality.th.std": "Standard",
       "mfg.quality.th.req": "Indicator",
-      "mfg.quality.th.koros": "Koros",
+      "mfg.quality.th.koros": "Koros LLC",
       "mfg.quality.th.status": "Status",
       "mfg.quality.r1.c1": "EN 13377:2002",
       "mfg.quality.r1.c2": "Bending moment",
