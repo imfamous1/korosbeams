@@ -99,4 +99,178 @@
       transparent var(--koros-hero-scrim-to-pos)
     );
   }
+
+  .koros-chat-widget {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 70;
+  }
+  .koros-chat-widget__toggle {
+    width: 3.2rem;
+    height: 3.2rem;
+    border: 0;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 10px 26px rgb(31 94 189 / 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .koros-chat-widget__toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgb(31 94 189 / 0.45);
+  }
+  .koros-chat-widget__toggle:focus-visible {
+    outline: 2px solid #ffd100;
+    outline-offset: 3px;
+  }
+  .koros-chat-widget__toggle-glyph {
+    font-size: 1.65rem;
+    line-height: 1;
+    color: #2aabee;
+    font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+    pointer-events: none;
+  }
+  .koros-chat-widget__panel {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 0.85rem);
+    width: min(23rem, calc(100vw - 2rem));
+    padding: 1rem 1rem 0.9rem;
+    background: #f4f6f8;
+    color: #1f2937;
+    border: 1px solid rgb(17 24 39 / 0.12);
+    border-radius: 0.75rem;
+    box-shadow: 0 24px 46px rgb(17 24 39 / 0.22);
+  }
+  .koros-chat-widget__close {
+    position: absolute;
+    top: 0.45rem;
+    right: 0.55rem;
+    border: 0;
+    background: transparent;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #4b5563;
+  }
+  .koros-chat-widget__close:hover {
+    background: rgb(148 163 184 / 0.2);
+  }
+  .koros-chat-widget__close:focus-visible {
+    outline: 2px solid #2f86eb;
+    outline-offset: 1px;
+  }
+  .koros-chat-widget__title {
+    margin: 0 1.75rem 0.2rem 0;
+    font-size: 1.02rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #111827;
+  }
+  .koros-chat-widget__hint {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: #6b7280;
+  }
+  .koros-chat-widget__content {
+    display: flex;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .koros-chat-widget__qr-wrap {
+    flex: 0 0 auto;
+    width: 8.4rem;
+    height: 8.4rem;
+    border: 1px solid rgb(17 24 39 / 0.08);
+    border-radius: 0.6rem;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    padding: 0.4rem;
+  }
+  .koros-chat-widget__qr {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .koros-chat-widget__actions {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    justify-content: center;
+  }
+  .koros-chat-widget__action {
+    border-radius: 0.55rem;
+    min-height: 2rem;
+    padding: 0.3rem 0.55rem 0.3rem 0.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    transition: filter 0.15s ease;
+  }
+  .koros-chat-widget__action:hover {
+    filter: brightness(0.96);
+  }
+  .koros-chat-widget__action:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 2px;
+  }
+  .koros-chat-widget__action--max {
+    /* Брендовый стиль MAX: сине-фиолетовый градиент */
+    background: linear-gradient(120deg, #2a8cff 0%, #5967ff 55%, #7c4dff 100%);
+  }
+  .koros-chat-widget__action--telegram {
+    /* Telegram blue (часто используется как #2AABEE) */
+    background: #2aabee;
+  }
+  .koros-chat-widget__action-icon {
+    width: 1.05rem;
+    height: 1.05rem;
+    object-fit: contain;
+    pointer-events: none;
+  }
+  .koros-chat-widget__action-icon-wrap {
+    width: 1.9rem;
+    min-width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.45rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255 255 255 / 0.2);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.18);
+  }
+  .koros-chat-widget__action-icon--max {
+    width: 1.55rem;
+  }
+  .koros-chat-widget__action span[data-i18n] {
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+
+  @media (max-width: 640px) {
+    .koros-chat-widget__panel {
+      right: -0.2rem;
+      bottom: calc(100% + 0.7rem);
+    }
+    .koros-chat-widget__content {
+      flex-direction: column;
+    }
+    .koros-chat-widget__qr-wrap {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+    }
+  }
 }

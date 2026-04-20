@@ -132,4 +132,33 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 <a class="hover:text-[#ffd100]" href="#" data-i18n="footer.terms">Условия</a>
 </div>
 </div>
+<div class="koros-chat-widget" data-chat-widget>
+<button type="button" class="koros-chat-widget__toggle" aria-expanded="false" aria-controls="koros-chat-widget-panel" data-chat-widget-toggle data-i18n-aria-label="widget.chat.toggleAria">
+<span class="material-symbols-outlined koros-chat-widget__toggle-glyph" aria-hidden="true">forum</span>
+</button>
+<section id="koros-chat-widget-panel" class="koros-chat-widget__panel hidden" data-chat-widget-panel aria-hidden="true">
+<button type="button" class="koros-chat-widget__close" data-chat-widget-close data-i18n-aria-label="widget.chat.closeAria">×</button>
+<h3 class="koros-chat-widget__title" data-i18n="widget.chat.title">Мы на связи в мессенджерах</h3>
+<p class="koros-chat-widget__hint" data-i18n="widget.chat.hint">Отсканируйте QR или перейдите напрямую в чат</p>
+<div class="koros-chat-widget__content">
+<div class="koros-chat-widget__qr-wrap">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Ft.me%2F%2B79250953377" alt="QR Telegram" width="180" height="180" class="koros-chat-widget__qr" data-i18n-alt="widget.chat.qrAlt" loading="lazy" decoding="async"/>
+</div>
+<div class="koros-chat-widget__actions" role="group" data-i18n-aria-label="widget.chat.actionsAria">
+<a class="koros-chat-widget__action koros-chat-widget__action--max" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer">
+<span class="koros-chat-widget__action-icon-wrap" aria-hidden="true">
+<img src="images/icons/max-logo-2025.png" alt="" width="64" height="32" class="koros-chat-widget__action-icon koros-chat-widget__action-icon--max" loading="lazy" decoding="async"/>
+</span>
+<span data-i18n="widget.chat.max">MAX</span>
+</a>
+<a class="koros-chat-widget__action koros-chat-widget__action--telegram" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer">
+<span class="koros-chat-widget__action-icon-wrap" aria-hidden="true">
+<img src="images/icons/telegram-logo.png" alt="" width="96" height="96" class="koros-chat-widget__action-icon" loading="lazy" decoding="async"/>
+</span>
+<span data-i18n="widget.chat.telegram">Telegram</span>
+</a>
+</div>
+</div>
+</section>
+</div>
 `;

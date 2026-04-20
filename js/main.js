@@ -58,5 +58,44 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", initNav);
+  function initMessengerWidget() {
+    var widget = document.querySelector("[data-chat-widget]");
+    if (!widget) return;
+
+    var panel = widget.querySelector("[data-chat-widget-panel]");
+    var toggle = widget.querySelector("[data-chat-widget-toggle]");
+    var closeBtn = widget.querySelector("[data-chat-widget-close]");
+    if (!panel || !toggle || !closeBtn) return;
+
+    function setOpen(open) {
+      panel.classList.toggle("hidden", !open);
+      panel.setAttribute("aria-hidden", open ? "false" : "true");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    toggle.addEventListener("click", function () {
+      var open = panel.classList.contains("hidden");
+      setOpen(open);
+    });
+
+    closeBtn.addEventListener("click", function () {
+      setOpen(false);
+    });
+
+    document.addEventListener("click", function (ev) {
+      if (panel.classList.contains("hidden")) return;
+      if (!widget.contains(ev.target)) setOpen(false);
+    });
+
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && !panel.classList.contains("hidden")) {
+        setOpen(false);
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    initNav();
+    initMessengerWidget();
+  });
 })();
