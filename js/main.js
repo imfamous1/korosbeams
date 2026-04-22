@@ -94,8 +94,21 @@
     });
   }
 
+  function initInquiryPrefill() {
+    var select = document.getElementById("inquiry-product");
+    if (!select) return;
+    var params = new URLSearchParams(window.location.search);
+    var product = params.get("product");
+    if (!product) return;
+    var has = Array.prototype.some.call(select.options, function (opt) {
+      return opt.value === product;
+    });
+    if (has) select.value = product;
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initMessengerWidget();
+    initInquiryPrefill();
   });
 })();

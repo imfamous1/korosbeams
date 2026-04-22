@@ -38,7 +38,7 @@
 <p class="text-on-surface-variant max-w-2xl" data-i18n="contact.hero.lead">…</p>
 </header>
 <div class="w-full flex flex-col pb-4">
-<section aria-labelledby="contact-form-heading">
+<section id="inquiry" class="scroll-mt-24" aria-labelledby="contact-form-heading">
 <div class="bg-surface-container-low p-8 md:p-10 rounded-xl border border-outline-variant/20">
 <h2 id="contact-form-heading" class="font-headline font-bold text-2xl md:text-3xl tracking-tight mb-8" data-i18n="contact.form.title">Запрос по продукту</h2>
 <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6" method="get">
@@ -62,12 +62,12 @@
 <h3 class="font-headline font-bold text-base md:text-lg text-on-surface tracking-tight border-l-4 border-primary pl-3" data-i18n="contact.form.materials">Параметры</h3>
 <div class="grid md:grid-cols-2 gap-6 pt-1">
 <div class="space-y-2">
-<label class="block text-xs font-bold uppercase text-outline" data-i18n="contact.form.beam">Линейка</label>
-<select class="w-full bg-surface-container-high border-none p-4 focus:ring-0 border-b-2 border-transparent focus:border-primary">
-<option data-i18n="contact.opt.norm">Norm</option>
-<option data-i18n="contact.opt.pro">Pro</option>
-<option data-i18n="contact.opt.both">Обе</option>
-<option data-i18n="contact.opt.custom">Другое</option>
+<label class="block text-xs font-bold uppercase text-outline" for="inquiry-product" data-i18n="contact.form.beam">Линейка</label>
+<select id="inquiry-product" name="product" class="w-full bg-surface-container-high border-none p-4 focus:ring-0 border-b-2 border-transparent focus:border-primary">
+<option value="h20" data-i18n="contact.opt.norm">БДК Н20</option>
+<option value="h20-pro" data-i18n="contact.opt.pro">Pro</option>
+<option value="both" data-i18n="contact.opt.both">Обе</option>
+<option value="custom" data-i18n="contact.opt.custom">Другое</option>
 </select>
 </div>
 <div class="space-y-2">
