@@ -4,7 +4,9 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <div class="relative z-[110] w-full bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl bg-surface-container-low/80 dark:bg-zinc-800/50 border-b border-outline-variant/20" data-koros-header-bar>
 <div class="max-w-[1440px] mx-auto px-6 sm:px-8 w-full flex justify-between items-center py-2.5 gap-3 flex-wrap">
 <div class="flex items-center gap-3 md:gap-5 min-w-0 flex-1 md:flex-initial">
-<a class="bg-[#ffd100] text-black px-2.5 py-1 font-black tracking-tighter text-lg font-headline shrink-0" href="index.html">КОРОС</a>
+<a class="inline-flex shrink-0 items-center" href="index.html" aria-label="КОРОС">
+<img src="images/logo.png" alt="КОРОС" width="170" height="56" class="w-auto object-contain" style="height: 1.85rem;" loading="eager" decoding="async"/>
+</a>
 <div class="hidden lg:flex items-center gap-3 xl:gap-4 shrink min-w-0">
 <a href="index.html" data-koros-nav="home" data-i18n="nav.home">Главная</a>
 <a href="manufacturing.html" data-koros-nav="manufacturing" data-i18n="nav.about">О компании</a>
@@ -78,7 +80,9 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 `;
 window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-10 px-6 sm:px-8 max-w-[1440px] mx-auto">
 <div>
-<a href="index.html" class="text-[#ffd100] font-black text-xl tracking-tighter mb-3 block font-headline">ООО «КОРОС»</a>
+<a href="index.html" class="mb-3 inline-flex items-center" aria-label="КОРОС">
+<img src="images/logo.png" alt="КОРОС" width="170" height="56" class="w-auto object-contain" style="height: 1.85rem;" loading="lazy" decoding="async"/>
+</a>
 <p class="text-zinc-400 leading-relaxed mb-4" data-i18n="footer.tagline">…</p>
 </div>
 <div>
