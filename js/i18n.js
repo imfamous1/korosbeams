@@ -224,7 +224,7 @@
       "prod.norm.hero.h1.before": "Балка БДК Н20",
       "prod.norm.hero.h1.accent": "",
       "prod.pro.hero.h1.before": "Балка БДК Н20",
-      "prod.pro.hero.h1.accent": "Pro",
+      "prod.pro.hero.h1.accent": "Про",
       "prod.hero.badge.series": "Серия КОРОС H20",
       "prod.hero.img.alt.main": "Балка БДК Н20 в производственном освещении",
       "prod.hero.img.alt.t1": "Крупный план торца балки и полимерной защиты",
@@ -305,7 +305,7 @@
       "prod.norm.aside.text": "Испытания в аккредитованных лабораториях по ГОСТ и EN; маркировка и прослеживаемость партии.",
       "prod.norm.aside.link": "Производство и ОТК",
 
-      "prod.pro.hero.kicker": "Линейка Pro",
+      "prod.pro.hero.kicker": "Линейка Про",
       "prod.pro.hero.title": "БДК Н20 Про",
       "prod.pro.hero.lead": "Усиленное исполнение: фанера ФСФ 24 или 27 мм и полимерные заглушки на торцах. Для объектов, где важна стойкость торцов к ударам при погрузочно-разгрузочных работах.",
       "prod.pro.badge": "Н20 Про",
