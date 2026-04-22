@@ -25,15 +25,15 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
 <article class="bg-white border border-zinc-200 rounded-xl p-8 shadow-sm flex flex-col">
 <span class="material-symbols-outlined text-4xl text-primary mb-4">science</span>
-<h2 class="font-headline font-bold text-xl mb-3" data-i18n="cert.card1.t">Протоколы</h2>
-<p class="text-zinc-600 text-sm flex-1 mb-6" data-i18n="cert.card1.p">…</p>
-<a href="contact.html" class="text-primary font-bold text-sm inline-flex items-center gap-1" data-i18n="cert.card1.link">Запросить</a>
+<h2 class="font-headline font-bold text-xl mb-3" data-i18n="cert.card2.t">Паспорт продукции и ТУ</h2>
+<p class="text-zinc-600 text-sm flex-1 mb-6" data-i18n="cert.card2.p">…</p>
+<a href="contact.html" class="text-primary font-bold text-sm inline-flex items-center gap-1" data-i18n="cert.card2.link">Запросить</a>
 </article>
 <article class="bg-white border border-zinc-200 rounded-xl p-8 shadow-sm flex flex-col">
 <span class="material-symbols-outlined text-4xl text-secondary mb-4">verified</span>
-<h2 class="font-headline font-bold text-xl mb-3" data-i18n="cert.card2.t">Сертификаты</h2>
-<p class="text-zinc-600 text-sm flex-1 mb-6" data-i18n="cert.card2.p">…</p>
-<a href="contact.html" class="text-secondary font-bold text-sm inline-flex items-center gap-1" data-i18n="cert.card2.link">Запросить</a>
+<h2 class="font-headline font-bold text-xl mb-3" data-i18n="cert.card1.t">Протоколы</h2>
+<p class="text-zinc-600 text-sm flex-1 mb-6" data-i18n="cert.card1.p">…</p>
+<a href="contact.html" class="text-secondary font-bold text-sm inline-flex items-center gap-1" data-i18n="cert.card1.link">Запросить</a>
 </article>
 <article class="bg-primary-container/30 border border-primary/30 rounded-xl p-8 flex flex-col">
 <span class="material-symbols-outlined text-4xl text-on-primary-container mb-4">picture_as_pdf</span>
@@ -42,9 +42,52 @@
 <a href="assets/docs/koros-h20-presentation.pdf" download class="inline-flex items-center gap-2 font-bold bg-primary text-white px-5 py-3 rounded-lg text-sm" data-i18n="cert.card3.link">Скачать</a>
 </article>
 </div>
-<section class="bg-zinc-900 text-white rounded-xl p-8 md:p-10">
-<h2 class="font-headline font-bold text-2xl mb-4" data-i18n="cert.std.title">Стандарты</h2>
-<p class="text-zinc-300 text-sm leading-relaxed" data-i18n="cert.std.p">…</p>
+<section class="py-2">
+<h2 class="font-headline font-bold text-2xl md:text-3xl mb-4" data-i18n="cert.std.title">Стандарты</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6" data-i18n="cert.std.sub">…</p>
+<div class="overflow-x-auto bg-surface-container-lowest shadow-sm border border-outline-variant/40 rounded-lg">
+<table class="w-full text-left text-sm min-w-[760px]">
+<thead class="bg-surface-container-highest border-b border-outline-variant/30">
+<tr>
+<th class="p-4 font-headline font-bold text-xs uppercase tracking-wide" data-i18n="cert.std.table.th1">Стандарт / документ</th>
+<th class="p-4 font-headline font-bold text-xs uppercase tracking-wide" data-i18n="cert.std.table.th2">Область</th>
+<th class="p-4 font-headline font-bold text-xs uppercase tracking-wide" data-i18n="cert.std.table.th3">Примечание</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20">
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r1.doc">ГОСТ Р 71938-2025</td>
+<td class="p-4" data-i18n="cert.std.table.r1.scope">Качество и требования к балке БДК Н20</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r1.note">Базовый отраслевой стандарт для поставки</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r2.doc">EN 13377:2002</td>
+<td class="p-4" data-i18n="cert.std.table.r2.scope">Показатели несущей способности двутавровой балки</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r2.note">Используется для сопоставления результатов испытаний</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r3.doc">ГОСТ 8486-86</td>
+<td class="p-4" data-i18n="cert.std.table.r3.scope">Пиломатериалы хвойных пород для поясов балки</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r3.note">Не ниже II сорта (по данным презентации)</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r4.doc">ГОСТ 3916.1-2018 / EN 636-3</td>
+<td class="p-4" data-i18n="cert.std.table.r4.scope">Фанера ФСФ для стенки балки</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r4.note">Типовые толщины 24/27 мм</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r5.doc">EN 301 / EN 204-205</td>
+<td class="p-4" data-i18n="cert.std.table.r5.scope">Клеевые системы (PUR) для узлов соединения</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r5.note">Требования к водостойкости и классу клея</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r6.doc">ТУ [placeholder]</td>
+<td class="p-4" data-i18n="cert.std.table.r6.scope">Внутренние технические условия на продукцию</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r6.note">Заполнить номер и редакцию ТУ после утверждения</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </div>
 </main>
