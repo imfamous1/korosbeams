@@ -106,9 +106,50 @@
     if (has) select.value = product;
   }
 
+  function initCertificatePreviewDialog() {
+    var dialog = document.querySelector("[data-cert-preview-dialog]");
+    if (!dialog) return;
+
+    var triggers = document.querySelectorAll("[data-cert-preview-open]");
+    var closeButtons = dialog.querySelectorAll("[data-cert-preview-close]");
+
+    function closeDialog() {
+      if (typeof dialog.close === "function" && dialog.open) {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+        document.body.classList.remove("overflow-hidden");
+      }
+    }
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        if (typeof dialog.showModal === "function") {
+          dialog.showModal();
+        } else {
+          dialog.setAttribute("open", "");
+        }
+        document.body.classList.add("overflow-hidden");
+      });
+    });
+
+    closeButtons.forEach(function (button) {
+      button.addEventListener("click", closeDialog);
+    });
+
+    dialog.addEventListener("click", function (ev) {
+      if (ev.target === dialog) closeDialog();
+    });
+
+    dialog.addEventListener("close", function () {
+      document.body.classList.remove("overflow-hidden");
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initMessengerWidget();
     initInquiryPrefill();
+    initCertificatePreviewDialog();
   });
 })();
