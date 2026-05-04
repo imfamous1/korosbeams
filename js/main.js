@@ -293,6 +293,7 @@
       fd.append(inquiryT("contact.form.qty"), qty || "—");
       fd.append(inquiryT("contact.form.details"), message || "—");
       fd.append(inquiryT("contact.form.meta.page"), window.location.href);
+      fd.append(inquiryT("contact.form.consentRecordKey"), inquiryT("contact.form.consentRecordYes"));
       fd.append("_subject", subject);
       fd.append("_template", "table");
       fd.append("_replyto", email);
@@ -327,6 +328,44 @@
           setStatus("err", inquiryT(act ? "contact.form.errorActivate" : "contact.form.error"));
         });
     });
+  }
+
+  var COOKIE_CONSENT_KEY = "koros-cookie-consent";
+
+  function initCookieConsentBanner() {
+    try {
+      if (localStorage.getItem(COOKIE_CONSENT_KEY) === "1") return;
+    } catch (e0) {
+      /* ignore */
+    }
+    var bar = document.createElement("div");
+    bar.id = "koros-cookie-banner";
+    bar.className =
+      "fixed bottom-0 left-0 right-0 z-[100] bg-zinc-900 text-zinc-200 text-sm px-4 py-4 md:px-6 md:py-5 shadow-xl border-t border-zinc-700 flex flex-col sm:flex-row sm:items-center gap-4 sm:justify-between max-w-full";
+    bar.setAttribute("role", "dialog");
+    bar.setAttribute("aria-modal", "false");
+    bar.setAttribute("data-i18n-aria-label", "cookie.banner.dialogAria");
+    bar.innerHTML =
+      '<div class="min-w-0 flex-1 leading-relaxed pr-2" data-i18n-html="cookie.banner.messageHtml"></div>' +
+      '<div class="flex shrink-0 gap-3 sm:self-center">' +
+      '<button type="button" class="whitespace-nowrap rounded-lg bg-[#ffd100] text-[#725c00] font-headline font-bold px-5 py-2.5 text-sm hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" data-cookie-accept data-i18n="cookie.banner.accept">OK</button>' +
+      "</div>";
+    document.body.appendChild(bar);
+    var i18n = window.KorosI18n;
+    if (i18n && typeof i18n.applyLang === "function") {
+      i18n.applyLang(typeof i18n.getLang === "function" ? i18n.getLang() : "ru");
+    }
+    var btn = bar.querySelector("[data-cookie-accept]");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        try {
+          localStorage.setItem(COOKIE_CONSENT_KEY, "1");
+        } catch (e1) {
+          /* ignore */
+        }
+        bar.remove();
+      });
+    }
   }
 
   function initCertificatePreviewDialog() {
@@ -373,6 +412,7 @@
     initNav();
     initMessengerWidget();
     initInquiryPrefill();
+    initCookieConsentBanner();
     initContactInquiryForm();
     initCertificatePreviewDialog();
     applyTypography(document.body);

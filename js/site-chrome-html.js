@@ -129,8 +129,8 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 <div class="max-w-[1440px] mx-auto px-6 sm:px-8 mt-12 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
 <p data-i18n="footer.copyright">© 2026</p>
 <div class="flex gap-6">
-<a class="hover:text-[#ffd100]" href="#" data-i18n="footer.privacy">Политика</a>
-<a class="hover:text-[#ffd100]" href="#" data-i18n="footer.terms">Условия</a>
+<a class="hover:text-[#ffd100]" href="privacy-policy.html" data-i18n="footer.privacy">Политика</a>
+<a class="hover:text-[#ffd100]" href="terms-of-use.html" data-i18n="footer.terms">Условия</a>
 </div>
 </div>
 <div class="koros-chat-widget" data-chat-widget>

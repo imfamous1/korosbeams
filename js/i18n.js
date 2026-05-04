@@ -30,6 +30,14 @@
       "meta.desc.certificates": "Стандарты ГОСТ и EN, протоколы испытаний и презентация продукции для скачивания.",
       "meta.desc.objects": "Примеры объектов с балками БДК КОРОС; раздел обновляется.",
 
+      "meta.title.privacy": "Политика персональных данных | ООО «КОРОС»",
+      "meta.title.consent": "Согласие на обработку ПД | ООО «КОРОС»",
+      "meta.title.terms": "Условия сайта | ООО «КОРОС»",
+      "meta.desc.privacy": "Политика ООО «КОРОС» о порядке обработки персональных данных посетителей korosbeams.ru.",
+      "meta.desc.consent": "Текст согласия на обработку персональных данных при отправке формы на сайте.",
+      "meta.desc.terms": "Условия использования сайта korosbeams.ru.",
+
+      "cookie.banner.dialogAria": "Уведомление об использовании cookie",
       "a11y.mainNav": "Основная навигация",
       "a11y.breadcrumbs": "Хлебные крошки",
       "a11y.langSwitch": "Язык интерфейса",
@@ -380,6 +388,10 @@
         "Нужна однократная активация: откройте письмо от FormSubmit на info@korosbeams.ru и нажмите ссылку «Activate Form», затем отправьте форму снова.",
       "contact.form.emailSubject": "[korosbeams.ru] Запрос с сайта: {{who}}",
       "contact.form.meta.page": "Страница отправки",
+      "contact.form.consentHtml":
+        'Я даю согласие на <a href=\"privacy-policy.html\" class=\"text-primary underline underline-offset-2\">обработку персональных данных</a> на условиях <a href=\"personal-data-consent.html\" class=\"text-primary underline underline-offset-2\">документа о согласии</a> <span class=\"text-outline text-xs uppercase tracking-wide\">(обязательно)</span>.',
+      "contact.form.consentRecordKey": "Согласие на обработку ПД (версия на сайте)",
+      "contact.form.consentRecordYes": "Отмечено при отправке формы",
       "contact.opt.norm": "БДК Н20",
       "contact.opt.pro": "БДК Н20 Про",
       "contact.opt.both": "Обе линейки / уточнить",
@@ -468,6 +480,18 @@
       "objects.lead": "Раздел в подготовке: здесь появятся примеры объектов с нашими балками БДК.",
       "objects.placeholder": "Мы готовим материалы для этой страницы. По вопросам поставок и референсов свяжитесь с нами.",
       "objects.cta": "Связаться",
+
+      "meta.title.privacy": "Политика персональных данных | ООО «КОРОС»",
+      "meta.title.consent": "Согласие на обработку ПД | ООО «КОРОС»",
+      "meta.title.terms": "Условия сайта | ООО «КОРОС»",
+      "meta.desc.privacy": "Политика ООО «КОРОС» о порядке обработки персональных данных посетителей korosbeams.ru.",
+      "meta.desc.consent": "Текст согласия на обработку персональных данных при отправке формы на сайте.",
+      "meta.desc.terms": "Условия использования сайта korosbeams.ru.",
+
+      "cookie.banner.dialogAria": "Уведомление об использовании cookie",
+      "cookie.banner.messageHtml":
+        "На сайте используются cookie и локальное хранилище браузера (в том числе для языка интерфейса). При подключении Яндекс.Метрики или иной аналитики политика и баннер будут обновлены. Подробнее в <a href=\"privacy-policy.html#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">политике конфиденциальности</a>.",
+      "cookie.banner.accept": "Понятно",
     },
     en: {
       "meta.title.index": "Koros | H20 timber formwork beams",
@@ -488,6 +512,18 @@
       "meta.desc.compare": "Shortcut to the Koros catalogue: where H20 timber beams are used.",
       "meta.desc.certificates": "GOST & EN alignment, test reports and downloadable product presentation.",
       "meta.desc.objects": "Reference projects with Koros H20 beams; section coming soon.",
+
+      "meta.title.privacy": "Privacy policy | Koros LLC",
+      "meta.title.consent": "Personal data consent | Koros LLC",
+      "meta.title.terms": "Site terms | Koros LLC",
+      "meta.desc.privacy": "How Koros LLC processes personal data on korosbeams.ru.",
+      "meta.desc.consent": "Consent wording for inquiries submitted via the website form.",
+      "meta.desc.terms": "Terms of use for korosbeams.ru.",
+
+      "cookie.banner.dialogAria": "Cookie notice",
+      "cookie.banner.messageHtml":
+        "This site uses cookies and browser storage (including for language preference). If Yandex.Metrica or other analytics are added, the policy and banner will be updated. Details in the <a href=\"privacy-policy.html#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">privacy policy</a>.",
+      "cookie.banner.accept": "OK",
 
       "a11y.mainNav": "Main navigation",
       "a11y.breadcrumbs": "Breadcrumbs",
@@ -842,6 +878,10 @@
         "One-time activation required: open the FormSubmit email sent to info@korosbeams.ru and click «Activate Form», then submit again.",
       "contact.form.emailSubject": "[korosbeams.ru] Website inquiry: {{who}}",
       "contact.form.meta.page": "Submitted from",
+      "contact.form.consentHtml":
+        'I agree to the <a href=\"privacy-policy.html\" class=\"text-primary underline underline-offset-2\">processing of my personal data</a> as set out in the <a href=\"personal-data-consent.html\" class=\"text-primary underline underline-offset-2\">consent document</a> <span class=\"text-outline text-xs uppercase tracking-wide\">(required)</span>.',
+      "contact.form.consentRecordKey": "Personal data consent (site wording)",
+      "contact.form.consentRecordYes": "Checked on form submit",
       "contact.opt.norm": "H20 beam",
       "contact.opt.pro": "H20 Pro beam",
       "contact.opt.both": "Both lines / TBD",
