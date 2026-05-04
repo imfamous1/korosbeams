@@ -992,6 +992,9 @@
     if (window.KorosLayout && typeof window.KorosLayout.syncHeaderHeight === "function") {
       window.KorosLayout.syncHeaderHeight();
     }
+    if (window.KorosTypography && typeof window.KorosTypography.apply === "function") {
+      window.KorosTypography.apply(document.body);
+    }
   }
 
   function initI18nUi() {

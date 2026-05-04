@@ -4,6 +4,97 @@
 (function () {
   "use strict";
 
+  var NBSP = "\u00A0";
+  var TYPOGRAPHY_SKIP_TAGS = {
+    SCRIPT: true,
+    STYLE: true,
+    NOSCRIPT: true,
+    TEXTAREA: true,
+    INPUT: true,
+    SELECT: true,
+    OPTION: true,
+    PRE: true,
+    CODE: true,
+    KBD: true,
+    SAMP: true,
+    VAR: true,
+    SVG: true,
+    MATH: true,
+  };
+  var RU_SHORT_WORDS = [
+    "и",
+    "а",
+    "но",
+    "да",
+    "или",
+    "либо",
+    "в",
+    "во",
+    "к",
+    "ко",
+    "с",
+    "со",
+    "у",
+    "о",
+    "об",
+    "обо",
+    "от",
+    "до",
+    "по",
+    "на",
+    "за",
+    "из",
+    "без",
+    "для",
+    "при",
+    "не",
+    "ни",
+  ];
+  var EN_SHORT_WORDS = ["a", "an", "and", "or", "to", "of", "in", "on", "at", "by", "for", "if", "as"];
+  var SHORT_WORDS_RE = new RegExp(
+    "(^|[\\s\\u00A0(«\"'])(" + RU_SHORT_WORDS.join("|") + "|" + EN_SHORT_WORDS.join("|") + ")\\s+(?=[\\p{L}\\d])",
+    "giu"
+  );
+  var NUMBER_UNITS_RE = /(\d)\s+(%|мм|см|дм|м|км|м2|м²|м3|м³|г|кг|т|мг|л|мл|кн|kn|квт|kw|вт|w|°c|°f)\b/giu;
+
+  function applyTypographyToText(text) {
+    if (!text || text.indexOf(" ") === -1) return text;
+    return text
+      .replace(SHORT_WORDS_RE, "$1$2" + NBSP)
+      .replace(/(\d)\s*%/g, "$1" + NBSP + "%")
+      .replace(/%\s+(\d)/g, "%" + NBSP + "$1")
+      .replace(NUMBER_UNITS_RE, "$1" + NBSP + "$2")
+      .replace(/№\s+(\d)/g, "№" + NBSP + "$1");
+  }
+
+  function shouldSkipTypographyNode(node) {
+    var parent = node && node.parentElement;
+    if (!parent) return true;
+    if (parent.closest("[data-no-typography]")) return true;
+    if (parent.closest("[contenteditable='true']")) return true;
+    return !!parent.closest(Object.keys(TYPOGRAPHY_SKIP_TAGS).join(","));
+  }
+
+  function applyTypography(root) {
+    var scope = root && root.nodeType === Node.ELEMENT_NODE ? root : document.body;
+    if (!scope) return;
+    var walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
+    var node = walker.nextNode();
+    while (node) {
+      if (!shouldSkipTypographyNode(node)) {
+        var original = node.nodeValue;
+        var formatted = applyTypographyToText(original);
+        if (formatted !== original) node.nodeValue = formatted;
+      }
+      node = walker.nextNode();
+    }
+  }
+
+  window.KorosTypography = {
+    apply: applyTypography,
+    formatText: applyTypographyToText,
+  };
+
   function syncNavToggleUi(toggle, open) {
     if (!toggle) return;
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
@@ -151,5 +242,6 @@
     initMessengerWidget();
     initInquiryPrefill();
     initCertificatePreviewDialog();
+    applyTypography(document.body);
   });
 })();
