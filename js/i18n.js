@@ -392,6 +392,7 @@
         "Не удалось отправить форму. Попробуйте позже или напишите на info@korosbeams.ru.",
       "contact.form.errorActivate":
         "Нужна однократная активация: откройте письмо от FormSubmit на info@korosbeams.ru и нажмите ссылку «Activate Form», затем отправьте форму снова.",
+      "contact.form.phoneInvalid": "Укажите телефон в формате +7 (999) 999-99-99",
       "contact.form.emailSubject": "[korosbeams.ru] Запрос с сайта: {{who}}",
       "contact.form.meta.page": "Страница отправки",
       "contact.form.consentHtml":
@@ -418,6 +419,7 @@
       "contact.direct.email": "Email",
       "contact.direct.messengers": "Мессенджеры",
       "contact.form.phoneHint": "8 800 333-22-33",
+      "contact.form.qtyHint": "1200",
 
       "contact.bento.title": "Документы и поддержка",
       "contact.bento.doc.t": "Техническая документация",
@@ -888,6 +890,7 @@
         "Could not send the form. Try again later or email info@korosbeams.ru.",
       "contact.form.errorActivate":
         "One-time activation required: open the FormSubmit email sent to info@korosbeams.ru and click «Activate Form», then submit again.",
+      "contact.form.phoneInvalid": "Enter the phone number as +7 (999) 999-99-99",
       "contact.form.emailSubject": "[korosbeams.ru] Website inquiry: {{who}}",
       "contact.form.meta.page": "Submitted from",
       "contact.form.consentHtml":
@@ -914,6 +917,7 @@
       "contact.direct.email": "Email",
       "contact.direct.messengers": "Messengers",
       "contact.form.phoneHint": "8 800 333-22-33",
+      "contact.form.qtyHint": "1200",
 
       "contact.bento.title": "Docs & support",
       "contact.bento.doc.t": "Technical pack",

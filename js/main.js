@@ -210,6 +210,128 @@
   var INQUIRY_MAIL_TO = "info@korosbeams.ru";
   var FORMSUBMIT_AJAX = "https://formsubmit.co/ajax/" + encodeURIComponent(INQUIRY_MAIL_TO);
 
+  function formatRuPhone(value) {
+    var digits = String(value || "").replace(/\D/g, "");
+    if (!digits) return "";
+    if (digits.charAt(0) === "8") digits = "7" + digits.slice(1);
+    if (digits.charAt(0) === "7") digits = digits.slice(1);
+    digits = digits.slice(0, 10);
+
+    var result = "+7";
+    if (digits.length > 0) result += " (" + digits.slice(0, 3);
+    if (digits.length >= 3) result += ")";
+    if (digits.length > 3) result += " " + digits.slice(3, 6);
+    if (digits.length > 6) result += "-" + digits.slice(6, 8);
+    if (digits.length > 8) result += "-" + digits.slice(8, 10);
+    return result;
+  }
+
+  function normalizeQuantity(value) {
+    var source = String(value || "").replace(",", ".");
+    var output = "";
+    var hasSeparator = false;
+
+    for (var i = 0; i < source.length; i += 1) {
+      var ch = source.charAt(i);
+      if (/\d/.test(ch)) {
+        output += ch;
+      } else if (ch === "." && !hasSeparator && output) {
+        output += ".";
+        hasSeparator = true;
+      }
+    }
+
+    return output;
+  }
+
+  function getEditablePhoneDigits(value) {
+    var digits = String(value || "").replace(/\D/g, "");
+    if (digits.charAt(0) === "8") digits = "7" + digits.slice(1);
+    if (digits.charAt(0) === "7") digits = digits.slice(1);
+    return digits.slice(0, 10);
+  }
+
+  function countDigitsBefore(value, index) {
+    var count = 0;
+    var text = String(value || "").slice(0, Math.max(0, index));
+    for (var i = 0; i < text.length; i += 1) {
+      if (/\d/.test(text.charAt(i))) count += 1;
+    }
+    return count;
+  }
+
+  function getPhoneCaretByEditableDigits(value, editableCount) {
+    var target = Math.max(0, editableCount) + 1;
+    var seen = 0;
+    for (var i = 0; i < value.length; i += 1) {
+      if (/\d/.test(value.charAt(i))) {
+        seen += 1;
+        if (seen >= target) return i + 1;
+      }
+    }
+    return value.length;
+  }
+
+  function initInquiryInputMasks() {
+    var phoneEl = document.getElementById("inquiry-phone");
+    var qtyEl = document.getElementById("inquiry-qty");
+
+    if (phoneEl) {
+      phoneEl.addEventListener("keydown", function (ev) {
+        if (ev.key !== "Backspace" && ev.key !== "Delete") return;
+
+        var value = phoneEl.value;
+        var digits = getEditablePhoneDigits(value).split("");
+        if (!digits.length) return;
+
+        var start = phoneEl.selectionStart == null ? value.length : phoneEl.selectionStart;
+        var end = phoneEl.selectionEnd == null ? start : phoneEl.selectionEnd;
+        var editableStart = Math.max(0, countDigitsBefore(value, start) - 1);
+        var editableEnd = Math.max(0, countDigitsBefore(value, end) - 1);
+        var removeFrom = editableStart;
+        var removeCount = editableEnd - editableStart;
+
+        if (removeCount <= 0) {
+          if (ev.key === "Backspace") {
+            removeFrom = editableStart - 1;
+          } else {
+            removeFrom = editableStart;
+          }
+          removeCount = 1;
+        }
+
+        if (removeFrom < 0 || removeFrom >= digits.length) return;
+
+        ev.preventDefault();
+        digits.splice(removeFrom, removeCount);
+        phoneEl.value = formatRuPhone("7" + digits.join(""));
+        var caret = getPhoneCaretByEditableDigits(phoneEl.value, removeFrom);
+        phoneEl.setSelectionRange(caret, caret);
+        phoneEl.setCustomValidity("");
+      });
+      phoneEl.addEventListener("input", function () {
+        phoneEl.value = formatRuPhone(phoneEl.value);
+        phoneEl.setCustomValidity("");
+      });
+      phoneEl.addEventListener("blur", function () {
+        if (phoneEl.value && !phoneEl.checkValidity()) {
+          phoneEl.setCustomValidity(inquiryT("contact.form.phoneInvalid"));
+        } else {
+          phoneEl.setCustomValidity("");
+        }
+      });
+      phoneEl.addEventListener("focus", function () {
+        phoneEl.setCustomValidity("");
+      });
+    }
+
+    if (qtyEl) {
+      qtyEl.addEventListener("input", function () {
+        qtyEl.value = normalizeQuantity(qtyEl.value);
+      });
+    }
+  }
+
   function initContactInquiryForm() {
     var form = document.getElementById("koros-inquiry-form");
     if (!form) return;
@@ -250,6 +372,17 @@
 
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
+      var fullNameEl = document.getElementById("inquiry-full-name");
+      var companyEl = document.getElementById("inquiry-company");
+      var emailEl = document.getElementById("inquiry-email");
+      var phoneEl = document.getElementById("inquiry-phone");
+      var select = document.getElementById("inquiry-product");
+      var qtyEl = document.getElementById("inquiry-qty");
+      var messageEl = document.getElementById("inquiry-message");
+
+      if (phoneEl && phoneEl.value) phoneEl.value = formatRuPhone(phoneEl.value);
+      if (qtyEl && qtyEl.value) qtyEl.value = normalizeQuantity(qtyEl.value);
+
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
@@ -258,14 +391,6 @@
         setStatus("ok", inquiryT("contact.form.success"));
         return;
       }
-
-      var fullNameEl = document.getElementById("inquiry-full-name");
-      var companyEl = document.getElementById("inquiry-company");
-      var emailEl = document.getElementById("inquiry-email");
-      var phoneEl = document.getElementById("inquiry-phone");
-      var select = document.getElementById("inquiry-product");
-      var qtyEl = document.getElementById("inquiry-qty");
-      var messageEl = document.getElementById("inquiry-message");
 
       var fullName = fullNameEl ? fullNameEl.value.trim() : "";
       var company = companyEl ? companyEl.value.trim() : "";
@@ -467,6 +592,7 @@
     initNav();
     initMessengerWidget();
     initInquiryPrefill();
+    initInquiryInputMasks();
     initCookieConsentBanner();
     initContactInquiryForm();
     initCertificatePreviewDialog();
