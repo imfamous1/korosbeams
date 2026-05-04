@@ -408,6 +408,61 @@
     });
   }
 
+  function initProductGalleries() {
+    document.querySelectorAll("[data-product-gallery]").forEach(function (gallery) {
+      var image = gallery.querySelector("[data-gallery-image]");
+      var thumbs = Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-thumb]"));
+      var prev = gallery.querySelector("[data-gallery-prev]");
+      var next = gallery.querySelector("[data-gallery-next]");
+      if (!image || thumbs.length < 2) return;
+
+      var index = thumbs.findIndex(function (thumb) {
+        return thumb.getAttribute("aria-current") === "true";
+      });
+      if (index < 0) index = 0;
+
+      function setImage(nextIndex) {
+        index = (nextIndex + thumbs.length) % thumbs.length;
+        var active = thumbs[index];
+        var src = active.getAttribute("data-src");
+        if (!src) return;
+        image.src = src;
+        thumbs.forEach(function (thumb, i) {
+          thumb.setAttribute("aria-current", i === index ? "true" : "false");
+        });
+      }
+
+      thumbs.forEach(function (thumb, i) {
+        thumb.addEventListener("click", function () {
+          setImage(i);
+        });
+      });
+
+      if (prev) {
+        prev.addEventListener("click", function () {
+          setImage(index - 1);
+        });
+      }
+      if (next) {
+        next.addEventListener("click", function () {
+          setImage(index + 1);
+        });
+      }
+
+      gallery.addEventListener("keydown", function (ev) {
+        if (ev.key === "ArrowLeft") {
+          ev.preventDefault();
+          setImage(index - 1);
+        } else if (ev.key === "ArrowRight") {
+          ev.preventDefault();
+          setImage(index + 1);
+        }
+      });
+
+      setImage(index);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initMessengerWidget();
@@ -415,6 +470,7 @@
     initCookieConsentBanner();
     initContactInquiryForm();
     initCertificatePreviewDialog();
+    initProductGalleries();
     applyTypography(document.body);
   });
 })();

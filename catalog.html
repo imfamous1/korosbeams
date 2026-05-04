@@ -36,11 +36,27 @@
 <section id="h20" class="scroll-mt-24 border-t border-surface-container-highest pt-12 pb-16" aria-labelledby="h20-heading">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
 <div class="lg:col-span-7">
-<div class="relative aspect-[16/10] overflow-hidden bg-white dark:bg-zinc-900 rounded-lg border border-outline-variant/40 shadow-sm">
-<img class="w-full h-full object-contain p-6 hover:scale-[1.02] transition-transform duration-500" alt="" data-i18n-alt="cat.card.norm.img.alt" src="images/product-bdk-norm.png"/>
-<div class="absolute bottom-5 left-5 bg-surface/90 backdrop-blur-md px-4 py-2.5 border-l-4 border-primary max-w-[90%]">
+<div class="koros-product-gallery relative aspect-[16/10] overflow-hidden bg-white dark:bg-zinc-900 rounded-lg border border-outline-variant/40 shadow-sm" data-product-gallery>
+<img class="koros-product-gallery__image w-full h-full object-contain p-6 transition-transform duration-500" alt="" data-i18n-alt="cat.card.norm.img.alt" data-gallery-image src="images/h20-1.png"/>
+<button class="koros-product-gallery__nav koros-product-gallery__nav--prev" type="button" data-gallery-prev aria-label="Предыдущее фото" data-i18n-aria-label="prod.gallery.prev">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+</button>
+<button class="koros-product-gallery__nav koros-product-gallery__nav--next" type="button" data-gallery-next aria-label="Следующее фото" data-i18n-aria-label="prod.gallery.next">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+</button>
+<div class="koros-product-gallery__meta absolute bottom-5 left-5 right-5 flex flex-col sm:flex-row sm:items-end gap-3 sm:justify-between pointer-events-none">
+<div class="bg-surface/90 backdrop-blur-md px-4 py-2.5 border-l-4 border-primary max-w-[90%] pointer-events-auto">
 <span class="font-headline font-bold text-xs sm:text-sm tracking-widest uppercase block" data-i18n="prod.hero.badge.series">Серия КОРОС H20</span>
 <span class="font-headline font-bold text-[10px] uppercase tracking-wider text-primary mt-0.5 block" data-i18n="prod.norm.badge">H20</span>
+</div>
+<div class="koros-product-gallery__thumbs pointer-events-auto" data-gallery-thumbs aria-label="Фото товара" data-i18n-aria-label="prod.gallery.thumbs">
+<button class="koros-product-gallery__thumb" type="button" data-gallery-thumb data-src="images/h20-1.png" aria-label="Фото 1" data-i18n-aria-label="prod.gallery.photo1" aria-current="true">
+<img src="images/h20-1.png" alt="" loading="lazy"/>
+</button>
+<button class="koros-product-gallery__thumb" type="button" data-gallery-thumb data-src="images/h20-2.png" aria-label="Фото 2" data-i18n-aria-label="prod.gallery.photo2" aria-current="false">
+<img src="images/h20-2.png" alt="" loading="lazy"/>
+</button>
+</div>
 </div>
 </div>
 </div>
@@ -113,11 +129,30 @@
 <section id="h20-pro" class="scroll-mt-24 border-t border-surface-container-highest pt-12 pb-16" aria-labelledby="h20-pro-heading">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
 <div class="lg:col-span-7">
-<div class="relative aspect-[16/10] overflow-hidden bg-white dark:bg-zinc-900 rounded-lg border border-outline-variant/40 shadow-sm">
-<img class="w-full h-full object-contain p-6 hover:scale-[1.02] transition-transform duration-500" alt="" data-i18n-alt="cat.card.pro.img.alt" src="images/product-bdk-pro.png"/>
-<div class="absolute bottom-5 left-5 bg-surface/90 backdrop-blur-md px-4 py-2.5 border-l-4 border-secondary max-w-[90%]">
+<div class="koros-product-gallery relative aspect-[16/10] overflow-hidden bg-white dark:bg-zinc-900 rounded-lg border border-outline-variant/40 shadow-sm" data-product-gallery>
+<img class="koros-product-gallery__image w-full h-full object-contain p-6 transition-transform duration-500" alt="" data-i18n-alt="cat.card.pro.img.alt" data-gallery-image src="images/product-bdk-pro.png"/>
+<button class="koros-product-gallery__nav koros-product-gallery__nav--prev" type="button" data-gallery-prev aria-label="Предыдущее фото" data-i18n-aria-label="prod.gallery.prev">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+</button>
+<button class="koros-product-gallery__nav koros-product-gallery__nav--next" type="button" data-gallery-next aria-label="Следующее фото" data-i18n-aria-label="prod.gallery.next">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+</button>
+<div class="koros-product-gallery__meta absolute bottom-5 left-5 right-5 flex flex-col sm:flex-row sm:items-end gap-3 sm:justify-between pointer-events-none">
+<div class="bg-surface/90 backdrop-blur-md px-4 py-2.5 border-l-4 border-secondary max-w-[90%] pointer-events-auto">
 <span class="font-headline font-bold text-xs sm:text-sm tracking-widest uppercase block" data-i18n="prod.hero.badge.series">Серия КОРОС H20</span>
 <span class="font-headline font-bold text-[10px] uppercase tracking-wider text-secondary mt-0.5 block" data-i18n="prod.pro.badge">Н20 Про</span>
+</div>
+<div class="koros-product-gallery__thumbs pointer-events-auto" data-gallery-thumbs aria-label="Фото товара" data-i18n-aria-label="prod.gallery.thumbs">
+<button class="koros-product-gallery__thumb" type="button" data-gallery-thumb data-src="images/product-bdk-pro.png" aria-label="Фото 1" data-i18n-aria-label="prod.gallery.photo1" aria-current="true">
+<img src="images/product-bdk-pro.png" alt="" loading="lazy"/>
+</button>
+<button class="koros-product-gallery__thumb" type="button" data-gallery-thumb data-src="images/product-bdk-pro2.png" aria-label="Фото 2" data-i18n-aria-label="prod.gallery.photo2" aria-current="false">
+<img src="images/product-bdk-pro2.png" alt="" loading="lazy"/>
+</button>
+<button class="koros-product-gallery__thumb" type="button" data-gallery-thumb data-src="images/bdk-cross-section.png" aria-label="Фото 3" data-i18n-aria-label="prod.gallery.photo3" aria-current="false">
+<img src="images/bdk-cross-section.png" alt="" loading="lazy"/>
+</button>
+</div>
 </div>
 </div>
 </div>
