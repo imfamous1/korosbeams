@@ -371,6 +371,15 @@
       "contact.form.qty": "Объём, м (пог.)",
       "contact.form.details": "Комментарий",
       "contact.form.submit": "Отправить запрос",
+      "contact.form.honeyLabel": "Не заполняйте это поле",
+      "contact.form.sending": "Отправляем…",
+      "contact.form.success": "Сообщение отправлено. Мы свяжемся с вами в рабочее время.",
+      "contact.form.error":
+        "Не удалось отправить форму. Попробуйте позже или напишите на info@korosbeams.ru.",
+      "contact.form.errorActivate":
+        "Нужна однократная активация: откройте письмо от FormSubmit на info@korosbeams.ru и нажмите ссылку «Activate Form», затем отправьте форму снова.",
+      "contact.form.emailSubject": "[korosbeams.ru] Запрос с сайта: {{who}}",
+      "contact.form.meta.page": "Страница отправки",
       "contact.opt.norm": "БДК Н20",
       "contact.opt.pro": "БДК Н20 Про",
       "contact.opt.both": "Обе линейки / уточнить",
@@ -824,6 +833,15 @@
       "contact.form.qty": "Quantity, m (run)",
       "contact.form.details": "Message",
       "contact.form.submit": "Submit request",
+      "contact.form.honeyLabel": "Leave this field empty",
+      "contact.form.sending": "Sending…",
+      "contact.form.success": "Your message was sent. We will get back to you during business hours.",
+      "contact.form.error":
+        "Could not send the form. Try again later or email info@korosbeams.ru.",
+      "contact.form.errorActivate":
+        "One-time activation required: open the FormSubmit email sent to info@korosbeams.ru and click «Activate Form», then submit again.",
+      "contact.form.emailSubject": "[korosbeams.ru] Website inquiry: {{who}}",
+      "contact.form.meta.page": "Submitted from",
       "contact.opt.norm": "H20 beam",
       "contact.opt.pro": "H20 Pro beam",
       "contact.opt.both": "Both lines / TBD",

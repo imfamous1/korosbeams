@@ -185,6 +185,15 @@
     });
   }
 
+  function inquiryT(key) {
+    var i18n = window.KorosI18n;
+    if (!i18n || !i18n.STRINGS) return key;
+    var lang = typeof i18n.getLang === "function" ? i18n.getLang() : "ru";
+    var dict = i18n.STRINGS[lang] || i18n.STRINGS.ru;
+    var s = dict && dict[key];
+    return s != null ? s : key;
+  }
+
   function initInquiryPrefill() {
     var select = document.getElementById("inquiry-product");
     if (!select) return;
@@ -195,6 +204,129 @@
       return opt.value === product;
     });
     if (has) select.value = product;
+  }
+
+  /** Письма на info@korosbeams.ru через FormSubmit (AJAX, шаблон table). Требуется подтвердить ящик на стороне FormSubmit. */
+  var INQUIRY_MAIL_TO = "info@korosbeams.ru";
+  var FORMSUBMIT_AJAX = "https://formsubmit.co/ajax/" + encodeURIComponent(INQUIRY_MAIL_TO);
+
+  function initContactInquiryForm() {
+    var form = document.getElementById("koros-inquiry-form");
+    if (!form) return;
+    var statusEl = document.getElementById("koros-inquiry-status");
+    var submitBtn = document.getElementById("koros-inquiry-submit");
+    var honey = document.getElementById("koros-inquiry-honey");
+
+    function setStatus(kind, message) {
+      if (!statusEl) return;
+      statusEl.textContent = message;
+      statusEl.classList.remove(
+        "hidden",
+        "koros-inquiry-status--ok",
+        "koros-inquiry-status--err",
+        "koros-inquiry-status--pending"
+      );
+      if (kind === "ok") statusEl.classList.add("koros-inquiry-status--ok");
+      else if (kind === "err") statusEl.classList.add("koros-inquiry-status--err");
+      else if (kind === "pending") statusEl.classList.add("koros-inquiry-status--pending");
+      else statusEl.classList.add("hidden");
+    }
+
+    function parseFormSubmitResponse(res, text) {
+      var data = null;
+      if (text) {
+        try {
+          data = JSON.parse(text);
+        } catch (e1) {
+          data = null;
+        }
+      }
+      var ok =
+        res.ok &&
+        data &&
+        (data.success === true || data.success === "true" || String(data.success).toLowerCase() === "true");
+      return { ok: ok, data: data };
+    }
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      if (honey && honey.value.replace(/\s/g, "")) {
+        setStatus("ok", inquiryT("contact.form.success"));
+        return;
+      }
+
+      var fullNameEl = document.getElementById("inquiry-full-name");
+      var companyEl = document.getElementById("inquiry-company");
+      var emailEl = document.getElementById("inquiry-email");
+      var phoneEl = document.getElementById("inquiry-phone");
+      var select = document.getElementById("inquiry-product");
+      var qtyEl = document.getElementById("inquiry-qty");
+      var messageEl = document.getElementById("inquiry-message");
+
+      var fullName = fullNameEl ? fullNameEl.value.trim() : "";
+      var company = companyEl ? companyEl.value.trim() : "";
+      var email = emailEl ? emailEl.value.trim() : "";
+      var phone = phoneEl ? phoneEl.value.trim() : "";
+      var productLabel = "";
+      var productValue = "";
+      if (select) {
+        var opt = select.options[select.selectedIndex];
+        productLabel = opt ? opt.textContent.trim() : "";
+        productValue = select.value || "";
+      }
+      var qty = qtyEl ? qtyEl.value.trim() : "";
+      var message = messageEl ? messageEl.value.trim() : "";
+
+      var who = fullName || email || "—";
+      var subject = inquiryT("contact.form.emailSubject").split("{{who}}").join(who);
+
+      var fd = new FormData();
+      fd.append(inquiryT("contact.form.name"), fullName);
+      fd.append(inquiryT("contact.form.company"), company || "—");
+      fd.append(inquiryT("contact.form.email"), email);
+      fd.append(inquiryT("contact.form.phone"), phone || "—");
+      fd.append(inquiryT("contact.form.beam"), productLabel + (productValue ? " (" + productValue + ")" : ""));
+      fd.append(inquiryT("contact.form.qty"), qty || "—");
+      fd.append(inquiryT("contact.form.details"), message || "—");
+      fd.append(inquiryT("contact.form.meta.page"), window.location.href);
+      fd.append("_subject", subject);
+      fd.append("_template", "table");
+      fd.append("_replyto", email);
+
+      if (submitBtn) submitBtn.disabled = true;
+      setStatus("pending", inquiryT("contact.form.sending"));
+
+      fetch(FORMSUBMIT_AJAX, {
+        method: "POST",
+        body: fd,
+        headers: { Accept: "application/json" },
+      })
+        .then(function (res) {
+          return res.text().then(function (text) {
+            return parseFormSubmitResponse(res, text);
+          });
+        })
+        .catch(function () {
+          return { ok: false, data: null };
+        })
+        .then(function (result) {
+          if (submitBtn) submitBtn.disabled = false;
+          if (result.ok) {
+            setStatus("ok", inquiryT("contact.form.success"));
+            form.reset();
+            return;
+          }
+          var act =
+            result.data &&
+            result.data.message &&
+            String(result.data.message).toLowerCase().indexOf("activation") !== -1;
+          setStatus("err", inquiryT(act ? "contact.form.errorActivate" : "contact.form.error"));
+        });
+    });
   }
 
   function initCertificatePreviewDialog() {
@@ -241,6 +373,7 @@
     initNav();
     initMessengerWidget();
     initInquiryPrefill();
+    initContactInquiryForm();
     initCertificatePreviewDialog();
     applyTypography(document.body);
   });
