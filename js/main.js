@@ -456,11 +456,54 @@
   }
 
   var COOKIE_CONSENT_KEY = "koros-cookie-consent";
+  var YANDEX_METRIKA_ID = 109053129;
+
+  function loadYandexMetrika() {
+    if (window.KorosYandexMetrikaLoaded) return;
+    window.KorosYandexMetrikaLoaded = true;
+
+    (function (m, e, t, r, i, k, a) {
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < e.scripts.length; j += 1) {
+        if (e.scripts[j].src === r) return;
+      }
+      k = e.createElement(t);
+      a = e.getElementsByTagName(t)[0];
+      k.async = 1;
+      k.src = r;
+      a.parentNode.insertBefore(k, a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=" + YANDEX_METRIKA_ID, "ym");
+
+    window.ym(YANDEX_METRIKA_ID, "init", {
+      ssr: true,
+      webvisor: true,
+      clickmap: true,
+      ecommerce: "dataLayer",
+      referrer: document.referrer,
+      url: location.href,
+      accurateTrackBounce: true,
+      trackLinks: true,
+    });
+  }
+
+  function initAnalyticsConsent() {
+    try {
+      var value = localStorage.getItem(COOKIE_CONSENT_KEY);
+      if (value === "1" || value === "accepted") loadYandexMetrika();
+    } catch (e0) {
+      /* ignore */
+    }
+  }
 
   function initCookieConsentBanner() {
     try {
-      if (localStorage.getItem(COOKIE_CONSENT_KEY) === "1") return;
-    } catch (e0) {
+      if (localStorage.getItem(COOKIE_CONSENT_KEY)) return;
+    } catch (e1) {
       /* ignore */
     }
     var bar = document.createElement("div");
@@ -472,8 +515,9 @@
     bar.setAttribute("data-i18n-aria-label", "cookie.banner.dialogAria");
     bar.innerHTML =
       '<div class="min-w-0 flex-1 leading-relaxed pr-2" data-i18n-html="cookie.banner.messageHtml"></div>' +
-      '<div class="flex shrink-0 gap-3 sm:self-center">' +
-      '<button type="button" class="whitespace-nowrap rounded-lg bg-[#ffd100] text-[#725c00] font-headline font-bold px-5 py-2.5 text-sm hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" data-cookie-accept data-i18n="cookie.banner.accept">OK</button>' +
+      '<div class="flex shrink-0 flex-wrap gap-3 sm:self-center">' +
+      '<button type="button" class="whitespace-nowrap rounded-lg border border-zinc-600 text-zinc-100 font-headline font-bold px-5 py-2.5 text-sm hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" data-cookie-decline data-i18n="cookie.banner.decline">Только необходимые</button>' +
+      '<button type="button" class="whitespace-nowrap rounded-lg bg-[#ffd100] text-[#725c00] font-headline font-bold px-5 py-2.5 text-sm hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" data-cookie-accept data-i18n="cookie.banner.accept">Принять</button>' +
       "</div>";
     document.body.appendChild(bar);
     var i18n = window.KorosI18n;
@@ -484,8 +528,20 @@
     if (btn) {
       btn.addEventListener("click", function () {
         try {
-          localStorage.setItem(COOKIE_CONSENT_KEY, "1");
-        } catch (e1) {
+          localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
+        } catch (e2) {
+          /* ignore */
+        }
+        loadYandexMetrika();
+        bar.remove();
+      });
+    }
+    var declineBtn = bar.querySelector("[data-cookie-decline]");
+    if (declineBtn) {
+      declineBtn.addEventListener("click", function () {
+        try {
+          localStorage.setItem(COOKIE_CONSENT_KEY, "declined");
+        } catch (e3) {
           /* ignore */
         }
         bar.remove();
@@ -594,6 +650,7 @@
     initMessengerWidget();
     initInquiryPrefill();
     initInquiryInputMasks();
+    initAnalyticsConsent();
     initCookieConsentBanner();
     initContactInquiryForm();
     initCertificatePreviewDialog();

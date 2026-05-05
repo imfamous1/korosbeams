@@ -498,8 +498,9 @@
 
       "cookie.banner.dialogAria": "Уведомление об использовании cookie",
       "cookie.banner.messageHtml":
-        "На сайте используются cookie и локальное хранилище браузера (в том числе для языка интерфейса). При подключении Яндекс.Метрики или иной аналитики политика и баннер будут обновлены. Подробнее в <a href=\"/privacy-policy/#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">политике конфиденциальности</a>.",
-      "cookie.banner.accept": "Понятно",
+        "Мы используем необходимые cookie и локальное хранилище для работы сайта и сохранения настроек, а также Яндекс.Метрику для анализа посещаемости. Вы можете принять аналитику или оставить только необходимые технологии. Подробнее — в <a href=\"/privacy-policy/#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">политике конфиденциальности</a>.",
+      "cookie.banner.accept": "Принять",
+      "cookie.banner.decline": "Только необходимые",
     },
     en: {
       "meta.title.index": "Koros | H20 timber formwork beams",
@@ -530,8 +531,9 @@
 
       "cookie.banner.dialogAria": "Cookie notice",
       "cookie.banner.messageHtml":
-        "This site uses cookies and browser storage (including for language preference). If Yandex.Metrica or other analytics are added, the policy and banner will be updated. Details in the <a href=\"/privacy-policy/#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">privacy policy</a>.",
-      "cookie.banner.accept": "OK",
+        "We use required cookies and browser storage to run the site and remember preferences, and Yandex Metrica to understand site usage. You can accept analytics or keep only required technologies. Details are in the <a href=\"/privacy-policy/#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">privacy policy</a>.",
+      "cookie.banner.accept": "Accept",
+      "cookie.banner.decline": "Required only",
 
       "a11y.mainNav": "Main navigation",
       "a11y.breadcrumbs": "Breadcrumbs",
