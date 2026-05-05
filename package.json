@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "build:css": "tailwindcss -i ./src/tailwind-input.css -o ./css/koros.css --minify",
-    "serve": "python3 scripts/serve.py",
     "watch:css": "tailwindcss -i ./src/tailwind-input.css -o ./css/koros.css --watch"
   },
   "devDependencies": {
