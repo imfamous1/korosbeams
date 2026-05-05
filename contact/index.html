@@ -70,6 +70,40 @@
             cursor: pointer;
             accent-color: #725c00;
         }
+        #koros-inquiry-form,
+        #koros-inquiry-form > *,
+        #koros-inquiry-form input,
+        #koros-inquiry-form select,
+        #koros-inquiry-form textarea,
+        .contact-loc-card,
+        .contact-loc-card > *,
+        .contact-loc-card iframe {
+            min-width: 0;
+            max-width: 100%;
+        }
+        #koros-inquiry-form input,
+        #koros-inquiry-form select,
+        #koros-inquiry-form textarea {
+            font-size: 16px;
+        }
+        .contact-loc-card a,
+        .contact-loc-card address,
+        .contact-loc-card h3,
+        .contact-loc-card p {
+            overflow-wrap: anywhere;
+        }
+        @media (max-width: 640px) {
+            .contact-loc-grid {
+                gap: 1rem;
+                row-gap: 1.25rem;
+            }
+            .contact-loc-card {
+                padding: 1rem;
+            }
+            .contact-loc-card .material-symbols-outlined {
+                font-size: 1.55rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">

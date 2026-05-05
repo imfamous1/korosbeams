@@ -234,6 +234,11 @@
     }
   }
 
+  .koros-spec-lengths-value {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
   .koros-chat-widget {
     position: fixed;
     right: 1rem;
@@ -399,12 +404,12 @@
       bottom: calc(100% + 0.7rem);
     }
     .koros-chat-widget__content {
-      flex-direction: column;
+      align-items: center;
     }
     .koros-chat-widget__qr-wrap {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1;
+      width: 5.5rem;
+      height: 5.5rem;
+      padding: 0.28rem;
     }
   }
 }

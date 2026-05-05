@@ -135,7 +135,7 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 </div>
 <div class="koros-chat-widget" data-chat-widget>
 <button type="button" class="koros-chat-widget__toggle" aria-expanded="false" aria-controls="koros-chat-widget-panel" data-chat-widget-toggle data-i18n-aria-label="widget.chat.toggleAria">
-<span class="material-symbols-outlined koros-chat-widget__toggle-glyph" aria-hidden="true">forum</span>
+<span class="material-symbols-outlined koros-chat-widget__toggle-glyph" aria-hidden="true">chat_bubble</span>
 </button>
 <section id="koros-chat-widget-panel" class="koros-chat-widget__panel hidden" data-chat-widget-panel aria-hidden="true">
 <button type="button" class="koros-chat-widget__close" data-chat-widget-close data-i18n-aria-label="widget.chat.closeAria">×</button>
