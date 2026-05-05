@@ -535,8 +535,9 @@
 
   function initProductGalleries() {
     document.querySelectorAll("[data-product-gallery]").forEach(function (gallery) {
+      var scope = gallery.parentElement || gallery;
       var image = gallery.querySelector("[data-gallery-image]");
-      var thumbs = Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-thumb]"));
+      var thumbs = Array.prototype.slice.call(scope.querySelectorAll("[data-gallery-thumb]"));
       var prev = gallery.querySelector("[data-gallery-prev]");
       var next = gallery.querySelector("[data-gallery-next]");
       if (!image || thumbs.length < 2) return;

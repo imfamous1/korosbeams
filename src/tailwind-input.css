@@ -235,7 +235,7 @@
   }
 
   .koros-spec-lengths-value {
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
     word-break: normal;
   }
 
