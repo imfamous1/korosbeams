@@ -396,7 +396,7 @@
       "contact.form.emailSubject": "[korosbeams.ru] Запрос с сайта: {{who}}",
       "contact.form.meta.page": "Страница отправки",
       "contact.form.consentHtml":
-        'Я даю согласие на <a href=\"privacy-policy.html\" class=\"text-primary underline underline-offset-2\">обработку персональных данных</a> на условиях <a href=\"personal-data-consent.html\" class=\"text-primary underline underline-offset-2\">документа о согласии</a> <span class=\"text-outline text-xs uppercase tracking-wide\">(обязательно)</span>.',
+        'Я даю согласие на <a href=\"/privacy-policy/\" class=\"text-primary underline underline-offset-2\">обработку персональных данных</a> на условиях <a href=\"/personal-data-consent/\" class=\"text-primary underline underline-offset-2\">документа о согласии</a> <span class=\"text-outline text-xs uppercase tracking-wide\">(обязательно)</span>.',
       "contact.form.consentRecordKey": "Согласие на обработку ПД (версия на сайте)",
       "contact.form.consentRecordYes": "Отмечено при отправке формы",
       "contact.opt.norm": "БДК Н20",
@@ -498,7 +498,7 @@
 
       "cookie.banner.dialogAria": "Уведомление об использовании cookie",
       "cookie.banner.messageHtml":
-        "На сайте используются cookie и локальное хранилище браузера (в том числе для языка интерфейса). При подключении Яндекс.Метрики или иной аналитики политика и баннер будут обновлены. Подробнее в <a href=\"privacy-policy.html#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">политике конфиденциальности</a>.",
+        "На сайте используются cookie и локальное хранилище браузера (в том числе для языка интерфейса). При подключении Яндекс.Метрики или иной аналитики политика и баннер будут обновлены. Подробнее в <a href=\"/privacy-policy/#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">политике конфиденциальности</a>.",
       "cookie.banner.accept": "Понятно",
     },
     en: {
@@ -530,7 +530,7 @@
 
       "cookie.banner.dialogAria": "Cookie notice",
       "cookie.banner.messageHtml":
-        "This site uses cookies and browser storage (including for language preference). If Yandex.Metrica or other analytics are added, the policy and banner will be updated. Details in the <a href=\"privacy-policy.html#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">privacy policy</a>.",
+        "This site uses cookies and browser storage (including for language preference). If Yandex.Metrica or other analytics are added, the policy and banner will be updated. Details in the <a href=\"/privacy-policy/#cookies-file\" class=\"text-[#ffd100] underline underline-offset-2 hover:opacity-90\">privacy policy</a>.",
       "cookie.banner.accept": "OK",
 
       "a11y.mainNav": "Main navigation",
@@ -894,7 +894,7 @@
       "contact.form.emailSubject": "[korosbeams.ru] Website inquiry: {{who}}",
       "contact.form.meta.page": "Submitted from",
       "contact.form.consentHtml":
-        'I agree to the <a href=\"privacy-policy.html\" class=\"text-primary underline underline-offset-2\">processing of my personal data</a> as set out in the <a href=\"personal-data-consent.html\" class=\"text-primary underline underline-offset-2\">consent document</a> <span class=\"text-outline text-xs uppercase tracking-wide\">(required)</span>.',
+        'I agree to the <a href=\"/privacy-policy/\" class=\"text-primary underline underline-offset-2\">processing of my personal data</a> as set out in the <a href=\"/personal-data-consent/\" class=\"text-primary underline underline-offset-2\">consent document</a> <span class=\"text-outline text-xs uppercase tracking-wide\">(required)</span>.',
       "contact.form.consentRecordKey": "Personal data consent (site wording)",
       "contact.form.consentRecordYes": "Checked on form submit",
       "contact.opt.norm": "H20 beam",

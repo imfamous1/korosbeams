@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="light" lang="ru" data-i18n-document-title="meta.title.certificates" data-koros-nav="certificates">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Сертификаты и испытания ООО КОРОС" data-i18n-content="meta.desc.certificates"/>
+<title>Сертификаты | ООО «КОРОС»</title>
+<link rel="canonical" href="/certificates/"/>
+<link href="/css/koros.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .tonal-shift { transition: background-color 0.3s ease; }
+        .cert-preview-dialog {
+            width: min(960px, calc(100vw - 2rem));
+            height: calc(100dvh - 2rem);
+            max-height: calc(100dvh - 2rem);
+            margin: auto;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            padding: 0;
+            overflow: hidden;
+        }
+        .cert-preview-dialog::backdrop {
+            background: rgba(24, 24, 27, 0.72);
+            backdrop-filter: blur(8px);
+        }
+        .cert-preview-dialog__panel {
+            height: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .cert-preview-dialog__body {
+            min-height: 0;
+            overflow-y: auto;
+            padding: 1rem;
+            background: var(--surface-container-low, #f2f4f7);
+        }
+        .cert-preview-dialog__image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<div id="koros-site-header"></div>
+<main class="koros-site-main pb-16">
+<div class="max-w-[1440px] mx-auto px-6 sm:px-8">
+<header class="py-12">
+<p class="text-xs font-bold tracking-widest text-secondary uppercase mb-3" data-i18n="cert.hero.kicker">Документы</p>
+<h1 class="font-headline text-4xl md:text-6xl font-bold tracking-tight max-w-3xl leading-tight mb-6" data-i18n="cert.title">Сертификаты</h1>
+<p class="text-on-surface-variant max-w-2xl" data-i18n="cert.sub">…</p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 sm:mb-10">
+<article class="group bg-white border border-zinc-200 rounded-xl shadow-sm flex flex-col overflow-hidden transition-shadow hover:shadow-md">
+<div class="relative aspect-video overflow-hidden bg-surface-container-high border-b border-outline-variant/20">
+<div class="absolute inset-0 grid place-items-center p-6">
+<div class="w-full h-full border border-primary/30 bg-white/70 rounded-lg flex flex-col items-center justify-center text-center p-6">
+<span class="material-symbols-outlined text-5xl text-primary mb-3" aria-hidden="true">article</span>
+<span class="font-headline font-bold text-sm uppercase tracking-widest text-primary" data-i18n="cert.card2.visual">Паспорт + ТУ</span>
+</div>
+</div>
+<span class="absolute left-4 top-4 bg-white/70 text-primary text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-sm" data-i18n="cert.card2.badge">По запросу</span>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h2 class="font-headline font-bold text-xl mb-3" data-i18n="cert.card2.t">Паспорт продукции и ТУ</h2>
+<p class="text-zinc-600 text-sm flex-1 mb-6" data-i18n="cert.card2.p">…</p>
+<a href="/contact/#inquiry" class="text-primary font-bold text-sm inline-flex items-center gap-2">
+<span data-i18n="cert.card2.link">Запросить</span>
+<span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+</a>
+</div>
+</article>
+<article class="group bg-white border border-zinc-200 rounded-xl shadow-sm flex flex-col overflow-hidden transition-shadow hover:shadow-md">
+<div class="relative aspect-video overflow-hidden bg-surface-container-low border-b border-outline-variant/20">
+<img src="/images/protocol.png" alt="Превью протокола испытаний БДК Н20" data-i18n-alt="cert.card1.img.alt" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" decoding="async"/>
+<span class="absolute left-4 top-4 bg-white/70 text-secondary text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-sm" data-i18n="cert.card1.badge">Можно посмотреть</span>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h2 class="font-headline font-bold text-xl mb-3" data-i18n="cert.card1.t">Протоколы</h2>
+<p class="text-zinc-600 text-sm flex-1 mb-6" data-i18n="cert.card1.p">…</p>
+<button type="button" class="text-secondary font-bold text-sm inline-flex items-center gap-2 self-start" data-cert-preview-open="protocol">
+<span data-i18n="cert.card1.link">Посмотреть</span>
+<span class="material-symbols-outlined text-base" aria-hidden="true">open_in_full</span>
+</button>
+</div>
+</article>
+<article class="group bg-primary-container/30 border border-primary/30 rounded-xl flex flex-col overflow-hidden transition-shadow hover:shadow-md">
+<div class="relative aspect-video overflow-hidden bg-primary-container/30 border-b border-primary/30">
+<div class="absolute inset-0 grid place-items-center p-6">
+<div class="w-full h-full bg-white/70 rounded-lg flex flex-col items-center justify-center text-center p-6">
+<span class="material-symbols-outlined text-5xl text-on-primary-container mb-3" aria-hidden="true">picture_as_pdf</span>
+<span class="font-headline font-bold text-sm uppercase tracking-widest text-on-primary-container" data-i18n="cert.card3.visual">PDF-презентация</span>
+</div>
+</div>
+<span class="absolute left-4 top-4 bg-white/70 text-on-primary-container text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-sm" data-i18n="cert.card3.badge">Файл</span>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h2 class="font-headline font-bold text-xl mb-3 text-on-primary-container" data-i18n="cert.card3.t">Презентация</h2>
+<p class="text-sm flex-1 mb-6 text-on-primary-container/90" data-i18n="cert.card3.p">…</p>
+<a href="/assets/docs/koros-h20-presentation.pdf" download class="inline-flex items-center gap-2 font-bold bg-primary text-white px-5 py-3 rounded-lg text-sm self-start">
+<span data-i18n="cert.card3.link">Скачать PDF</span>
+<span class="material-symbols-outlined text-base" aria-hidden="true">download</span>
+</a>
+</div>
+</article>
+</div>
+<dialog id="protocol-preview" class="cert-preview-dialog" data-cert-preview-dialog aria-labelledby="protocol-preview-title">
+<div class="cert-preview-dialog__panel bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl border border-outline-variant/30">
+<header class="flex items-start justify-between gap-4 p-6 border-b border-outline-variant/20">
+<div>
+<p class="text-xs font-bold tracking-widest text-secondary uppercase mb-2" data-i18n="cert.modal.kicker">Предпросмотр документа</p>
+<h2 id="protocol-preview-title" class="font-headline font-bold text-2xl" data-i18n="cert.modal.title">Протоколы испытаний</h2>
+</div>
+<button type="button" class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface inline-flex items-center justify-center hover:bg-surface-container-highest transition-colors" data-cert-preview-close data-i18n-aria-label="cert.modal.close" aria-label="Закрыть просмотр">
+<span class="material-symbols-outlined" aria-hidden="true">close</span>
+</button>
+</header>
+<div class="cert-preview-dialog__body">
+<img src="/images/protocol.png" alt="Протокол испытаний БДК Н20" data-i18n-alt="cert.modal.img.alt" class="cert-preview-dialog__image w-full rounded-lg bg-white border border-outline-variant/20"/>
+</div>
+<footer class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-md" data-i18n="cert.modal.caption">Это начало протокола. Для тендера или поставки запросите актуальный комплект документов под вашу партию.</p>
+<a href="/contact/#inquiry" class="inline-flex items-center justify-center gap-2 font-bold bg-secondary text-white px-5 py-3 rounded-lg text-sm">
+<span data-i18n="cert.modal.cta">Запросить полный комплект</span>
+<span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+</a>
+</footer>
+</div>
+</dialog>
+<section class="pt-8 pb-14 sm:pt-10 sm:pb-16">
+<h2 class="font-headline font-bold text-2xl md:text-3xl mb-4" data-i18n="cert.video.title">Производство в реальном процессе</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6" data-i18n="cert.video.sub">Видео с производственного участка помогает оценить стабильность операций, дисциплину процесса и фактический уровень готовности продукции к отгрузке.</p>
+<div class="rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container-lowest shadow-sm">
+<figure class="bg-black">
+<video class="w-full" src="/images/IMG_1489.MP4" controls autoplay loop muted playsinline preload="metadata"></video>
+<figcaption class="bg-white px-5 py-4 text-sm text-on-surface-variant border-t border-outline-variant/20" data-i18n="cert.video.caption">На видео видно, как проходит производство: подготовка заготовок, обработка и маркировка балки перед отгрузкой.</figcaption>
+</figure>
+</div>
+</section>
+<section class="pt-0 pb-16">
+<h2 class="font-headline font-bold text-2xl md:text-3xl mb-4" data-i18n="cert.std.title">Стандарты</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6" data-i18n="cert.std.sub">…</p>
+<div class="overflow-x-auto bg-surface-container-lowest shadow-sm border border-outline-variant/40 rounded-lg">
+<table class="w-full text-left text-sm min-w-[760px]">
+<thead class="bg-surface-container-highest border-b border-outline-variant/30">
+<tr>
+<th class="p-4 font-headline font-bold text-xs uppercase tracking-wide" data-i18n="cert.std.table.th1">Стандарт / документ</th>
+<th class="p-4 font-headline font-bold text-xs uppercase tracking-wide" data-i18n="cert.std.table.th2">Область</th>
+<th class="p-4 font-headline font-bold text-xs uppercase tracking-wide" data-i18n="cert.std.table.th3">Примечание</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20">
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r1.doc">ГОСТ Р 71938-2025</td>
+<td class="p-4" data-i18n="cert.std.table.r1.scope">Качество и требования к балке БДК Н20</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r1.note">Базовый отраслевой стандарт для поставки</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r2.doc">EN 13377:2002</td>
+<td class="p-4" data-i18n="cert.std.table.r2.scope">Показатели несущей способности двутавровой балки</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r2.note">Используется для сопоставления результатов испытаний</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r3.doc">ГОСТ 8486-86</td>
+<td class="p-4" data-i18n="cert.std.table.r3.scope">Пиломатериалы хвойных пород для поясов балки</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r3.note">Не ниже II сорта (по данным презентации)</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r4.doc">ГОСТ 3916.1-2018 / EN 636-3</td>
+<td class="p-4" data-i18n="cert.std.table.r4.scope">Фанера ФСФ для стенки балки</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r4.note">Типовые толщины 24/27 мм</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r5.doc">EN 301 / EN 204-205</td>
+<td class="p-4" data-i18n="cert.std.table.r5.scope">Клеевые системы (PUR) для узлов соединения</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r5.note">Требования к водостойкости и классу клея</td>
+</tr>
+<tr class="hover:bg-surface-container-low/80">
+<td class="p-4 font-medium" data-i18n="cert.std.table.r6.doc">ТУ [placeholder]</td>
+<td class="p-4" data-i18n="cert.std.table.r6.scope">Внутренние технические условия на продукцию</td>
+<td class="p-4 text-on-surface-variant text-sm" data-i18n="cert.std.table.r6.note">Заполнить номер и редакцию ТУ после утверждения</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+<footer id="koros-site-footer" class="bg-zinc-900 w-full pt-16 pb-8 text-base"></footer>
+<script src="/js/site-chrome-html.js"></script>
+<script src="/js/layout.js" defer></script>
+<script src="/js/i18n.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
