@@ -89,7 +89,7 @@
 
       "index.hero.kicker": "Производитель БДК",
       "index.hero.title": "Балка БДК Н20<br />для опалубки",
-      "index.hero.lead": "Более 10 лет в деревопереработке: полный цикл<br />от пиломатериалов и фанеры до готовых балок БДК<br />для опалубки в монолитном строительстве.",
+      "index.hero.lead": "Более 10 лет в деревопереработке: полный цикл <br />от пиломатериалов и фанеры до готовых балок БДК <br />для опалубки в монолитном строительстве.",
       "index.hero.trust1": "Стандарты: ГОСТ Р 71938-2025 и EN 13377:2002",
       "index.hero.trust2": "Материалы: древесина, фанера, клей PUR и ЛКМ под контролем",
       "index.hero.trust3": "Испытания прочности в аккредитованных лабораториях по нормам",
@@ -584,7 +584,7 @@
 
       "index.hero.kicker": "Beam manufacturer",
       "index.hero.title": "Beams H20 timber beam for formwork",
-      "index.hero.lead": "Over 10 years in wood processing: full flow<br />from sawn timber and plywood to finished H20 formwork beams<br />for monolithic construction.",
+      "index.hero.lead": "Over 10 years in wood processing: full flow <br />from sawn timber and plywood to finished H20 formwork beams <br />for monolithic construction.",
       "index.hero.trust1": "Standards: GOST R 71938-2025 & EN 13377:2002",
       "index.hero.trust2": "Materials: timber, plywood, PUR adhesive and coatings under control",
       "index.hero.trust3": "Strength testing in accredited labs to applicable codes",

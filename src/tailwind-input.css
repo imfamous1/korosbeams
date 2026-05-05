@@ -79,18 +79,22 @@
     user-select: none;
   }
 
-  /* Главная: hero-фото целиком в блоке + лёгкий сдвиг кадра вправо */
+  /* Главная: hero-фото кадрируется отдельно под мобильный и широкий экран. */
   .koros-index-hero-img {
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
-    object-fit: contain;
-    object-position: 76% center;
+    object-fit: cover;
+    object-position: 42% center;
   }
 
   .koros-hero-scrim {
+    position: absolute;
+    inset: 0;
     --koros-hero-scrim-rgb: 252 249 248;
     --koros-hero-scrim-from-opacity: 1;
-    --koros-hero-scrim-via-opacity: 0.44;
-    --koros-hero-scrim-via-pos: 50%;
+    --koros-hero-scrim-via-opacity: 0.72;
+    --koros-hero-scrim-via-pos: 58%;
     --koros-hero-scrim-to-pos: 100%;
     background: linear-gradient(
       to right,
@@ -98,6 +102,33 @@
       rgb(var(--koros-hero-scrim-rgb) / var(--koros-hero-scrim-via-opacity)) var(--koros-hero-scrim-via-pos),
       transparent var(--koros-hero-scrim-to-pos)
     );
+  }
+
+  .koros-hero-lead br {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    .koros-index-hero-img {
+      object-position: 48% center;
+    }
+    .koros-hero-scrim {
+      --koros-hero-scrim-via-opacity: 0.64;
+      --koros-hero-scrim-via-pos: 56%;
+    }
+    .koros-hero-lead br {
+      display: initial;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .koros-index-hero-img {
+      object-position: 76% center;
+    }
+    .koros-hero-scrim {
+      --koros-hero-scrim-via-opacity: 0.44;
+      --koros-hero-scrim-via-pos: 50%;
+    }
   }
 
   .koros-product-gallery__image {
