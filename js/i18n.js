@@ -184,6 +184,10 @@
 
       "mfg.quality.title": "Качество и стандарты",
       "mfg.quality.sub": "Соответствие ГОСТ Р 71938-2025 и EN 13377:2002; древесина хвойных пород не ниже II сорта по ГОСТ 8486-86.",
+      "mfg.quality.sub1.label": "Стандарты",
+      "mfg.quality.sub1": "Соответствие ГОСТ Р 71938-2025 и EN 13377:2002.",
+      "mfg.quality.sub2.label": "Сырьё",
+      "mfg.quality.sub2": "Хвойная древесина не ниже II сорта по <span class=\"whitespace-nowrap\">ГОСТ 8486-86</span>.",
       "mfg.quality.th.std": "Стандарт",
       "mfg.quality.th.req": "Показатель",
       "mfg.quality.th.koros": "ООО Корос",
@@ -688,6 +692,10 @@
 
       "mfg.quality.title": "Quality & codes",
       "mfg.quality.sub": "GOST R 71938-2025 and EN 13377:2002; softwood not below grade II per GOST 8486-86.",
+      "mfg.quality.sub1.label": "Standards",
+      "mfg.quality.sub1": "GOST R 71938-2025 and EN 13377:2002 compliance.",
+      "mfg.quality.sub2.label": "Raw material",
+      "mfg.quality.sub2": "Softwood grade II or higher per <span class=\"whitespace-nowrap\">GOST 8486-86</span>.",
       "mfg.quality.th.std": "Standard",
       "mfg.quality.th.req": "Indicator",
       "mfg.quality.th.koros": "Koros LLC",

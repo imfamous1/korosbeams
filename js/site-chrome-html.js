@@ -5,7 +5,7 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <div class="max-w-[1440px] mx-auto px-6 sm:px-8 w-full flex justify-between items-center py-2.5 gap-3 flex-nowrap">
 <div class="flex items-center gap-3 xl:gap-5 min-w-0 flex-1 xl:flex-initial">
 <a class="inline-flex shrink-0 items-center" href="/" aria-label="КОРОС">
-<img src="/images/logo.png" alt="КОРОС" width="170" height="56" class="w-auto object-contain" style="height: 1.85rem;" loading="eager" decoding="async"/>
+<img src="/images/koros_logo.svg" alt="КОРОС" width="1345" height="328" class="w-auto object-contain" style="height: 1.85rem;" loading="eager" decoding="async"/>
 </a>
 <div class="hidden xl:flex items-center gap-3 xl:gap-4 shrink min-w-0">
 <a href="/" data-koros-nav="home" data-i18n="nav.home">Главная</a>
@@ -111,7 +111,7 @@ window.__KOROS_FOOTER_HTML__ = `<div class="px-6 sm:px-8 max-w-[1440px] mx-auto"
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 <div>
 <a href="/" class="mb-3 inline-flex items-center" aria-label="КОРОС">
-<img src="/images/logo.png" alt="КОРОС" width="170" height="56" class="w-auto object-contain" style="height: 1.85rem;" loading="lazy" decoding="async"/>
+<img src="/images/koros_logo.svg" alt="КОРОС" width="1345" height="328" class="w-auto object-contain" style="height: 1.85rem;" loading="lazy" decoding="async"/>
 </a>
 <p class="text-zinc-400 leading-relaxed mb-4" data-i18n="footer.tagline">…</p>
 </div>

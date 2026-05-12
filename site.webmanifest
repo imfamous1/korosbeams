@@ -1,0 +1,25 @@
+{
+  "name": "КОРОС",
+  "short_name": "КОРОС",
+  "icons": [
+    {
+      "src": "/images/favicons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#ffd100",
+  "background_color": "#fcf9f8",
+  "display": "standalone"
+}
