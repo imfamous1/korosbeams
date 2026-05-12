@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 LINK = "text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors duration-300"
-ACTIVE = "text-[#725c00] dark:text-[#ffd100] border-b-2 border-[#ffd100] pb-1 font-bold font-headline"
+ACTIVE = "text-[#725c00] dark:text-[#ffd100] font-bold font-headline"
 
 
 def build_nav(active: str) -> str:
@@ -23,7 +23,7 @@ def build_nav(active: str) -> str:
 
     if active == "contact":
         c_desktop = (
-            '<a class="text-[#725c00] border-b-2 border-[#ffd100] pb-1 font-headline font-bold tracking-tight '
+            '<a class="text-[#725c00] font-headline font-bold tracking-tight '
             'hidden md:inline" href="/contact/" aria-current="page">Contact/Inquiry</a>'
         )
         c_mobile_btn = ""

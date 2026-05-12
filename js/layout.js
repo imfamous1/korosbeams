@@ -5,7 +5,7 @@
   "use strict";
 
   var DESKTOP_ON =
-    "text-[16px] leading-tight text-[#725c00] dark:text-[#ffd100] font-semibold border-b-2 border-[#ffd100] pb-0.5";
+    "text-[16px] leading-tight text-[#725c00] dark:text-[#ffd100] font-semibold";
   var DESKTOP_OFF =
     "text-[16px] leading-tight text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors";
   var MOBILE_ON =

@@ -17,7 +17,7 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 </div>
 <div class="hidden xl:flex items-center gap-2 shrink-0 min-w-0 flex-nowrap overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
 <div class="grid shrink-0 [grid-template-columns:auto_repeat(3,2.25rem)] items-center gap-x-0.5">
-<a class="koros-header-chip h-9 px-2 text-sm font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a>
+<a class="koros-header-chip h-9 px-2 text-base font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
 <img src="/images/icons/max-logo-2025.png" alt="" width="64" height="32" class="max-h-[25px] w-auto max-w-[48px] object-contain object-center pointer-events-none" loading="lazy" decoding="async"/>
 </a>
@@ -55,7 +55,7 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 </div>
 <div class="mt-8 flex w-full max-w-md flex-col items-stretch gap-3 px-1">
 <div class="grid w-full max-w-md mx-auto [grid-template-columns:auto_repeat(3,2.25rem)] items-center justify-center gap-x-0.5">
-<a class="koros-header-chip h-9 px-2 text-sm font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a>
+<a class="koros-header-chip h-9 px-2 text-base font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
 <img src="/images/icons/max-logo-2025.png" alt="" width="64" height="32" class="max-h-[25px] w-auto max-w-[48px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
