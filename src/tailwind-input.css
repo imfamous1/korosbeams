@@ -246,30 +246,43 @@
     z-index: 70;
   }
   .koros-chat-widget__toggle {
-    width: 3.2rem;
-    height: 3.2rem;
+    min-width: 3.35rem;
+    height: 3.35rem;
+    padding: 0 1rem 0 0.85rem;
     border: 0;
     border-radius: 9999px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    box-shadow: 0 10px 26px rgb(31 94 189 / 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 0.42rem;
+    background: #ffd100;
+    color: #1b1c1c;
+    box-shadow: 0 12px 28px rgb(114 92 0 / 0.3), 0 0 0 1px rgb(27 28 28 / 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   }
   .koros-chat-widget__toggle:hover {
     transform: translateY(-1px);
-    box-shadow: 0 14px 30px rgb(31 94 189 / 0.45);
+    background: #ffe05a;
+    box-shadow: 0 16px 34px rgb(114 92 0 / 0.42), 0 0 0 1px rgb(27 28 28 / 0.12);
   }
   .koros-chat-widget__toggle:focus-visible {
-    outline: 2px solid #ffd100;
+    outline: 2px solid #1b1c1c;
     outline-offset: 3px;
   }
   .koros-chat-widget__toggle-glyph {
     font-size: 1.65rem;
     line-height: 1;
-    color: #2aabee;
-    font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+    color: currentColor;
+    font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 0, "opsz" 24;
+    pointer-events: none;
+  }
+  .koros-chat-widget__toggle-label {
+    font-size: 0.86rem;
+    line-height: 1;
+    font-weight: 800;
+    color: currentColor;
+    letter-spacing: 0;
+    white-space: nowrap;
     pointer-events: none;
   }
   .koros-chat-widget__panel {
@@ -399,6 +412,13 @@
   }
 
   @media (max-width: 640px) {
+    .koros-chat-widget__toggle {
+      width: 3.35rem;
+      padding: 0;
+    }
+    .koros-chat-widget__toggle-label {
+      display: none;
+    }
     .koros-chat-widget__panel {
       right: -0.2rem;
       bottom: calc(100% + 0.7rem);
