@@ -401,7 +401,9 @@
       "contact.form.submit": "Отправить запрос",
       "contact.form.honeyLabel": "Не заполняйте это поле",
       "contact.form.sending": "Отправляем…",
-      "contact.form.success": "Сообщение отправлено. Мы свяжемся с вами в рабочее время.",
+      "contact.form.successTitle": "Запрос отправлен",
+      "contact.form.success": "Спасибо! Мы получили ваши контакты и свяжемся с вами в рабочее время.",
+      "contact.form.successOk": "OK",
       "contact.form.error":
         "Не удалось отправить форму. Попробуйте позже или напишите на info@korosbeams.ru.",
       "contact.form.errorActivate":
@@ -915,7 +917,9 @@
       "contact.form.submit": "Submit request",
       "contact.form.honeyLabel": "Leave this field empty",
       "contact.form.sending": "Sending…",
-      "contact.form.success": "Your message was sent. We will get back to you during business hours.",
+      "contact.form.successTitle": "Request sent",
+      "contact.form.success": "Thank you! We have your contact details and will get back to you during business hours.",
+      "contact.form.successOk": "OK",
       "contact.form.error":
         "Could not send the form. Try again later or email info@korosbeams.ru.",
       "contact.form.errorActivate":

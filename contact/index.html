@@ -53,15 +53,71 @@
         }
         #koros-inquiry-status.koros-inquiry-status--ok {
             display: block;
-            background: color-mix(in srgb, var(--color-primary-container, #e8def8) 40%, transparent);
+            background: color-mix(in srgb, #2e7d32 12%, white);
             color: var(--color-on-surface, #1c1b1f);
-            border: 1px solid color-mix(in srgb, var(--color-primary, #6750a4) 35%, transparent);
+            border: 1px solid color-mix(in srgb, #2e7d32 42%, transparent);
         }
         #koros-inquiry-status.koros-inquiry-status--err {
             display: block;
             background: color-mix(in srgb, #b3261e 12%, transparent);
             color: #1c1b1f;
             border: 1px solid color-mix(in srgb, #b3261e 40%, transparent);
+        }
+        .koros-inquiry-dialog {
+            width: min(31rem, calc(100vw - 2rem));
+            border: 0;
+            border-radius: 0.75rem;
+            padding: 0;
+            background: #fcf9f8;
+            color: #1b1c1c;
+            box-shadow: 0 28px 70px rgba(17, 24, 39, 0.28);
+        }
+        .koros-inquiry-dialog::backdrop {
+            background: rgba(17, 24, 39, 0.48);
+        }
+        .koros-inquiry-dialog__body {
+            display: grid;
+            gap: 1rem;
+            padding: 1.5rem;
+        }
+        .koros-inquiry-dialog__icon {
+            width: 2.75rem;
+            height: 2.75rem;
+            display: grid;
+            place-items: center;
+            border-radius: 9999px;
+            background: color-mix(in srgb, #2e7d32 14%, white);
+            color: #2e7d32;
+        }
+        .koros-inquiry-dialog__title {
+            font-size: 1.35rem;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+        .koros-inquiry-dialog__text {
+            color: #5f6368;
+            line-height: 1.55;
+        }
+        .koros-inquiry-dialog__actions {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 0.25rem;
+        }
+        .koros-inquiry-dialog__ok {
+            min-width: 7rem;
+            border-radius: 0.5rem;
+            background: #ffd100;
+            color: #6f5a00;
+            padding: 0.8rem 1.25rem;
+            font-weight: 800;
+        }
+        .koros-inquiry-dialog__ok:hover {
+            opacity: 0.95;
+        }
+        .koros-inquiry-dialog__ok:focus-visible {
+            outline: 2px solid #1b1c1c;
+            outline-offset: 3px;
         }
         .koros-consent-field {
             display: grid;
@@ -126,7 +182,6 @@
 <div class="bg-surface-container-low p-4 sm:p-8 md:p-10 rounded-xl border border-outline-variant/20">
 <h2 id="contact-form-heading" class="font-headline font-bold text-2xl md:text-3xl tracking-tight mb-6 sm:mb-8" data-i18n="contact.form.title">Запрос по продукту</h2>
 <form id="koros-inquiry-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6" novalidate>
-<p id="koros-inquiry-status" class="md:col-span-2 rounded-lg px-4 py-3 text-sm font-medium hidden" role="status" aria-live="polite"></p>
 <div class="koros-honey-wrap" aria-hidden="true">
 <label><span data-i18n="contact.form.honeyLabel">Не заполняйте, если вы человек</span><input type="text" id="koros-inquiry-honey" name="_honey" autocomplete="off" tabindex="-1"/></label>
 </div>
@@ -178,7 +233,22 @@
 <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
 </button>
 </div>
+<p id="koros-inquiry-status" class="md:col-span-2 rounded-lg px-4 py-3 text-sm font-medium hidden" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
 </form>
+<dialog id="koros-inquiry-success-dialog" class="koros-inquiry-dialog" aria-labelledby="koros-inquiry-success-title" aria-describedby="koros-inquiry-success-text">
+<div class="koros-inquiry-dialog__body" data-no-typography>
+<div class="koros-inquiry-dialog__icon" aria-hidden="true">
+<span class="material-symbols-outlined">check</span>
+</div>
+<div>
+<h3 id="koros-inquiry-success-title" class="koros-inquiry-dialog__title font-headline" data-i18n="contact.form.successTitle">Запрос отправлен</h3>
+<p id="koros-inquiry-success-text" class="koros-inquiry-dialog__text mt-2" data-i18n="contact.form.success">Спасибо! Мы получили ваши контакты и свяжемся с вами в рабочее время.</p>
+</div>
+<div class="koros-inquiry-dialog__actions">
+<button class="koros-inquiry-dialog__ok" type="button" data-contact-success-close data-i18n="contact.form.successOk">OK</button>
+</div>
+</div>
+</dialog>
 </div>
 </section>
 <section id="contact-locations" class="pt-14 sm:pt-16 scroll-mt-24" aria-labelledby="contact-locations-heading">

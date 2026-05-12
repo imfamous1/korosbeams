@@ -338,6 +338,11 @@
     var statusEl = document.getElementById("koros-inquiry-status");
     var submitBtn = document.getElementById("koros-inquiry-submit");
     var honey = document.getElementById("koros-inquiry-honey");
+    var successDialog = document.getElementById("koros-inquiry-success-dialog");
+    var successCloseButtons = successDialog
+      ? successDialog.querySelectorAll("[data-contact-success-close]")
+      : [];
+    var successReturnFocus = null;
 
     function setStatus(kind, message) {
       if (!statusEl) return;
@@ -352,6 +357,61 @@
       else if (kind === "err") statusEl.classList.add("koros-inquiry-status--err");
       else if (kind === "pending") statusEl.classList.add("koros-inquiry-status--pending");
       else statusEl.classList.add("hidden");
+    }
+
+    function closeSuccessDialog() {
+      if (!successDialog) return;
+      if (typeof successDialog.close === "function" && successDialog.open) {
+        successDialog.close();
+      } else {
+        successDialog.removeAttribute("open");
+        document.body.classList.remove("overflow-hidden");
+        if (successReturnFocus && typeof successReturnFocus.focus === "function") {
+          successReturnFocus.focus();
+        }
+      }
+    }
+
+    function openSuccessDialog() {
+      if (!successDialog) {
+        setStatus("ok", inquiryT("contact.form.success"));
+        return;
+      }
+      successReturnFocus = submitBtn || document.activeElement;
+      if (typeof successDialog.showModal === "function") {
+        successDialog.showModal();
+      } else {
+        successDialog.setAttribute("open", "");
+      }
+      document.body.classList.add("overflow-hidden");
+      var okButton = successDialog.querySelector("[data-contact-success-close]");
+      if (okButton && typeof okButton.focus === "function") okButton.focus();
+    }
+
+    if (successDialog) {
+      successCloseButtons.forEach(function (button) {
+        button.addEventListener("click", closeSuccessDialog);
+      });
+      successDialog.addEventListener("click", function (ev) {
+        if (ev.target === successDialog) closeSuccessDialog();
+      });
+      successDialog.addEventListener("close", function () {
+        document.body.classList.remove("overflow-hidden");
+        if (successReturnFocus && typeof successReturnFocus.focus === "function") {
+          successReturnFocus.focus();
+        }
+      });
+      successDialog.addEventListener("cancel", function () {
+        document.body.classList.remove("overflow-hidden");
+        if (successReturnFocus && typeof successReturnFocus.focus === "function") {
+          successReturnFocus.focus();
+        }
+      });
+      if (typeof successDialog.showModal !== "function") {
+        document.addEventListener("keydown", function (ev) {
+          if (ev.key === "Escape" && successDialog.hasAttribute("open")) closeSuccessDialog();
+        });
+      }
     }
 
     function parseFormSubmitResponse(res, text) {
@@ -388,7 +448,8 @@
         return;
       }
       if (honey && honey.value.replace(/\s/g, "")) {
-        setStatus("ok", inquiryT("contact.form.success"));
+        setStatus("", "");
+        openSuccessDialog();
         return;
       }
 
@@ -442,8 +503,9 @@
         .then(function (result) {
           if (submitBtn) submitBtn.disabled = false;
           if (result.ok) {
-            setStatus("ok", inquiryT("contact.form.success"));
             form.reset();
+            setStatus("", "");
+            openSuccessDialog();
             return;
           }
           var act =
