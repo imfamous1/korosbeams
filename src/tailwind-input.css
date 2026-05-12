@@ -25,6 +25,35 @@
     padding-top: var(--koros-header-height, 5rem);
   }
 
+  .koros-index-hero-title,
+  .koros-page-title,
+  .koros-product-hero-title,
+  .koros-immersive-title {
+    letter-spacing: 0;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  .koros-index-hero-title {
+    font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+    line-height: 1.08;
+  }
+
+  .koros-page-title {
+    font-size: clamp(2.25rem, 4.8vw, 3.25rem);
+    line-height: 1.12;
+  }
+
+  .koros-product-hero-title {
+    font-size: clamp(2.2rem, 4.2vw, 3.35rem);
+    line-height: 1.08;
+  }
+
+  .koros-immersive-title {
+    font-size: clamp(2.35rem, 5.2vw, 3.75rem);
+    line-height: 1.04;
+  }
+
   /* Бургер / крестик: глиф Material Symbols смещён в метриках шрифта; grid + line-height 0 центрируют в кнопке */
   [data-nav-toggle] {
     display: inline-grid;
