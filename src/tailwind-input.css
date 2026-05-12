@@ -49,6 +49,16 @@
     line-height: 1.08;
   }
 
+  .koros-index-hero-title-line {
+    display: inline-block;
+  }
+
+  @media (min-width: 640px) {
+    .koros-index-hero-title-line {
+      white-space: nowrap;
+    }
+  }
+
   .koros-page-title {
     font-size: clamp(2.25rem, 4.8vw, 3.25rem);
     line-height: 1.12;

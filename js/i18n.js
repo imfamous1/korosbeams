@@ -90,7 +90,7 @@
       "footer.copyright": "© 2026 ООО «КОРОС». Все права защищены.",
 
       "index.hero.kicker": "Производитель балок H20",
-      "index.hero.title": "Балки H20 для опалубки —<br />производство и продажа в Санкт-Петербурге",
+      "index.hero.title": "<span class=\"koros-index-hero-title-line\">Балки H20 для опалубки —</span><br />производство и продажа в Санкт-Петербурге",
       "index.hero.lead": "БДК Н20 КОРОС для опалубки перекрытий и монолитного строительства: полный цикл от пиломатериалов и фанеры до готовой двутавровой балки H20 с доставкой по Санкт-Петербургу и Ленинградской области.",
       "index.hero.trust1": "Стандарты: ГОСТ Р 71938-2025 и EN 13377:2002",
       "index.hero.trust2": "Материалы: древесина, фанера, клей PUR и ЛКМ под контролем",
@@ -671,7 +671,7 @@
       "footer.copyright": "© 2026 Koros LLC. All rights reserved.",
 
       "index.hero.kicker": "Beam manufacturer",
-      "index.hero.title": "H20 formwork beams —<br />manufacturing and sales in Saint Petersburg",
+      "index.hero.title": "<span class=\"koros-index-hero-title-line\">H20 formwork beams —</span><br />manufacturing and sales in Saint Petersburg",
       "index.hero.lead": "Koros BDK H20 beams for slab formwork and monolithic construction: a full cycle from sawn timber and plywood to finished H20 I-beams, with delivery across Saint Petersburg and the Leningrad Region.",
       "index.hero.trust1": "Standards: GOST R 71938-2025 & EN 13377:2002",
       "index.hero.trust2": "Materials: timber, plywood, PUR adhesive and coatings under control",
