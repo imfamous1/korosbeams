@@ -117,7 +117,7 @@
       "index.feat3.li3": "Соединение PUR-клеем по EN 301 / EN 204-205.",
       "index.feat3.li4": "Покрытие с защитой от УФ-лучей; у линейки Pro — полимерные заглушки на торцах балки.",
       "index.feat4.title": "Экспорт и логистика",
-      "index.feat4.text": "Логистика в РФ и любую точку мира.",
+      "index.feat4.text": "Поставки по Санкт-Петербургу, Ленинградской области, РФ и за рубежом. Есть опыт поставок и сотрудничества с российскими и международными компаниями: Грузия, Турция, Египет, ОАЭ, Израиль, Китай и другие страны.",
 
       "index.product.kicker": "Балка",
       "index.product.titleLine1": "Наша продукция:",
@@ -620,7 +620,7 @@
       "index.feat3.li3": "PUR bonding per EN 301 / EN 204-205.",
       "index.feat3.li4": "Coating with UV protection; on the Pro line — polymer end caps on the beam ends.",
       "index.feat4.title": "Export & logistics",
-      "index.feat4.text": "Logistics across Russia and to any destination worldwide.",
+      "index.feat4.text": "Deliveries across Saint Petersburg, the Leningrad Region, Russia and abroad. We have delivery and partnership experience with Russian and international companies in Georgia, Turkey, Egypt, the UAE, Israel, China and other countries.",
 
       "index.product.kicker": "Beams",
       "index.product.titleLine1": "Our products:",
