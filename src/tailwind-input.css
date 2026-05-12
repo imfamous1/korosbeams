@@ -25,6 +25,16 @@
     padding-top: var(--koros-header-height, 5rem);
   }
 
+  .koros-manufacturing-hero {
+    min-height: 560px;
+  }
+
+  @media (min-width: 640px) {
+    .koros-manufacturing-hero {
+      min-height: 640px;
+    }
+  }
+
   .koros-index-hero-title,
   .koros-page-title,
   .koros-product-hero-title,
