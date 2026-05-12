@@ -78,7 +78,37 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 </div>
 </nav>
 `;
-window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-10 px-6 sm:px-8 max-w-[1440px] mx-auto">
+window.__KOROS_FOOTER_HTML__ = `<div class="px-6 sm:px-8 max-w-[1440px] mx-auto">
+<div class="mb-12 border-y border-zinc-800 py-5">
+<div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+<a class="group flex min-w-0 items-center gap-4 text-white" href="tel:+78004444694">
+<span class="inline-grid h-11 w-11 shrink-0 place-items-center bg-[#ffd100] text-zinc-950">
+<span class="material-symbols-outlined text-[1.45rem]" aria-hidden="true">call</span>
+</span>
+<span class="min-w-0">
+<span class="block text-xs font-bold uppercase tracking-wide text-zinc-500" data-i18n="contact.phone.label">Телефон</span>
+<span class="block truncate font-headline text-2xl font-bold tabular-nums tracking-wide text-[#ffd100] transition-colors group-hover:text-white sm:text-3xl" data-i18n="header.phone.display">8 800 444 46 94</span>
+</span>
+</a>
+<div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-end">
+<div class="flex flex-wrap items-center gap-2" role="group" data-i18n-aria-label="a11y.messengerLinks">
+<a class="inline-flex h-11 items-center gap-2 border border-zinc-700 px-3 text-sm font-semibold text-white transition-colors hover:border-[#ffd100] hover:text-[#ffd100] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
+<img src="/images/icons/max-logo-2025.png" alt="" width="64" height="32" class="max-h-[22px] w-auto max-w-[36px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<span data-i18n="header.messenger.max">MAX</span>
+</a>
+<a class="inline-flex h-11 items-center gap-2 border border-zinc-700 px-3 text-sm font-semibold text-white transition-colors hover:border-[#ffd100] hover:text-[#ffd100] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
+<img src="/images/icons/telegram-logo.png" alt="" width="96" height="96" class="h-[22px] w-[22px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<span data-i18n="header.messenger.telegram">Telegram</span>
+</a>
+</div>
+<a class="inline-flex h-11 items-center gap-2 border border-zinc-800 px-3 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-600 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" href="mailto:info@korosbeams.ru" data-i18n-aria-label="a11y.writeEmail">
+<span class="material-symbols-outlined text-[1.2rem]" aria-hidden="true">mail</span>
+<span>info@korosbeams.ru</span>
+</a>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 <div>
 <a href="/" class="mb-3 inline-flex items-center" aria-label="КОРОС">
 <img src="/images/logo.png" alt="КОРОС" width="170" height="56" class="w-auto object-contain" style="height: 1.85rem;" loading="lazy" decoding="async"/>
@@ -112,18 +142,7 @@ window.__KOROS_FOOTER_HTML__ = `<div class="grid grid-cols-1 md:grid-cols-4 gap-
 <p class="m-0"><span data-i18n="contact.addr.plant.line1">Россия, Ленинградская область,</span><br/><span data-i18n="contact.addr.plant.line2">п. Тихорицы, ул. Набережная, д. 1Н</span></p>
 </div>
 </div>
-<p class="mt-3"><a class="text-[#ffd100] font-medium" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a></p>
-<p class="mt-2 flex flex-wrap items-center gap-2">
-<span class="inline-flex items-center gap-1.5 shrink-0" role="group" data-i18n-aria-label="a11y.messengerLinks">
-<a class="inline-flex shrink-0 rounded-sm opacity-90 hover:opacity-100 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" href="https://max.ru/chat?phone=%2B79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
-<img src="/images/icons/max-logo-2025.png" alt="" width="64" height="32" class="max-h-[22px] w-auto max-w-[36px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
-</a>
-<a class="inline-flex shrink-0 rounded-sm opacity-90 hover:opacity-100 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
-<img src="/images/icons/telegram-logo.png" alt="" width="96" height="96" class="w-[22px] h-[22px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
-</a>
-</span>
-<a class="text-zinc-400 hover:text-white break-all" href="mailto:info@korosbeams.ru">info@korosbeams.ru</a>
-</p>
+</div>
 </div>
 </div>
 <div class="max-w-[1440px] mx-auto px-6 sm:px-8 mt-12 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
