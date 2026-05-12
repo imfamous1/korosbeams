@@ -612,13 +612,11 @@
   }
 
   function initCertificatePreviewDialog() {
-    var dialog = document.querySelector("[data-cert-preview-dialog]");
-    if (!dialog) return;
-
     var triggers = document.querySelectorAll("[data-cert-preview-open]");
-    var closeButtons = dialog.querySelectorAll("[data-cert-preview-close]");
+    var dialogs = document.querySelectorAll("[data-cert-preview-dialog]");
+    if (!dialogs.length) return;
 
-    function closeDialog() {
+    function closeDialog(dialog) {
       if (typeof dialog.close === "function" && dialog.open) {
         dialog.close();
       } else {
@@ -629,6 +627,13 @@
 
     triggers.forEach(function (trigger) {
       trigger.addEventListener("click", function () {
+        var previewKey = trigger.getAttribute("data-cert-preview-open");
+        var dialog =
+          document.querySelector('[data-cert-preview-dialog="' + previewKey + '"]') ||
+          document.getElementById(previewKey + "-preview") ||
+          document.querySelector("[data-cert-preview-dialog]");
+        if (!dialog) return;
+
         if (typeof dialog.showModal === "function") {
           dialog.showModal();
         } else {
@@ -638,16 +643,22 @@
       });
     });
 
-    closeButtons.forEach(function (button) {
-      button.addEventListener("click", closeDialog);
-    });
+    dialogs.forEach(function (dialog) {
+      var closeButtons = dialog.querySelectorAll("[data-cert-preview-close]");
 
-    dialog.addEventListener("click", function (ev) {
-      if (ev.target === dialog) closeDialog();
-    });
+      closeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          closeDialog(dialog);
+        });
+      });
 
-    dialog.addEventListener("close", function () {
-      document.body.classList.remove("overflow-hidden");
+      dialog.addEventListener("click", function (ev) {
+        if (ev.target === dialog) closeDialog(dialog);
+      });
+
+      dialog.addEventListener("close", function () {
+        document.body.classList.remove("overflow-hidden");
+      });
     });
   }
 

@@ -64,21 +64,16 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 sm:mb-10">
 <article class="group bg-white border border-zinc-200 rounded-xl shadow-sm flex flex-col overflow-hidden transition-shadow hover:shadow-md">
 <div class="relative aspect-video overflow-hidden bg-surface-container-high border-b border-outline-variant/20">
-<div class="absolute inset-0 grid place-items-center p-6">
-<div class="w-full h-full border border-primary/30 bg-white/70 rounded-lg flex flex-col items-center justify-center text-center p-6">
-<span class="material-symbols-outlined text-5xl text-primary mb-3" aria-hidden="true">article</span>
-<span class="font-headline font-bold text-sm uppercase tracking-widest text-primary" data-i18n="cert.card2.visual">Паспорт + ТУ</span>
-</div>
-</div>
-<span class="absolute left-4 top-4 bg-white/70 text-primary text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-sm" data-i18n="cert.card2.badge">По запросу</span>
+<img src="/images/passport.jpg" alt="Превью паспорта продукции и технических условий БДК Н20" data-i18n-alt="cert.card2.img.alt" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" style="object-position: top center;" loading="lazy" decoding="async"/>
+<span class="absolute left-4 top-4 bg-white/70 text-primary text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-sm" data-i18n="cert.card2.badge">Можно посмотреть</span>
 </div>
 <div class="p-6 flex flex-col flex-1">
 <h2 class="font-headline font-bold text-xl mb-3" data-i18n="cert.card2.t">Паспорт продукции и ТУ</h2>
 <p class="text-zinc-600 text-sm flex-1 mb-6" data-i18n="cert.card2.p">…</p>
-<a href="/contact/#inquiry" class="text-primary font-bold text-sm inline-flex items-center gap-2">
-<span data-i18n="cert.card2.link">Запросить</span>
-<span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
-</a>
+<button type="button" class="text-primary font-bold text-sm inline-flex items-center gap-2 self-start" data-cert-preview-open="passport">
+<span data-i18n="cert.card2.link">Посмотреть</span>
+<span class="material-symbols-outlined text-base" aria-hidden="true">open_in_full</span>
+</button>
 </div>
 </article>
 <article class="group bg-white border border-zinc-200 rounded-xl shadow-sm flex flex-col overflow-hidden transition-shadow hover:shadow-md">
@@ -110,7 +105,30 @@
 </div>
 </article>
 </div>
-<dialog id="protocol-preview" class="cert-preview-dialog" data-cert-preview-dialog aria-labelledby="protocol-preview-title">
+<dialog id="passport-preview" class="cert-preview-dialog" data-cert-preview-dialog="passport" aria-labelledby="passport-preview-title">
+<div class="cert-preview-dialog__panel bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl border border-outline-variant/30">
+<header class="flex items-start justify-between gap-4 p-6 border-b border-outline-variant/20">
+<div>
+<p class="text-xs font-bold tracking-widest text-primary uppercase mb-2" data-i18n="cert.modal.kicker">Предпросмотр документа</p>
+<h2 id="passport-preview-title" class="font-headline font-bold text-2xl" data-i18n="cert.passportModal.title">Паспорт продукции и ТУ</h2>
+</div>
+<button type="button" class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface inline-flex items-center justify-center hover:bg-surface-container-highest transition-colors" data-cert-preview-close data-i18n-aria-label="cert.modal.close" aria-label="Закрыть просмотр">
+<span class="material-symbols-outlined" aria-hidden="true">close</span>
+</button>
+</header>
+<div class="cert-preview-dialog__body">
+<img src="/images/passport.jpg" alt="Паспорт продукции и технические условия БДК Н20" data-i18n-alt="cert.passportModal.img.alt" class="cert-preview-dialog__image w-full rounded-lg bg-white border border-outline-variant/20"/>
+</div>
+<footer class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-md" data-i18n="cert.passportModal.caption">Это начало паспорта продукции. Для согласования запросите полный актуальный комплект документов.</p>
+<a href="/contact/#inquiry" class="inline-flex items-center justify-center gap-2 font-bold bg-primary text-white px-5 py-3 rounded-lg text-sm">
+<span data-i18n="cert.passportModal.cta">Запросить полный</span>
+<span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+</a>
+</footer>
+</div>
+</dialog>
+<dialog id="protocol-preview" class="cert-preview-dialog" data-cert-preview-dialog="protocol" aria-labelledby="protocol-preview-title">
 <div class="cert-preview-dialog__panel bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl border border-outline-variant/30">
 <header class="flex items-start justify-between gap-4 p-6 border-b border-outline-variant/20">
 <div>
