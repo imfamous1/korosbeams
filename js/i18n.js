@@ -112,6 +112,10 @@
       "index.feat2.text": "Испытания в аккредитованных центрах. Показатели изгиба, разрушающей нагрузки и поперечной силы — не ниже требований EN 13377:2002.",
       "index.feat3.title": "Материалы и клей",
       "index.feat3.text": "Хвоя не ниже II сорта по ГОСТ 8486-86. Фанера ФСФ по ГОСТ 3916.1-2018 и EN 636-3. Соединение PUR-клеем по EN 301 / EN 204-205. Покрытие с защитой от УФ-лучей; у линейки Pro — полимерные заглушки на торцах балки.",
+      "index.feat3.li1": "Хвоя не ниже II сорта по ГОСТ 8486-86.",
+      "index.feat3.li2": "Фанера ФСФ по ГОСТ 3916.1-2018 и EN 636-3.",
+      "index.feat3.li3": "Соединение PUR-клеем по EN 301 / EN 204-205.",
+      "index.feat3.li4": "Покрытие с защитой от УФ-лучей; у линейки Pro — полимерные заглушки на торцах балки.",
       "index.feat4.title": "Экспорт и логистика",
       "index.feat4.text": "Логистика в РФ и любую точку мира.",
 
@@ -611,6 +615,10 @@
       "index.feat2.text": "Testing in accredited labs. Bending, ultimate load and shear values meet or exceed EN 13377:2002 minima stated in our data sheets.",
       "index.feat3.title": "Materials & adhesive",
       "index.feat3.text": "Softwood not below II grade per GOST 8486-86. FSF plywood per GOST 3916.1-2018 and EN 636-3. PUR bonding per EN 301 / EN 204-205. Coating with UV protection; on the Pro line — polymer end caps on the beam ends.",
+      "index.feat3.li1": "Softwood not below II grade per GOST 8486-86.",
+      "index.feat3.li2": "FSF plywood per GOST 3916.1-2018 and EN 636-3.",
+      "index.feat3.li3": "PUR bonding per EN 301 / EN 204-205.",
+      "index.feat3.li4": "Coating with UV protection; on the Pro line — polymer end caps on the beam ends.",
       "index.feat4.title": "Export & logistics",
       "index.feat4.text": "Logistics across Russia and to any destination worldwide.",
 
