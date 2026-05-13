@@ -24,7 +24,7 @@
       "meta.desc.index": "Производство и продажа балок H20 для опалубки перекрытий в Санкт-Петербурге и Ленинградской области. БДК Н20 КОРОС для монолитного строительства, ГОСТ Р 71938-2025 и EN 13377:2002.",
       "meta.desc.catalog": "Производство и продажа балок H20 для опалубки в Санкт-Петербурге. БДК Н20 и БДК Н20 Про, доставка по Ленинградской области, документы ГОСТ и EN.",
       "meta.desc.product.norm": "Балка опалубки H20 3,6 м и другие длины БДК Н20 КОРОС для монолитного строительства. Технические характеристики, материалы, документы, доставка по Санкт-Петербургу и Ленинградской области.",
-      "meta.desc.product.pro": "БДК Н20 Про: фанера ФСФ 24 или 27 мм, полимерные заглушки на торцах. Техданные КОРОС.",
+      "meta.desc.product.pro": "БДК Н20 Про для опалубки: усиленная защита торцов, фанера до 27 мм, характеристики и документы. Производство и поставка в Санкт-Петербурге и Ленинградской области.",
       "meta.desc.manufacturing": "Опыт в деревопереработке, полный производственный цикл, контроль качества и испытания в аккредитованных лабораториях.",
       "meta.desc.contact": "Свяжитесь с ООО «КОРОС»: офис в Санкт-Петербурге, производство в п. Тихорицы, телефон, email и форма запроса.",
       "meta.desc.compare": "Страница перенаправляет в каталог продукции: применение балок БДК Н20.",
@@ -299,6 +299,7 @@
       "prod.gallery.photo3": "Фото 3",
 
       "prod.cta.inquiry": "Запрос в отдел снабжения",
+      "prod.cta.details": "Подробнее",
       "prod.cta.order": "Сделать заказ",
       "prod.cta.sheet": "Сертификаты и презентация",
       "prod.stat.bend": "Изгибающий момент",
@@ -600,7 +601,7 @@
       "meta.desc.index": "Manufacturer of H20 timber beams for formwork. GOST R 71938-2025, EN 13377:2002. Leningrad region; Russia and export.",
       "meta.desc.catalog": "H20 beam and H20 Pro beam — timber formwork beams from Koros LLC.",
       "meta.desc.product.norm": "H20 beam: 24 mm FSF plywood, compound end sealing. Specs and GOST/EN alignment.",
-      "meta.desc.product.pro": "H20 Pro: 24 or 27 mm FSF, polymer end caps. Koros technical data.",
+      "meta.desc.product.pro": "H20 Pro formwork beam with reinforced end protection, plywood up to 27 mm, technical data and documents. Production and supply in Saint Petersburg and the Leningrad Region.",
       "meta.desc.manufacturing": "Wood-processing experience, full in-house cycle, quality control and accredited lab testing.",
       "meta.desc.contact": "Contact Koros LLC: St. Petersburg office, Tikhoritsy plant, phone, email and inquiry form.",
       "meta.desc.compare": "Shortcut to the Koros catalogue: where H20 timber beams are used.",
@@ -883,6 +884,7 @@
       "prod.gallery.photo3": "Photo 3",
 
       "prod.cta.inquiry": "Reach procurement",
+      "prod.cta.details": "Details",
       "prod.cta.order": "Place an order",
       "prod.cta.sheet": "Certificates & deck",
       "prod.stat.bend": "Bending moment",
