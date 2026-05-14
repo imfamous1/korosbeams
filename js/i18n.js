@@ -299,7 +299,6 @@
       "prod.gallery.photo3": "Фото 3",
 
       "prod.cta.inquiry": "Запрос в отдел снабжения",
-      "prod.cta.details": "Подробнее",
       "prod.cta.order": "Сделать заказ",
       "prod.cta.sheet": "Сертификаты и презентация",
       "prod.stat.bend": "Изгибающий момент",
@@ -884,7 +883,6 @@
       "prod.gallery.photo3": "Photo 3",
 
       "prod.cta.inquiry": "Reach procurement",
-      "prod.cta.details": "Details",
       "prod.cta.order": "Place an order",
       "prod.cta.sheet": "Certificates & deck",
       "prod.stat.bend": "Bending moment",
