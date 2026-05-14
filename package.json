@@ -2,7 +2,11 @@
   "name": "koros-site",
   "private": true,
   "scripts": {
+    "build": "npm run build:css && python3 scripts/bundle_chrome.py",
     "build:css": "tailwindcss -i ./src/tailwind-input.css -o ./css/koros.css --minify",
+    "prepare:deploy": "npm run build && npm run version:assets",
+    "ship": "bash scripts/ship.sh",
+    "version:assets": "python3 scripts/bump_asset_version.py",
     "watch:css": "tailwindcss -i ./src/tailwind-input.css -o ./css/koros.css --watch"
   },
   "devDependencies": {
