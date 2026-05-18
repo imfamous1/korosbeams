@@ -140,7 +140,7 @@
   .koros-hero-scrim {
     position: absolute;
     inset: 0;
-    --koros-hero-scrim-rgb: 252 249 248;
+    --koros-hero-scrim-rgb: 255 255 255;
     --koros-hero-scrim-from-opacity: 1;
     --koros-hero-scrim-via-opacity: 0.72;
     --koros-hero-scrim-via-pos: 58%;
@@ -195,8 +195,8 @@
     display: inline-grid;
     place-items: center;
     border-radius: 9999px;
-    background: rgb(252 249 248 / 0.86);
-    color: #1b1c1c;
+    background: rgb(255 255 255 / 0.9);
+    color: #061a36;
     box-shadow: 0 12px 30px rgb(17 24 39 / 0.18);
     opacity: 0;
     transform: translateY(-50%);
@@ -206,7 +206,7 @@
     background: #fff;
   }
   .koros-product-gallery__nav:focus-visible {
-    outline: 2px solid #ffd100;
+    outline: 2px solid #fec100;
     outline-offset: 3px;
     opacity: 1;
   }
@@ -231,9 +231,9 @@
     padding: 0.38rem;
     max-width: min(16rem, 100%);
     overflow-x: auto;
-    border: 1px solid rgb(209 198 171 / 0.45);
+    border: 1px solid rgb(184 200 220 / 0.55);
     border-radius: 0.75rem;
-    background: rgb(252 249 248 / 0.9);
+    background: rgb(255 255 255 / 0.92);
     backdrop-filter: blur(12px);
     box-shadow: 0 12px 30px rgb(17 24 39 / 0.14);
   }
@@ -252,11 +252,11 @@
     opacity: 1;
   }
   .koros-product-gallery__thumb:focus-visible {
-    outline: 2px solid #ffd100;
+    outline: 2px solid #fec100;
     outline-offset: 2px;
   }
   .koros-product-gallery__thumb[aria-current="true"] {
-    border-color: #725c00;
+    border-color: #062655;
     opacity: 1;
   }
   .koros-product-gallery__thumb img {
@@ -304,18 +304,18 @@
     align-items: center;
     justify-content: center;
     gap: 0.42rem;
-    background: #ffd100;
-    color: #1b1c1c;
-    box-shadow: 0 12px 28px rgb(114 92 0 / 0.3), 0 0 0 1px rgb(27 28 28 / 0.08);
+    background: #fec100;
+    color: #062655;
+    box-shadow: 0 12px 28px rgb(6 38 85 / 0.22), 0 0 0 1px rgb(6 38 85 / 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   }
   .koros-chat-widget__toggle:hover {
     transform: translateY(-1px);
-    background: #ffe05a;
-    box-shadow: 0 16px 34px rgb(114 92 0 / 0.42), 0 0 0 1px rgb(27 28 28 / 0.12);
+    background: #ffd866;
+    box-shadow: 0 16px 34px rgb(6 38 85 / 0.3), 0 0 0 1px rgb(6 38 85 / 0.12);
   }
   .koros-chat-widget__toggle:focus-visible {
-    outline: 2px solid #1b1c1c;
+    outline: 2px solid #062655;
     outline-offset: 3px;
   }
   .koros-chat-widget__toggle-glyph {
@@ -340,9 +340,9 @@
     bottom: calc(100% + 0.85rem);
     width: min(23rem, calc(100vw - 2rem));
     padding: 1rem 1rem 0.9rem;
-    background: #f4f6f8;
-    color: #1f2937;
-    border: 1px solid rgb(17 24 39 / 0.12);
+    background: #ffffff;
+    color: #061a36;
+    border: 1px solid rgb(184 200 220 / 0.8);
     border-radius: 0.75rem;
     box-shadow: 0 24px 46px rgb(17 24 39 / 0.22);
   }
@@ -363,7 +363,7 @@
     background: rgb(148 163 184 / 0.2);
   }
   .koros-chat-widget__close:focus-visible {
-    outline: 2px solid #2f86eb;
+    outline: 2px solid #062655;
     outline-offset: 1px;
   }
   .koros-chat-widget__title {

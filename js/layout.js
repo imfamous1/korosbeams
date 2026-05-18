@@ -5,13 +5,13 @@
   "use strict";
 
   var DESKTOP_ON =
-    "text-[16px] leading-tight text-[#725c00] dark:text-[#ffd100] font-semibold";
+    "text-[16px] leading-tight text-primary dark:text-primary-container font-semibold";
   var DESKTOP_OFF =
-    "text-[16px] leading-tight text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors";
+    "text-[16px] leading-tight text-zinc-600 dark:text-zinc-400 font-medium hover:text-primary dark:hover:text-primary-container transition-colors";
   var MOBILE_ON =
-    "py-2.5 text-[16px] leading-snug font-headline font-semibold text-[#725c00] dark:text-[#ffd100]";
+    "py-2.5 text-[16px] leading-snug font-headline font-semibold text-primary dark:text-primary-container";
   var MOBILE_OFF =
-    "py-2.5 text-[16px] leading-snug font-headline font-semibold text-on-surface hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors";
+    "py-2.5 text-[16px] leading-snug font-headline font-semibold text-on-surface hover:text-primary dark:hover:text-primary-container transition-colors";
 
   function syncKorosHeaderHeight() {
     var bar = document.querySelector("[data-koros-header-bar]");

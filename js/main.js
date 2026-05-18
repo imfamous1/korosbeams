@@ -571,7 +571,7 @@
     var bar = document.createElement("div");
     bar.id = "koros-cookie-banner";
     bar.className =
-      "fixed bottom-0 left-0 right-0 z-[100] bg-zinc-900 text-zinc-200 text-sm px-4 py-4 md:px-6 md:py-5 shadow-xl border-t border-zinc-700 flex flex-col sm:flex-row sm:items-center gap-4 sm:justify-between max-w-full";
+      "fixed bottom-0 left-0 right-0 z-[100] bg-on-background text-zinc-200 text-sm px-4 py-4 md:px-6 md:py-5 shadow-xl border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-4 sm:justify-between max-w-full";
     bar.setAttribute("role", "dialog");
     bar.setAttribute("aria-modal", "false");
     bar.setAttribute("data-i18n-aria-label", "cookie.banner.dialogAria");
@@ -579,7 +579,7 @@
       '<div class="min-w-0 flex-1 leading-relaxed pr-2" data-i18n-html="cookie.banner.messageHtml"></div>' +
       '<div class="flex shrink-0 flex-wrap gap-3 sm:self-center">' +
       '<button type="button" class="whitespace-nowrap rounded-lg border border-zinc-600 text-zinc-100 font-headline font-bold px-5 py-2.5 text-sm hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" data-cookie-decline data-i18n="cookie.banner.decline">Только необходимые</button>' +
-      '<button type="button" class="whitespace-nowrap rounded-lg bg-[#ffd100] text-[#725c00] font-headline font-bold px-5 py-2.5 text-sm hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd100] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" data-cookie-accept data-i18n="cookie.banner.accept">Принять</button>' +
+      '<button type="button" class="whitespace-nowrap rounded-lg bg-primary-container text-on-primary-container font-headline font-bold px-5 py-2.5 text-sm hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-container focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" data-cookie-accept data-i18n="cookie.banner.accept">Принять</button>' +
       "</div>";
     document.body.appendChild(bar);
     var i18n = window.KorosI18n;
