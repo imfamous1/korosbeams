@@ -29,9 +29,20 @@
     min-height: 560px;
   }
 
+  .koros-manufacturing-hero-lead {
+    max-width: 42rem;
+  }
+
   @media (min-width: 640px) {
     .koros-manufacturing-hero {
       min-height: 640px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .koros-manufacturing-hero-lead {
+      max-width: none;
+      white-space: nowrap;
     }
   }
 

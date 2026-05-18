@@ -86,11 +86,11 @@ def fix_footer(html: str) -> str:
         ('href="#">Scaffolding</a>', 'href="/catalog/">Scaffolding</a>'),
         ('href="#">Technical Data</a>', 'href="/catalog/">Technical Data</a>'),
         ('href="#">Installation Guide</a>', 'href="/manufacturing/">Installation Guide</a>'),
-        ('href="#">Safety Protocols</a>', 'href="/manufacturing/#quality">Safety Protocols</a>'),
+        ('href="#">Safety Protocols</a>', 'href="/certificates/">Safety Protocols</a>'),
         ('href="#">Contact</a>', 'href="/contact/">Contact</a>'),
         ('href="#">Steel Connectors</a>', 'href="/catalog/">Steel Connectors</a>'),
         ('href="#">Formwork Systems</a>', 'href="/catalog/">Formwork Systems</a>'),
-        ('href="#">Certifications</a>', 'href="/manufacturing/#quality">Certifications</a>'),
+        ('href="#">Certifications</a>', 'href="/certificates/">Certifications</a>'),
         ('href="#">Steel Walings</a>', 'href="/catalog/">Steel Walings</a>'),
         ('href="#">Slab Formwork</a>', 'href="/catalog/">Slab Formwork</a>'),
         ('href="#">Climbing Systems</a>', 'href="/catalog/">Climbing Systems</a>'),
@@ -165,11 +165,6 @@ def patch_manufacturing(html: str) -> str:
     html = html.replace(
         '<section class="relative h-[819px] flex items-end overflow-hidden">',
         '<section id="production" class="relative h-[819px] flex items-end overflow-hidden">',
-        1,
-    )
-    html = html.replace(
-        "<!-- Technical Specification Section (Engineer's Desk Style) -->\n<section class=\"bg-surface-container-highest py-24 px-8\">",
-        "<!-- Technical Specification Section (Engineer's Desk Style) -->\n<section id=\"quality\" class=\"bg-surface-container-highest py-24 px-8\">",
         1,
     )
     html = html.replace(
