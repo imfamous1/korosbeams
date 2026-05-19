@@ -88,6 +88,11 @@
       "footer.privacy": "Политика конфиденциальности",
       "footer.terms": "Условия использования",
       "footer.copyright": "© 2026 ООО «КОРОС». Все права защищены.",
+      "footer.map.officeAria": "Открыть офис в Яндекс.Картах",
+      "footer.map.plantAria": "Открыть производство в Яндекс.Картах",
+      "footer.addr.office": "СПб, Якорная ул., 7АД",
+      "footer.addr.plant.line1": "Лен. обл., п. Тихорицы,",
+      "footer.addr.plant.line2": "Набережная ул., 1Н",
 
       "index.hero.kicker": "Производитель балок H20",
       "index.hero.title": "<span class=\"koros-index-hero-title-line\">Балка Н20 для опалубки —</span><br />производство и продажа в Санкт-Петербурге",
@@ -634,6 +639,11 @@
       "footer.privacy": "Privacy policy",
       "footer.terms": "Terms of use",
       "footer.copyright": "© 2026 Koros LLC. All rights reserved.",
+      "footer.map.officeAria": "Open office in Yandex Maps",
+      "footer.map.plantAria": "Open production site in Yandex Maps",
+      "footer.addr.office": "St. Petersburg, Yakornaya St. 7AD",
+      "footer.addr.plant.line1": "Tikhoritsy, Leningrad Oblast,",
+      "footer.addr.plant.line2": "Naberezhnaya St. 1N",
 
       "index.hero.kicker": "Beam manufacturer",
       "index.hero.title": "<span class=\"koros-index-hero-title-line\">H20 formwork beams —</span><br />manufacturing and sales in Saint Petersburg",
