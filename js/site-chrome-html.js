@@ -5,7 +5,7 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <div class="max-w-[1440px] mx-auto px-4 sm:px-8 w-full flex justify-between items-center py-2.5 gap-2 sm:gap-3 flex-nowrap">
 <div class="flex items-center gap-3 xl:gap-5 min-w-0 flex-1 xl:flex-initial">
 <a class="inline-flex shrink-0 items-center" href="/" aria-label="КОРОС">
-<img src="/images/koros_logo_blue.svg?v=20260520112529" alt="КОРОС" width="1345" height="328" class="w-auto object-contain" style="height: 1.85rem;" loading="eager" decoding="async"/>
+<img src="/images/koros_logo_blue.svg?v=20260527140722" alt="КОРОС" width="1345" height="328" class="w-auto object-contain" style="height: 1.85rem;" loading="eager" decoding="async"/>
 </a>
 <div class="hidden xl:flex items-center gap-3 xl:gap-4 shrink min-w-0">
 <a href="/" data-koros-nav="home" data-i18n="nav.home">Главная</a>
@@ -20,13 +20,13 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <div class="grid shrink-0 [grid-template-columns:auto_repeat(3,2.25rem)] items-center gap-x-0.5">
 <a class="koros-header-chip h-9 px-2 text-lg font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="https://max.ru/u/f9LHodD0cOKgy56Ysfgx431R1C2dmBidll_2cMWbuiomv4frfGKVdnzssu8" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
-<img src="/images/icons/max-logo-2025.png?v=20260520112529" alt="" width="64" height="32" class="max-h-[25px] w-auto max-w-[48px] object-contain object-center pointer-events-none" loading="lazy" decoding="async"/>
+<img src="/images/icons/max-logo-2025.png?v=20260527140722" alt="" width="64" height="32" class="max-h-[25px] w-auto max-w-[48px] object-contain object-center pointer-events-none" loading="lazy" decoding="async"/>
 </a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
-<img src="/images/icons/telegram-logo.png?v=20260520112529" alt="" width="96" height="96" class="h-[25px] w-[25px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<img src="/images/icons/telegram-logo.png?v=20260527140722" alt="" width="96" height="96" class="h-[25px] w-[25px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="mailto:info@korosbeams.ru" data-i18n-aria-label="a11y.writeEmail">
-<img src="/images/icons/email-header.png?v=20260520112529" alt="" width="72" height="72" class="h-[25px] w-[25px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<img src="/images/icons/email-header.png?v=20260527140722" alt="" width="72" height="72" class="h-[25px] w-[25px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
 </div>
 <div class="inline-flex box-border h-9 shrink-0 items-stretch overflow-hidden rounded-none border border-outline-variant/55 bg-surface-container-high/90 divide-x divide-outline-variant/45 dark:border-zinc-600/45 dark:bg-zinc-800/75 dark:divide-zinc-600/45" role="group" data-i18n-aria-label="a11y.langSwitch" aria-label="ru en">
@@ -58,13 +58,13 @@ window.__KOROS_HEADER_HTML__ = `<nav class="fixed top-0 left-0 right-0 z-50 tona
 <div class="grid w-full max-w-md mx-auto [grid-template-columns:auto_repeat(3,2.25rem)] items-center justify-center gap-x-0.5">
 <a class="koros-header-chip h-9 px-2 text-lg font-semibold tabular-nums tracking-wide justify-self-start" href="tel:+78004444694" data-i18n="header.phone.display">8 800 444 46 94</a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="https://max.ru/u/f9LHodD0cOKgy56Ysfgx431R1C2dmBidll_2cMWbuiomv4frfGKVdnzssu8" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
-<img src="/images/icons/max-logo-2025.png?v=20260520112529" alt="" width="64" height="32" class="max-h-[25px] w-auto max-w-[48px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<img src="/images/icons/max-logo-2025.png?v=20260527140722" alt="" width="64" height="32" class="max-h-[25px] w-auto max-w-[48px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
-<img src="/images/icons/telegram-logo.png?v=20260520112529" alt="" width="96" height="96" class="h-[25px] w-[25px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<img src="/images/icons/telegram-logo.png?v=20260527140722" alt="" width="96" height="96" class="h-[25px] w-[25px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
 <a class="koros-header-chip koros-header-chip--icon h-9 w-9 justify-self-center" href="mailto:info@korosbeams.ru" data-i18n-aria-label="a11y.writeEmail">
-<img src="/images/icons/email-header.png?v=20260520112529" alt="" width="72" height="72" class="h-[25px] w-[25px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<img src="/images/icons/email-header.png?v=20260527140722" alt="" width="72" height="72" class="h-[25px] w-[25px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 </a>
 </div>
 <div class="flex flex-wrap items-center justify-center gap-2 mt-1">
@@ -94,11 +94,11 @@ window.__KOROS_FOOTER_HTML__ = `<div class="px-6 sm:px-8 max-w-[1440px] mx-auto"
 <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-end">
 <div class="flex flex-wrap items-center gap-2" role="group" data-i18n-aria-label="a11y.messengerLinks">
 <a class="inline-flex h-11 items-center gap-2 border border-white/20 px-3 text-sm font-semibold text-white transition-colors hover:border-primary-container hover:text-primary-container focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-container focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" href="https://max.ru/u/f9LHodD0cOKgy56Ysfgx431R1C2dmBidll_2cMWbuiomv4frfGKVdnzssu8" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openMax">
-<img src="/images/icons/max-logo-2025.png?v=20260520112529" alt="" width="64" height="32" class="max-h-[22px] w-auto max-w-[36px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<img src="/images/icons/max-logo-2025.png?v=20260527140722" alt="" width="64" height="32" class="max-h-[22px] w-auto max-w-[36px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 <span data-i18n="header.messenger.max">MAX</span>
 </a>
 <a class="inline-flex h-11 items-center gap-2 border border-white/20 px-3 text-sm font-semibold text-white transition-colors hover:border-primary-container hover:text-primary-container focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-container focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="a11y.openTelegram">
-<img src="/images/icons/telegram-logo.png?v=20260520112529" alt="" width="96" height="96" class="h-[22px] w-[22px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
+<img src="/images/icons/telegram-logo.png?v=20260527140722" alt="" width="96" height="96" class="h-[22px] w-[22px] object-contain pointer-events-none" loading="lazy" decoding="async"/>
 <span data-i18n="header.messenger.telegram">Telegram</span>
 </a>
 </div>
@@ -112,7 +112,7 @@ window.__KOROS_FOOTER_HTML__ = `<div class="px-6 sm:px-8 max-w-[1440px] mx-auto"
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 <div>
 <a href="/" class="mb-3 inline-flex items-center" aria-label="КОРОС">
-<img src="/images/koros_logo_white.svg?v=20260520112529" alt="КОРОС" width="1345" height="328" class="w-auto object-contain" style="height: 1.85rem;" loading="lazy" decoding="async"/>
+<img src="/images/koros_logo_white.svg?v=20260527140722" alt="КОРОС" width="1345" height="328" class="w-auto object-contain" style="height: 1.85rem;" loading="lazy" decoding="async"/>
 </a>
 <p class="text-zinc-400 leading-relaxed mb-4" data-i18n="footer.tagline">…</p>
 </div>
@@ -169,13 +169,13 @@ window.__KOROS_FOOTER_HTML__ = `<div class="px-6 sm:px-8 max-w-[1440px] mx-auto"
 <div class="koros-chat-widget__actions" role="group" data-i18n-aria-label="widget.chat.actionsAria">
 <a class="koros-chat-widget__action koros-chat-widget__action--max" href="https://max.ru/u/f9LHodD0cOKgy56Ysfgx431R1C2dmBidll_2cMWbuiomv4frfGKVdnzssu8" target="_blank" rel="noopener noreferrer">
 <span class="koros-chat-widget__action-icon-wrap" aria-hidden="true">
-<img src="/images/icons/max-logo-2025.png?v=20260520112529" alt="" width="64" height="32" class="koros-chat-widget__action-icon koros-chat-widget__action-icon--max" loading="lazy" decoding="async"/>
+<img src="/images/icons/max-logo-2025.png?v=20260527140722" alt="" width="64" height="32" class="koros-chat-widget__action-icon koros-chat-widget__action-icon--max" loading="lazy" decoding="async"/>
 </span>
 <span data-i18n="widget.chat.max">MAX</span>
 </a>
 <a class="koros-chat-widget__action koros-chat-widget__action--telegram" href="https://t.me/+79250953377" target="_blank" rel="noopener noreferrer">
 <span class="koros-chat-widget__action-icon-wrap" aria-hidden="true">
-<img src="/images/icons/telegram-logo.png?v=20260520112529" alt="" width="96" height="96" class="koros-chat-widget__action-icon" loading="lazy" decoding="async"/>
+<img src="/images/icons/telegram-logo.png?v=20260527140722" alt="" width="96" height="96" class="koros-chat-widget__action-icon" loading="lazy" decoding="async"/>
 </span>
 <span data-i18n="widget.chat.telegram">Telegram</span>
 </a>
