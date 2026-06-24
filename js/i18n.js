@@ -11,8 +11,8 @@
 
   var STRINGS = {
     ru: {
-      "meta.title.index": "Балки H20 для опалубки — производство и продажа в Санкт-Петербурге | КОРОС",
-      "meta.title.catalog": "Балки опалубки H20 — купить в Санкт-Петербурге | КОРОС",
+      "meta.title.index": "Балка H20 для опалубки — производство и продажа в Санкт-Петербурге | КОРОС",
+      "meta.title.catalog": "Балка опалубки H20 — купить в Санкт-Петербурге | КОРОС",
       "meta.title.product.norm": "Балка опалубки H20 3,6 м — купить в СПб | КОРОС",
       "meta.title.product.pro": "БДК Н20 Про | ООО «КОРОС»",
       "meta.title.manufacturing": "О компании и производстве | ООО «КОРОС»",
@@ -21,8 +21,8 @@
       "meta.title.certificates": "Сертификаты и испытания | ООО «КОРОС»",
       "meta.title.objects": "Наши объекты | ООО «КОРОС»",
       "meta.title.404": "404 | Страница не найдена",
-      "meta.desc.index": "Производство и продажа балок H20 для опалубки перекрытий в Санкт-Петербурге и Ленинградской области. БДК Н20 КОРОС для монолитного строительства, ГОСТ Р 71938-2025 и EN 13377:2002.",
-      "meta.desc.catalog": "Производство и продажа балок H20 для опалубки в Санкт-Петербурге. БДК Н20 и БДК Н20 Про, доставка по Ленинградской области, документы ГОСТ и EN.",
+      "meta.desc.index": "Производство и продажа балки H20 для опалубки перекрытий в Санкт-Петербурге и Ленинградской области. БДК Н20 КОРОС для монолитного строительства, ГОСТ Р 71938-2025 и EN 13377:2002.",
+      "meta.desc.catalog": "Производство и продажа балки H20 для опалубки в Санкт-Петербурге. БДК Н20 и БДК Н20 Про, доставка по Ленинградской области, документы ГОСТ и EN.",
       "meta.desc.product.norm": "Балка опалубки H20 3,6 м и другие длины БДК Н20 КОРОС для монолитного строительства. Технические характеристики, материалы, документы, доставка по Санкт-Петербургу и Ленинградской области.",
       "meta.desc.product.pro": "БДК Н20 Про для опалубки: усиленная защита торцов, фанера до 27 мм, характеристики и документы. Производство и поставка в Санкт-Петербурге и Ленинградской области.",
       "meta.desc.manufacturing": "Опыт в деревопереработке, полный производственный цикл, контроль качества и испытания в аккредитованных лабораториях.",
@@ -197,7 +197,7 @@
       "mfg.cta.btn": "Сертификаты и файлы",
 
       "cat.hero.kicker": "Продукция",
-      "cat.hero.title": "Балки опалубки H20 — купить в Санкт-Петербурге",
+      "cat.hero.title": "Балка опалубки H20 — купить в Санкт-Петербурге",
       "cat.hero.lead": "Каталог деревянных двутавровых балок H20 для монолитной опалубки. Базовая БДК Н20 подходит для типовых опалубочных решений; H20 Pro — для объектов, где нужна усиленная защита торцов и фанера до 27&nbsp;мм. Доставка по Санкт-Петербургу и Ленинградской области.",
       "cat.hero.listAria": "Ключевые сведения о каталоге",
       "cat.hero.item1": "Каталог деревянных двутавровых балок H20 для монолитной опалубки.",
@@ -461,6 +461,7 @@
       "contact.direct.email": "Email",
       "contact.direct.messengers": "Мессенджеры",
       "contact.legal.title": "Реквизиты для договоров и счетов",
+      "contact.legal.organization": "Организация",
       "contact.legal.fullName": "Полное наименование",
       "contact.legal.fullNameValue": "Общество с ограниченной ответственностью «КОРОС»",
       "contact.legal.shortName": "Сокращённое наименование",
@@ -470,7 +471,8 @@
       "contact.legal.ogrn": "ОГРН",
       "contact.legal.okpo": "ОКПО",
       "contact.legal.address": "Адрес места нахождения",
-      "contact.legal.addressValue": "Россия, г. Санкт-Петербург, ул. Якорная, д. 7АД",
+      "contact.legal.addressValue": "Россия, Ленинградская область, Волховский район, п. Тихорицы, ул. Набережная, д. 1Н, помещ. 2А",
+      "contact.legal.registration": "Регистрационные данные",
       "contact.form.phoneHint": "8 800 333-22-33",
       "contact.form.qtyHint": "1200",
 
@@ -1026,6 +1028,7 @@
       "contact.direct.email": "Email",
       "contact.direct.messengers": "Messengers",
       "contact.legal.title": "Company details for contracts and invoices",
+      "contact.legal.organization": "Organization",
       "contact.legal.fullName": "Full legal name",
       "contact.legal.fullNameValue": "Koros Limited Liability Company",
       "contact.legal.shortName": "Short legal name",
@@ -1035,7 +1038,8 @@
       "contact.legal.ogrn": "Primary state registration number",
       "contact.legal.okpo": "OKPO",
       "contact.legal.address": "Registered address",
-      "contact.legal.addressValue": "7AD Yakornaya St., Saint Petersburg, Russia",
+      "contact.legal.addressValue": "Premises 2A, 1N Naberezhnaya St., Tikhoritsy, Volkhovsky District, Leningrad Oblast, Russia",
+      "contact.legal.registration": "Registration details",
       "contact.form.phoneHint": "8 800 333-22-33",
       "contact.form.qtyHint": "1200",
 
