@@ -5,9 +5,9 @@
   "use strict";
 
   var DESKTOP_ON =
-    "text-[16px] leading-tight text-primary dark:text-primary-container font-semibold";
+    "text-sm leading-tight text-primary dark:text-primary-container font-semibold";
   var DESKTOP_OFF =
-    "text-[16px] leading-tight text-zinc-600 dark:text-zinc-400 font-medium hover:text-primary dark:hover:text-primary-container transition-colors";
+    "text-sm leading-tight text-zinc-600 dark:text-zinc-400 font-medium hover:text-primary dark:hover:text-primary-container transition-colors";
   var MOBILE_ON =
     "py-2.5 text-[16px] leading-snug font-headline font-semibold text-primary dark:text-primary-container";
   var MOBILE_OFF =
