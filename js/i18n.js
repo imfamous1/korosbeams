@@ -475,7 +475,7 @@
       "contact.legal.ogrn": "ОГРН",
       "contact.legal.okpo": "ОКПО",
       "contact.legal.address": "Адрес места нахождения",
-      "contact.legal.addressValue": "Россия, Ленинградская область, Волховский район, п. Тихорицы, ул. Набережная, д. 1Н, помещ. 2А",
+      "contact.legal.addressValue": "Россия, Ленинградская область, Волховский район,<br/>п. Тихорицы, ул. Набережная, д. 1Н, помещ. 2А",
       "contact.legal.registration": "Регистрационные данные",
       "contact.form.phoneHint": "8 800 333-22-33",
       "contact.form.qtyHint": "1200",
