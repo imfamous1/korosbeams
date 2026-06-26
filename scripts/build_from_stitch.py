@@ -7,6 +7,17 @@ ROOT = Path(__file__).resolve().parents[1]
 
 LINK = "text-zinc-600 dark:text-zinc-400 font-medium hover:text-[#725c00] dark:hover:text-[#ffd100] transition-colors duration-300"
 ACTIVE = "text-[#725c00] dark:text-[#ffd100] font-bold font-headline"
+GTM_HEAD = """<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TGQ5VRG6');</script>
+<!-- End Google Tag Manager -->"""
+GTM_BODY = """<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGQ5VRG6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->"""
 
 
 def build_nav(active: str) -> str:
@@ -140,6 +151,13 @@ def add_script(html: str) -> str:
     return html.replace("</body>", '  <script src="/js/main.js" defer></script>\n</body>')
 
 
+def ensure_gtm(html: str) -> str:
+    if "GTM-TGQ5VRG6" in html:
+        return html
+    html = html.replace("<head>", f"<head>\n{GTM_HEAD}", 1)
+    return re.sub(r"(<body[^>]*>)", rf"\1\n{GTM_BODY}", html, count=1)
+
+
 def patch_index(html: str) -> str:
     html = html.replace(
         '<section class="py-24 bg-surface-container-low">',
@@ -203,6 +221,7 @@ def run():
         raw = fix_footer(raw)
         if patcher:
             raw = patcher(raw)
+        raw = ensure_gtm(raw)
         raw = add_script(raw)
         out = ROOT / out_name
         out.parent.mkdir(parents=True, exist_ok=True)
